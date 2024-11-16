@@ -8,7 +8,7 @@ CORS(app, origins=['http://localhost:3000', 'https://g4ntt.vercel.app/'])
 @app.route('/api/home', methods=['GET'])
 def return_home():
     data = prompt({})
-    return jsonify({"message": data, 'people': ['Jack', 'Jill', 'John']})
+    return jsonify(data)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8080)

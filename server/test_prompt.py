@@ -1,6 +1,7 @@
 import openai
 import tiktoken
 import os
+from dotenv import load_dotenv
 
 def count_tokens(text, model="gpt-3.5-turbo"):
     """
@@ -35,8 +36,8 @@ def count_tokens(text, model="gpt-3.5-turbo"):
     # For non-chat models, simply encode and count
     return len(encoding.encode(text))
 
+load_dotenv()
 api_key = os.environ.get('OPENAI_API_KEY')
-
 client = openai.OpenAI(
   organization='org-rDJcL7q9nR2pzHnxeN1ipwQF',
   project='proj_Wm3JVHDej00hqCWSR2Ri6wVz',
