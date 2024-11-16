@@ -22,7 +22,7 @@ class RedditMultiScraper:
                     value = value.strip()
 
                     # Handle lists (comma-separated values)
-                    if ',' in value:
+                    if key in ['search_terms', 'subreddits']:
                         config[key] = [v.strip() for v in value.split(',')]
                     # Handle integers
                     elif value.isdigit():
@@ -91,7 +91,7 @@ class RedditMultiScraper:
 
         return comments_list
 
-    def scrape_reddit(self) -> pd.DataFrame:
+    def scrape_reddit(self) -> str:
         """
         Scrape Reddit posts and comments using configuration parameters
         """
@@ -197,7 +197,8 @@ class RedditMultiScraper:
         print("\nEntries per subreddit:")
         print(df.groupby('subreddit').size())
 
-        return df
+        # return df
+        return filename
 
 
 def main():
