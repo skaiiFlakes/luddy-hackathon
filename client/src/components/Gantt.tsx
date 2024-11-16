@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   GanttComponent,
   TaskFieldsModel,
@@ -17,7 +17,8 @@ import { PdfColor } from '@syncfusion/ej2-pdf-export';
 enableRipple(true);
 
 function Gantt({ data }: { data: any }) {
-  let ganttInst: GanttComponent | null;
+  const ganttRef = useRef<GanttComponent | null>(null);
+
   const editOptions: any = {
     allowEditing: true,
     allowAdding: true,
@@ -27,6 +28,7 @@ function Gantt({ data }: { data: any }) {
     allowTaskOverlap: true,
     validateMode: 'External',
   };
+
   const taskValues: TaskFieldsModel = {
     id: 'TaskID',
     name: 'TaskName',
@@ -36,9 +38,22 @@ function Gantt({ data }: { data: any }) {
     dependency: 'Predeceesor',
     child: 'subtasks',
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (ganttRef.current) {
+        ganttRef.current.collapseAll();
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const toolbarBtnClick = (args: any) => {
+    if (!ganttRef.current) return;
+
     if (args.item.id.includes('pdfexport')) {
-      (ganttInst as GanttComponent).pdfExport({
+      ganttRef.current.pdfExport({
         fileName: 'projectData.pdf',
         enableFooter: false,
         showPredecessorLines: false,
@@ -52,7 +67,7 @@ function Gantt({ data }: { data: any }) {
         },
       });
     } else if (args.item.id.includes('excelexport')) {
-      (ganttInst as GanttComponent).excelExport({
+      ganttRef.current.excelExport({
         fileName: 'projectData.xlsx',
         theme: {
           header: { fontColor: '#C67878' },
@@ -72,25 +87,12 @@ function Gantt({ data }: { data: any }) {
             },
           ],
         },
-        // footer: {
-        //   footerRows: 1,
-        //   rows: [
-        //     {
-        //       cells: [
-        //         {
-        //           colSpan: 4,
-        //           value: 'Visit Again !!!',
-        //           style: { fontSize: 18, hAlign: 'Center' },
-        //         },
-        //       ],
-        //     },
-        //   ],
-        // },
       });
     } else if (args.item.id.includes('csvexport')) {
-      (ganttInst as GanttComponent).csvExport();
+      ganttRef.current.csvExport();
     }
   };
+
   const splitterSettings = {
     position: '41%',
   };
@@ -102,9 +104,7 @@ function Gantt({ data }: { data: any }) {
       </p>
 
       <GanttComponent
-        ref={(gantt: GanttComponent | null) => {
-          ganttInst = gantt;
-        }}
+        ref={ganttRef}
         dataSource={data}
         taskFields={taskValues}
         editSettings={editOptions}
@@ -125,15 +125,11 @@ function Gantt({ data }: { data: any }) {
         allowPdfExport={true}
         allowExcelExport={true}
         toolbarClick={toolbarBtnClick}
-        created={() => {
-          if (ganttInst) ganttInst.collapseAll();
-        }}
       >
         <Inject
           services={[Edit, Toolbar, Selection, PdfExport, ExcelExport]}
         ></Inject>
         <ColumnsDirective>
-          {/* <ColumnDirective field='TaskID' headerText='ID'></ColumnDirective> */}
           <ColumnDirective
             field='TaskName'
             headerText='Name'
