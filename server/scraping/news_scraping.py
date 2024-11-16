@@ -142,7 +142,7 @@ if __name__ == "__main__":
         headlines_df = get_multiple_companies_headlines(
             api_key=API_KEY,
             companies=companies,
-            output_file='tech_companies_headlines.csv',
+            output_file='../general_news.csv',
             headlines_per_company=20
         )
 
