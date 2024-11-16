@@ -22,32 +22,74 @@ const FormGroup = ({
 
 export default function Form() {
   const [industry, setIndustry] = useState('');
-  const [kpi, setKpi] = useState('');
+  const [kpi, setKpi] = useState('CAC');
   const [currentStatus, setCurrentStatus] = useState('');
   const [targetStatus, setTargetStatus] = useState('');
   const [deadline, setDeadline] = useState('');
 
-  // KPI descriptions object
-  const kpiDescriptions: { [key: string]: string } = {
-    CAC: 'Customer Acquisition Cost - The total cost of acquiring a new customer, including marketing and sales expenses.',
-    'Churn Rate':
-      'The percentage of customers who stop using your product/service over a given time period.',
-    'Average Order Size':
-      'The average monetary value of each order placed by customers.',
-    MRR: 'Monthly Recurring Revenue - Predictable revenue generated each month from subscriptions.',
-    ARR: 'Annual Recurring Revenue - Predictable revenue generated annually from subscriptions.',
-    'Cash Runway':
-      'The amount of time a company can continue operating with its current cash reserves.',
-    'Burn Rate':
-      'The rate at which a company spends its cash reserves on operating expenses.',
-    'K-factor':
-      'The growth rate of a product through viral customer acquisition.',
-    'Gross Sales':
-      'Total revenue generated before deductions for returns, discounts, and other expenses.',
-    MAU: 'Monthly Active Users - The number of unique users who interact with your product in a month.',
-    NPS: 'Net Promoter Score - Measures customer satisfaction and likelihood to recommend.',
-    'LVT/CAC':
-      'Lifetime Value to Customer Acquisition Cost ratio - Measures the return on customer acquisition investment.',
+  const kpis: {
+    [key: string]: { description: string; unit: string };
+  } = {
+    CAC: {
+      description:
+        'Customer Acquisition Cost - The total cost of acquiring a new customer, including marketing and sales expenses.',
+      unit: 'USD',
+    },
+    'Churn Rate': {
+      description:
+        'Churn Rate - The percentage of customers who stop using your product/service over a given time period.',
+      unit: '%',
+    },
+    'Average Order Size': {
+      description:
+        'Average Order Size - The average monetary value of each order placed by customers.',
+      unit: 'USD',
+    },
+    MRR: {
+      description:
+        'Monthly Recurring Revenue - Predictable revenue generated each month from subscriptions.',
+      unit: 'USD',
+    },
+    ARR: {
+      description:
+        'Annual Recurring Revenue - Predictable revenue generated annually from subscriptions.',
+      unit: 'USD',
+    },
+    'Cash Runway': {
+      description:
+        'Cash Runway - The amount of time a company can continue operating with its current cash reserves.',
+      unit: 'mos.',
+    },
+    'Burn Rate': {
+      description:
+        'Burn Rate - The rate at which a company spends its cash reserves on operating expenses.',
+      unit: 'USD',
+    },
+    'K-factor': {
+      description:
+        'K-factor - The growth rate of a product through viral customer acquisition.',
+      unit: '',
+    },
+    'Gross Sales': {
+      description:
+        'Gross Sales - Total revenue generated before deductions for returns, discounts, and other expenses.',
+      unit: 'USD',
+    },
+    MAU: {
+      description:
+        'Monthly Active Users - The number of unique users who interact with your product in a month.',
+      unit: '#',
+    },
+    NPS: {
+      description:
+        'Net Promoter Score - Measures customer satisfaction and likelihood to recommend.',
+      unit: '',
+    },
+    'LVT/CAC': {
+      description:
+        'Lifetime Value to Customer Acquisition Cost ratio - Measures the return on customer acquisition investment.',
+      unit: '',
+    },
   };
 
   // Effect to log changes
@@ -154,7 +196,7 @@ export default function Form() {
           value={kpi}
           onChange={handleKpiChange}
         >
-          {Object.keys(kpiDescriptions).map((key) => (
+          {Object.keys(kpis).map((key) => (
             <option key={key} value={key}>
               {key}
             </option>
@@ -166,37 +208,70 @@ export default function Form() {
         <div className='max-w-full lg:flex lg:items-center lg:gap-4'>
           <div className='lg:w-1/3'></div>
           <div className='lg:w-2/3'>
-            <p className='text-sm text-gray-400'>{kpiDescriptions[kpi]}</p>
+            <p className='text-sm text-gray-400'>{kpis[kpi].description}</p>
           </div>
         </div>
       )}
 
       <FormGroup label='Current Status'>
-        <TextInput
-          className='dark w-full'
-          id='currentstatus'
-          type='text'
-          value={currentStatus}
-          onChange={handleCurrentStatusChange}
-          required
-          theme={{
-            field: {
-              input: {
-                colors: { gray: 'bg-gray-800 border-gray-500 text-white' },
+        <div className='flex'>
+          {kpis[kpi].unit !== '' && (
+            <div className='text-sm text-gray-400 pt-3 pr-4'>
+              {kpis[kpi].unit}
+            </div>
+          )}
+          <TextInput
+            className='dark w-full'
+            id='currentstatus'
+            type='text'
+            value={currentStatus}
+            onChange={handleCurrentStatusChange}
+            required
+            theme={{
+              field: {
+                input: {
+                  colors: { gray: 'bg-gray-800 border-gray-500 text-white' },
+                },
               },
-            },
-          }}
-        />
+            }}
+          />
+        </div>
       </FormGroup>
 
       <FormGroup label='Target Status'>
+        <div className='flex'>
+          {kpis[kpi].unit !== '' && (
+            <div className='text-sm text-gray-400 pt-3 pr-4'>
+              {kpis[kpi].unit}
+            </div>
+          )}
+          <TextInput
+            className='dark w-full'
+            id='targetstatus'
+            type='text'
+            value={targetStatus}
+            onChange={handleTargetStatusChange}
+            required
+            theme={{
+              field: {
+                input: {
+                  colors: { gray: 'bg-gray-800 border-gray-500 text-white' },
+                },
+              },
+            }}
+          />
+        </div>
+      </FormGroup>
+
+      <FormGroup label='Deadline'>
         <TextInput
+          type='date'
+          value={deadline}
+          onChange={(e) => {
+            setDeadline(e.target.value);
+            console.log('Date changed:', e.target.value);
+          }}
           className='dark w-full'
-          id='targetstatus'
-          type='text'
-          value={targetStatus}
-          onChange={handleTargetStatusChange}
-          required
           theme={{
             field: {
               input: {
@@ -204,34 +279,7 @@ export default function Form() {
               },
             },
           }}
-        />
-      </FormGroup>
-
-      <FormGroup label='Deadline'>
-        <Datepicker
-          className='dark w-full'
-          // onSelectedDateChanged={handleDeadlineChange}
-          theme={{
-            root: {
-              base: 'relative',
-            },
-            popup: {
-              root: {
-                base: 'absolute top-10 z-50 block bg-gray-800 border-gray-500 text-white',
-              },
-            },
-            views: {
-              days: {
-                items: {
-                  base: 'grid w-64 grid-cols-7',
-                  item: {
-                    base: 'block flex-1 cursor-pointer rounded-lg border-0 text-center text-sm font-semibold leading-9 hover:bg-gray-700 hover:text-white text-gray-300',
-                    selected: 'bg-blue-600 text-white hover:bg-blue-600',
-                  },
-                },
-              },
-            },
-          }}
+          required
         />
       </FormGroup>
 
