@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Label, Select, TextInput } from 'flowbite-react';
+import { kpis } from '../utils/kpiData';
 
 const FormGroup = ({
   label,
@@ -20,85 +21,52 @@ const FormGroup = ({
 );
 
 export default function Form() {
-  const [industry, setIndustry] = useState('');
+  const [industry, setIndustry] = useState('Information Technology');
   const [kpi, setKpi] = useState('Gross Sales');
   const [currentStatus, setCurrentStatus] = useState('');
   const [targetStatus, setTargetStatus] = useState('');
-  const [deadline, setDeadline] = useState('');
+  const [deadline, setDeadline] = useState(new Date());
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const kpis: {
-    [key: string]: { description: string; unit: string; abbr: string };
-  } = {
-    'Customer Acquisition Cost': {
-      description:
-        'The total cost of acquiring a new customer, including marketing and sales expenses.',
-      unit: 'USD',
-      abbr: 'CAC',
-    },
-    'Churn Rate': {
-      description:
-        'The percentage of customers who stop using your product/service over a given time period.',
-      unit: '%',
-      abbr: 'CR',
-    },
-    'Average Order Size': {
-      description:
-        'The average monetary value of each order placed by customers.',
-      unit: 'USD',
-      abbr: 'AOS',
-    },
-    'Monthly Recurring Revenue': {
-      description:
-        'Predictable revenue generated each month from subscriptions.',
-      unit: 'USD',
-      abbr: 'MRR',
-    },
-    'Annual Recurring Revenue': {
-      description: 'Predictable revenue generated annually from subscriptions.',
-      unit: 'USD',
-      abbr: 'ARR',
-    },
-    'Cash Runway': {
-      description:
-        'The amount of time a company can continue operating with its current cash reserves.',
-      unit: 'mos.',
-      abbr: 'CR',
-    },
-    'Burn Rate': {
-      description:
-        'The rate at which a company spends its cash reserves on operating expenses.',
-      unit: 'USD',
-      abbr: 'BR',
-    },
-    'K-factor': {
-      description:
-        'The growth rate of a product through viral customer acquisition.',
-      unit: '',
-      abbr: 'KF',
-    },
-    'Gross Sales': {
-      description:
-        'Total revenue generated before deductions for returns, discounts, and other expenses.',
-      unit: 'USD',
-      abbr: 'GS',
-    },
-    'Monthly Active Users': {
-      description:
-        'The number of unique users who interact with your product in a month.',
-      unit: '#',
-      abbr: 'MAU',
-    },
-    'Net Promoter Score': {
-      description:
-        'Measures customer satisfaction and likelihood to recommend.',
-      unit: '',
-      abbr: 'NPS',
-    },
-    'LVT/CAC': {
-      description: 'Measures the return on customer acquisition investment.',
-      unit: '',
-      abbr: 'LVT/CAC',
-    },
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    setIsLoading(true);
+    setError(null);
+
+    const formData = {
+      industry,
+      kpi,
+      currentStatus,
+      targetStatus,
+      deadline: deadline.toISOString(),
+    };
+
+    try {
+      const response = await fetch('http://localhost:8080/api/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
+      const data = await response.json();
+      console.log('Response:', data);
+
+      // Clear form or show success message
+      setCurrentStatus('');
+      setTargetStatus('');
+      setDeadline(new Date());
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   // Effect to log changes
@@ -144,19 +112,8 @@ export default function Form() {
     setTargetStatus(event.target.value);
   };
 
-  const handleDeadlineChange = (date: Date) => {
-    setDeadline(date.toISOString());
-  };
-
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    console.log('Form submitted with values:', {
-      industry,
-      kpi,
-      currentStatus,
-      targetStatus,
-      deadline,
-    });
+  const handleDeadlineChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setDeadline(event.target.valueAsDate!);
   };
 
   return (
@@ -277,11 +234,7 @@ export default function Form() {
       <FormGroup label='Deadline'>
         <TextInput
           type='date'
-          value={deadline}
-          onChange={(e) => {
-            setDeadline(e.target.value);
-            console.log('Date changed:', e.target.value);
-          }}
+          onChange={handleDeadlineChange}
           className='dark w-full'
           theme={{
             field: {
