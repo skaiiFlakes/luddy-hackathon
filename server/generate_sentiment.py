@@ -1,11 +1,9 @@
-from typing import List
-
 from scraping import parse_csv as pc
 from scraping import social_scraping as ss
 from sentiment import social_sentiment_analysis as ssa
 
-def generate_config(subreddits: List[str] = [],
-                    search_terms: List[str] = [],
+def generate_config(subreddits: list[str] = [],
+                    search_terms: list[str] = [],
                     posts_per_search: int = 10,
                     comments_per_post: int = 5,
                     sort_method: str = 'top',
@@ -19,9 +17,9 @@ def generate_config(subreddits: List[str] = [],
         Parameters:
         -----------
         search_terms : list or str
-            List of search terms or comma-separated string
+            list of search terms or comma-separated string
         subreddits : list or str
-            List of subreddits or comma-separated string
+            list of subreddits or comma-separated string
         posts_per_search : int
             Number of posts to retrieve per search term
         comments_per_post : int
@@ -92,12 +90,12 @@ def generate_config(subreddits: List[str] = [],
 
 
 
-def generate_sentiment(industry: str = "",
-                       top_companies: List[str] = [],
-                       subreddits: List[str] = [],
-                       search_terms: List[str] = [],
-                       config_file: str = './reddit_config.txt'
-                       ) -> str:
+def generate_social_sentiment(industry: str = "",
+                              top_companies: list[str] = [],
+                              subreddits: list[str] = [],
+                              search_terms: list[str] = [],
+                              config_file: str = './reddit_config.txt'
+                              ) -> list[str]:
     # Generate config for scraping
     generate_config(subreddits=subreddits, search_terms=search_terms, config_file=config_file, sort_method='relevant')
     # Do scraping to get csv
@@ -137,4 +135,4 @@ if __name__ == "__main__":
     search_terms = ['spacex', 'L3Harris', 'NextNav']
     subreddits = ['space']
 
-    print(generate_sentiment(search_terms=search_terms, subreddits=subreddits))
+    print(generate_social_sentiment(search_terms=search_terms, subreddits=subreddits))
