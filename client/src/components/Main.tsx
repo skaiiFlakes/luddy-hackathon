@@ -5,7 +5,7 @@ import Gantt from './Gantt';
 import { sampleGanttData } from '../sampleGanttData';
 
 export default function Main() {
-  const [response, setResponse] = useState('loading');
+  const [response, setResponse] = useState({});
 
   useEffect(() => {
     fetch('http://localhost:8080/api/home')
@@ -19,7 +19,7 @@ export default function Main() {
     <section className='text-gray-600 body-font'>
       <div className='max-w-5xl pt-44 pb-4 mx-auto'>
         <h1 className='text-80 text-center font-4 lh-6 ld-04 font-bold text-white mb-6'>
-          Turn Your KPI into Actionable Plans
+          Turn Your KPIs into Actionable Plans
         </h1>
         <h2 className='text-2xl font-4 font-semibold lh-6 ld-04 pb-11 text-gray-700 text-center'>
           Input your KPI, industry, and deadline. Let us analyze the data
@@ -37,7 +37,9 @@ export default function Main() {
         </div>
       </div>
 
-      <Gantt data={sampleGanttData} />
+      {response && response.outputs && response.outputs.recommendations && (
+        <Gantt data={response.outputs.recommendations} />
+      )}
 
       <h2 className='pt-40 mb-1 text-2xl font-semibold tracking-tighter text-center text-gray-200 lg:text-7xl md:text-6xl'>
         Your mother.
@@ -127,9 +129,7 @@ export default function Main() {
           </div>
         </Link>
       </div> */}
-      <h2 className='font-8 font-thin lh-6 ld-04 pb-11 text-gray-100 text-center'>
-        {JSON.stringify(response)}
-      </h2>
+
       <div className='pt-32 pb-32 max-w-6xl mx-auto fsac4 md:px-1 px-3'>
         <div className='ktq4'>
           <img src='/api/placeholder/400/300' alt='template preview'></img>

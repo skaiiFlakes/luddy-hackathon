@@ -88,6 +88,9 @@ function Gantt({ data }) {
       (ganttInst as GanttComponent).csvExport();
     }
   };
+  const splitterSettings = {
+    position: '41%',
+  };
 
   return (
     <div>
@@ -96,6 +99,7 @@ function Gantt({ data }) {
         dataSource={data}
         taskFields={taskValues}
         editSettings={editOptions}
+        splitterSettings={splitterSettings}
         toolbar={[
           'Add',
           'Edit',
@@ -112,18 +116,26 @@ function Gantt({ data }) {
         allowPdfExport={true}
         allowExcelExport={true}
         toolbarClick={toolbarBtnClick}
+        created={() => {
+          if (ganttInst) ganttInst.collapseAll();
+        }}
       >
         <Inject
           services={[Edit, Toolbar, Selection, PdfExport, ExcelExport]}
         ></Inject>
         <ColumnsDirective>
           {/* <ColumnDirective field='TaskID' headerText='ID'></ColumnDirective> */}
-          <ColumnDirective field='TaskName' headerText='Name'></ColumnDirective>
+          <ColumnDirective
+            field='TaskName'
+            headerText='Name'
+            minWidth='300'
+          ></ColumnDirective>
           <ColumnDirective
             field='StartDate'
-            format='dd-MMM-yy'
+            format='MM/dd/yy'
+            maxWidth='80'
           ></ColumnDirective>
-          <ColumnDirective field='Duration'></ColumnDirective>
+          <ColumnDirective field='Duration' maxWidth='75'></ColumnDirective>
         </ColumnsDirective>
       </GanttComponent>
     </div>
