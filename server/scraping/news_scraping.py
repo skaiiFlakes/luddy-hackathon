@@ -64,7 +64,7 @@ def get_industry_headlines(api_key: str, industry: str, output_file: str = 'indu
 
 def get_multiple_companies_headlines(api_key: str, companies: list[str],
                                      output_file: str = './company_headlines.csv',
-                                     headlines_per_company: int = 5) -> pd.DataFrame:
+                                     headlines_per_company: int = 5) -> str:
     """
     Fetch headlines for multiple companies and save all to a single CSV file.
 
@@ -109,7 +109,8 @@ def get_multiple_companies_headlines(api_key: str, companies: list[str],
         print(f"Headlines per company:")
         print(df['company'].value_counts().to_string())
 
-        return df
+        # return df
+        return output_file
 
     except Exception as e:
         print(f"Error processing companies: {str(e)}")
