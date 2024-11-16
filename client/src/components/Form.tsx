@@ -117,13 +117,6 @@ export default function Form() {
           required
           value={industry}
           onChange={handleIndustryChange}
-          theme={{
-            field: {
-              input: {
-                colors: { gray: 'bg-gray-800 border-gray-500 text-white' },
-              },
-            },
-          }}
         >
           {[
             'Automotive',
@@ -160,13 +153,6 @@ export default function Form() {
           required
           value={kpi}
           onChange={handleKpiChange}
-          theme={{
-            field: {
-              input: {
-                colors: { gray: 'bg-gray-800 border-gray-500 text-white' },
-              },
-            },
-          }}
         >
           {Object.keys(kpiDescriptions).map((key) => (
             <option key={key} value={key}>
@@ -224,7 +210,7 @@ export default function Form() {
       <FormGroup label='Deadline'>
         <Datepicker
           className='dark w-full'
-          onSelectedDateChanged={handleDeadlineChange}
+          // onSelectedDateChanged={handleDeadlineChange}
           theme={{
             root: {
               base: 'relative',
