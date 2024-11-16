@@ -20,14 +20,20 @@ const FormGroup = ({
   </div>
 );
 
-export default function Form() {
+export default function Form({
+  setIsLoading,
+  setError,
+  setResponse,
+}: {
+  setIsLoading: (isLoading: boolean) => void;
+  setError: (error: string | null) => void;
+  setResponse: (response: any) => void;
+}) {
   const [industry, setIndustry] = useState('Information Technology');
   const [kpi, setKpi] = useState('Gross Sales');
   const [currentStatus, setCurrentStatus] = useState('');
   const [targetStatus, setTargetStatus] = useState('');
   const [deadline, setDeadline] = useState(new Date());
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -56,9 +62,8 @@ export default function Form() {
       }
 
       const data = await response.json();
-      console.log('Response:', data);
+      setResponse(data);
 
-      // Clear form or show success message
       setCurrentStatus('');
       setTargetStatus('');
       setDeadline(new Date());

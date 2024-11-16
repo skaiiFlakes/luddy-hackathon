@@ -2,9 +2,12 @@ import Form from './Form';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Gantt from './Gantt';
+import GanttSkeleton from './GanttSkeleton';
 import { Target, Clock, TrendingUp, LineChart } from 'lucide-react';
-// import { sampleGanttData } from '../sampleGanttData';
 import TechStack from './TechStack';
+
+// import { sampleGanttData } from '../sampleGanttData';
+
 export default function Main() {
   interface ResponseData {
     outputs: {
@@ -12,17 +15,11 @@ export default function Main() {
     };
   }
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [response, setResponse] = useState<ResponseData>({
     outputs: { recommendations: [] },
   });
-
-  useEffect(() => {
-    fetch('http://localhost:8080/api/home')
-      .then((res) => res.json())
-      .then((data) => {
-        setResponse(data);
-      });
-  }, []);
 
   return (
     <section className='text-gray-600 body-font'>
@@ -38,11 +35,19 @@ export default function Main() {
       </div>
       <div className='container pt-12 pb-36 max-w-4xl mx-auto justify-center items-center'>
         <div className='ktq4'>
-          <Form />
+          <Form
+            setError={setError}
+            setIsLoading={setIsLoading}
+            setResponse={setResponse}
+          />
         </div>
       </div>
 
-      {response && <Gantt data={response.outputs.recommendations} />}
+      {Object.keys(response).length !== 0 &&
+        response.outputs.recommendations.length > 0 && (
+          <Gantt data={response.outputs.recommendations} />
+        )}
+      {isLoading && Object.keys(response).length !== 0 && <GanttSkeleton />}
 
       <TechStack />
 
