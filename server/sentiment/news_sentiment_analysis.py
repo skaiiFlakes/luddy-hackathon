@@ -112,7 +112,158 @@ class HeadlineSentimentAnalyzer:
             'expansion': 0.3,
             'development': 0.3,
             'collaboration': 0.3,
-            'opportunity': 0.3
+            'opportunity': 0.3,
+
+            # Industry terms
+            # Automotive (-1.0 to 1.0)
+            'recall': -1.0,
+            'malfunction': -1.0,
+            'defect': -1.0,
+            'electric vehicle': 0.7,
+            'autonomous': 0.7,
+            'fuel-efficient': 0.7,
+            'horsepower': 0.3,
+            'mileage': 0.3,
+            'hybrid': 0.3,
+
+            # Banking (-1.0 to 1.0)
+            'default': -1.0,
+            'foreclosure': -1.0,
+            'fraud': -1.0,
+            'debt': -0.7,
+            'delinquency': -0.7,
+            'overdraft': -0.7,
+            'deposit': 0.3,
+            'dividend': 0.7,
+            'refinance': 0.3,
+
+            # Construction
+            'delay': -0.7,
+            'overbudget': -0.7,
+            'unsafe': -1.0,
+            'renovation': 0.3,
+            'expansion': 0.7,
+            'development': 0.3,
+
+            # Education
+            'dropout': -0.7,
+            'underperform': -0.7,
+            'tuition increase': -0.7,
+            'scholarship': 0.7,
+            'graduation': 1.0,
+            'achievement': 1.0,
+
+            # Energy
+            'blackout': -1.0,
+            'shortage': -1.0,
+            'spill': -1.0,
+            'renewable': 0.7,
+            'sustainable': 0.7,
+            'efficient': 0.7,
+
+            # Fashion
+            'outdated': -0.3,
+            'unfashionable': -0.3,
+            'clearance': -0.3,
+            'trending': 0.7,
+            'designer': 0.3,
+            'exclusive': 0.7,
+
+            # Food and Beverage
+            'recall': -1.0,
+            'contamination': -1.0,
+            'spoilage': -1.0,
+            'organic': 0.3,
+            'fresh': 0.7,
+            'award-winning': 1.0,
+
+            # Healthcare
+            'outbreak': -1.0,
+            'epidemic': -1.0,
+            'malpractice': -1.0,
+            'treatment': 0.3,
+            'cure': 1.0,
+            'breakthrough': 1.0,
+
+            # Information Technology
+            'bug': -0.7,
+            'vulnerability': -1.0,
+            'hack': -1.0,
+            'upgrade': 0.7,
+            'innovation': 1.0,
+            'ai': 0.7,
+
+            # Manufacturing
+            'defect': -1.0,
+            'shutdown': -1.0,
+            'malfunction': -1.0,
+            'automation': 0.7,
+            'efficiency': 0.7,
+            'productivity': 0.7,
+
+            # Media and Entertainment
+            'flop': -0.7,
+            'cancel': -0.7,
+            'controversy': -0.7,
+            'blockbuster': 1.0,
+            'award': 1.0,
+            'hit': 0.7,
+
+            # Real Estate
+            'foreclosure': -1.0,
+            'bubble': -0.7,
+            'vacancy': -0.7,
+            'luxury': 0.7,
+            'prime location': 1.0,
+            'appreciate': 0.7,
+
+            # Retail
+            'bankrupt': -1.0,
+            'closeout': -0.7,
+            'liquidation': -0.7,
+            'bestseller': 1.0,
+            'expansion': 0.7,
+            'exclusive': 0.7,
+
+            # Telecommunications
+            'outage': -1.0,
+            'disruption': -0.7,
+            'interference': -0.7,
+            '5g': 0.7,
+            'coverage': 0.3,
+            'bandwidth': 0.3,
+
+            # Transportation
+            'delay': -0.7,
+            'accident': -1.0,
+            'congestion': -0.7,
+            'express': 0.7,
+            'on-time': 0.7,
+            'efficient': 0.7,
+
+            # Travel and Tourism
+            'cancellation': -0.7,
+            'overbooked': -0.7,
+            'stranded': -1.0,
+            'luxury': 1.0,
+            'destination': 0.7,
+            'resort': 0.7,
+
+            # Utilities
+            'outage': -1.0,
+            'blackout': -1.0,
+            'shortage': -1.0,
+            'renewable': 0.7,
+            'reliable': 0.7,
+            'efficient': 0.7,
+
+            # Wholesale
+            'surplus': -0.3,
+            'oversupply': -0.7,
+            'shortage': -0.7,
+            'bulk': 0.3,
+            'distributor': 0.3,
+            'partnership': 0.7
         }
 
         # Keep the same magnitude modifiers
@@ -134,7 +285,53 @@ class HeadlineSentimentAnalyzer:
             'small': 0.8,
             'limited': 0.7,
             'partial': 0.8,
-            'moderate': 0.9
+            'moderate': 0.9,
+
+            # Scale indicators
+            'industry-leading': 1.3,
+            'market-leading': 1.3,
+            'cutting-edge': 1.2,
+            'next-generation': 1.2,
+            'revolutionary': 1.3,
+            'disruptive': 1.2,
+
+            # Market position
+            'dominant': 1.2,
+            'leading': 1.2,
+            'premium': 1.1,
+            'budget': 0.8,
+            'discount': 0.7,
+            'economy': 0.8,
+
+            # Growth/Scale
+            'rapid': 1.2,
+            'exponential': 1.3,
+            'steady': 1.1,
+            'gradual': 0.9,
+            'incremental': 0.8,
+
+            # Implementation
+            'seamless': 1.2,
+            'integrated': 1.1,
+            'comprehensive': 1.2,
+            'partial': 0.8,
+            'pilot': 0.9,
+            'beta': 0.8,
+
+            # Market response
+            'overwhelming': 1.3,
+            'strong': 1.2,
+            'moderate': 0.9,
+            'mixed': 0.8,
+            'limited': 0.7,
+
+            # Innovation
+            'breakthrough': 1.3,
+            'innovative': 1.2,
+            'advanced': 1.2,
+            'traditional': 0.9,
+            'conventional': 0.9,
+            'legacy': 0.8
         }
 
     def analyze_headline(self, headline: str, source: str) -> Dict:
