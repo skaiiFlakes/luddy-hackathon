@@ -44,6 +44,6 @@ if __name__ == "__main__":
         ]
     })
 
-    # Generate and print the prompt
-    final_prompt = generate_prompt(kpi_data)
-    print(final_prompt)
+# Generate and print the prompt
+final_prompt = generate_prompt(kpi_data)
+print(final_prompt)
