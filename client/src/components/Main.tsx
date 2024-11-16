@@ -15,22 +15,26 @@ export default function Main() {
 
   return (
     <section className='text-gray-600 body-font'>
-      <div className='max-w-5xl pt-52 pb-24 mx-auto'>
+      <div className='max-w-5xl pt-44 pb-4 mx-auto'>
         <h1 className='text-80 text-center font-4 lh-6 ld-04 font-bold text-white mb-6'>
           Turn Your KPI into Actionable Plans
         </h1>
         <h2 className='text-2xl font-4 font-semibold lh-6 ld-04 pb-11 text-gray-700 text-center'>
-          Input your KPI, industry, and deadline. Let us analyze the data and
-          deliver a tailored Gantt chart of tasks to drive your success.
+          Input your KPI, industry, and deadline. Let us analyze the data
+          <br /> and deliver a tailored Gantt chart of tasks to drive your
+          success.
         </h2>
-        <h2 className='font-8 font-thin lh-6 ld-04 pb-11 text-gray-100 text-center'>
+        {/* <h2 className='font-8 font-thin lh-6 ld-04 pb-11 text-gray-100 text-center'>
           {JSON.stringify(response)}
-        </h2>
+        </h2> */}
       </div>
 
-      <div className='container flex flex-col items-center justify-center mx-auto'>
-        <Form />
+      <div className='container pt-12 pb-24 max-w-4xl mx-auto justify-center items-center'>
+        <div className='ktq4 '>
+          <Form />
+        </div>
       </div>
+
       <h2 className='pt-40 mb-1 text-2xl font-semibold tracking-tighter text-center text-gray-200 lg:text-7xl md:text-6xl'>
         Your mother.
       </h2>
@@ -101,7 +105,6 @@ export default function Main() {
           </p>
         </div>
       </div>
-
       {/* <div className='ml-6 text-center'>
         <Link
           className='inline-flex items-center py-3 font-semibold text-black transition duration-500 ease-in-out transform bg-transparent bg-white px-7 text-md md:mt-0 hover:text-black hover:bg-white focus:shadow-outline'
@@ -120,7 +123,9 @@ export default function Main() {
           </div>
         </Link>
       </div> */}
-
+      <h2 className='font-8 font-thin lh-6 ld-04 pb-11 text-gray-100 text-center'>
+        {JSON.stringify(response)}
+      </h2>
       <div className='pt-32 pb-32 max-w-6xl mx-auto fsac4 md:px-1 px-3'>
         <div className='ktq4'>
           <img src='/api/placeholder/400/300' alt='template preview'></img>

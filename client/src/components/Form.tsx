@@ -1,6 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { Datepicker, Label, Select, TextInput } from 'flowbite-react';
-import { HiMail } from 'react-icons/hi';
+// import { HiMail } from 'react-icons/hi';
+
+const FormGroup = ({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) => (
+  <div className='max-w-full lg:flex lg:items-center lg:gap-4'>
+    <div className='lg:w-1/3'>
+      <Label
+        className='text-xl text-gray-300 font-normal leading-relaxed fs521'
+        value={label}
+      />
+    </div>
+    <div className='lg:w-2/3'>{children}</div>
+  </div>
+);
 
 export default function Form() {
   const [industry, setIndustry] = useState('');
@@ -91,154 +109,156 @@ export default function Form() {
   };
 
   return (
-    <div className='dark'>
-      <form onSubmit={handleSubmit} className='space-y-4'>
-        <div className='max-w-md'>
-          <div className='mb-2 block'>
-            <Label htmlFor='industries' value='Industry:' />
-          </div>
-          <Select
-            id='industries'
-            required
-            value={industry}
-            onChange={handleIndustryChange}
-            theme={{
-              field: {
-                input: {
-                  colors: { gray: 'bg-gray-800 border-gray-500 text-white' },
-                },
+    <form onSubmit={handleSubmit} className='space-y-4'>
+      <FormGroup label='Industry'>
+        <Select
+          className='dark'
+          id='industries'
+          required
+          value={industry}
+          onChange={handleIndustryChange}
+          theme={{
+            field: {
+              input: {
+                colors: { gray: 'bg-gray-800 border-gray-500 text-white' },
               },
-            }}
-          >
-            <option value='Technology'>Technology</option>
-            <option value='Finance'>Finance</option>
-            <option value='Healthcare'>Healthcare</option>
-            <option value='Retail'>Retail</option>
-            <option value='Education'>Education</option>
-            <option value='Manufacturing'>Manufacturing</option>
-            <option value='Hospitality'>Hospitality</option>
-            <option value='Transportation'>Transportation</option>
-            <option value='Media'>Media</option>
-            <option value='Telecommunications'>Telecommunications</option>
-          </Select>
-        </div>
+            },
+          }}
+        >
+          {[
+            'Automotive',
+            'Banking',
+            'Construction',
+            'Education',
+            'Energy',
+            'Fashion',
+            'Food and Beverage',
+            'Healthcare',
+            'Information Technology',
+            'Manufacturing',
+            'Media and Entertainment',
+            'Real Estate',
+            'Retail',
+            'Telecommunications',
+            'Transportation',
+            'Travel and Tourism',
+            'Utilities',
+            'Wholesale',
+            'Not Specified',
+          ].map((industry) => (
+            <option key={industry} value={industry}>
+              {industry}
+            </option>
+          ))}
+        </Select>
+      </FormGroup>
 
-        <div className='max-w-md'>
-          <div className='mb-2 block'>
-            <Label htmlFor='kpis' value='KPI:' />
-          </div>
-          <Select
-            id='kpis'
-            required
-            value={kpi}
-            onChange={handleKpiChange}
-            theme={{
-              field: {
-                input: {
-                  colors: { gray: 'bg-gray-800 border-gray-500 text-white' },
-                },
+      <FormGroup label='KPI'>
+        <Select
+          className='dark'
+          id='kpis'
+          required
+          value={kpi}
+          onChange={handleKpiChange}
+          theme={{
+            field: {
+              input: {
+                colors: { gray: 'bg-gray-800 border-gray-500 text-white' },
               },
-            }}
-          >
-            <option value='CAC'>CAC</option>
-            <option value='Churn Rate'>Churn Rate</option>
-            <option value='Average Order Size'>Average Order Size</option>
-            <option value='MRR'>MRR</option>
-            <option value='ARR'>ARR</option>
-            <option value='Cash Runway'>Cash Runway</option>
-            <option value='Burn Rate'>Burn Rate</option>
-            <option value='K-factor'>K-factor</option>
-            <option value='Gross Sales'>Gross Sales</option>
-            <option value='MAU'>MAU</option>
-            <option value='NPS'>NPS</option>
-            <option value='LVT/CAC'>LVT/CAC</option>
-          </Select>
-          {kpi && (
-            <p className='mt-2 text-sm text-gray-400'>{kpiDescriptions[kpi]}</p>
-          )}
-        </div>
+            },
+          }}
+        >
+          {Object.keys(kpiDescriptions).map((key) => (
+            <option key={key} value={key}>
+              {key}
+            </option>
+          ))}
+        </Select>
+      </FormGroup>
 
-        <div className='max-w-md'>
-          <div className='mb-2 block'>
-            <Label htmlFor='currentstatus' value='Current Status:' />
+      {kpi && (
+        <div className='max-w-full lg:flex lg:items-center lg:gap-4'>
+          <div className='lg:w-1/3'></div>
+          <div className='lg:w-2/3'>
+            <p className='text-sm text-gray-400'>{kpiDescriptions[kpi]}</p>
           </div>
-          <TextInput
-            id='currentstatus'
-            type='text'
-            value={currentStatus}
-            onChange={handleCurrentStatusChange}
-            required
-            theme={{
-              field: {
-                input: {
-                  colors: { gray: 'bg-gray-800 border-gray-500 text-white' },
-                },
+        </div>
+      )}
+
+      <FormGroup label='Current Status'>
+        <TextInput
+          className='dark w-full'
+          id='currentstatus'
+          type='text'
+          value={currentStatus}
+          onChange={handleCurrentStatusChange}
+          required
+          theme={{
+            field: {
+              input: {
+                colors: { gray: 'bg-gray-800 border-gray-500 text-white' },
               },
-            }}
-          />
-        </div>
+            },
+          }}
+        />
+      </FormGroup>
 
-        <div className='max-w-md'>
-          <div className='mb-2 block'>
-            <Label htmlFor='targetstatus' value='Target Status:' />
-          </div>
-          <TextInput
-            id='targetstatus'
-            type='text'
-            value={targetStatus}
-            onChange={handleTargetStatusChange}
-            required
-            theme={{
-              field: {
-                input: {
-                  colors: { gray: 'bg-gray-800 border-gray-500 text-white' },
-                },
+      <FormGroup label='Target Status'>
+        <TextInput
+          className='dark w-full'
+          id='targetstatus'
+          type='text'
+          value={targetStatus}
+          onChange={handleTargetStatusChange}
+          required
+          theme={{
+            field: {
+              input: {
+                colors: { gray: 'bg-gray-800 border-gray-500 text-white' },
               },
-            }}
-          />
-        </div>
+            },
+          }}
+        />
+      </FormGroup>
 
-        <div>
-          <div className='mb-2 block'>
-            <Label htmlFor='deadline' value='Deadline:' />
-          </div>
-          <div className='relative max-w-sm'>
-            <Datepicker
-              onSelectedDateChanged={handleDeadlineChange}
-              theme={{
-                root: {
-                  base: 'relative',
-                },
-                popup: {
-                  root: {
-                    base: 'absolute top-10 z-50 block bg-gray-800 border-gray-500 text-white',
+      <FormGroup label='Deadline'>
+        <Datepicker
+          className='dark w-full'
+          onSelectedDateChanged={handleDeadlineChange}
+          theme={{
+            root: {
+              base: 'relative',
+            },
+            popup: {
+              root: {
+                base: 'absolute top-10 z-50 block bg-gray-800 border-gray-500 text-white',
+              },
+            },
+            views: {
+              days: {
+                items: {
+                  base: 'grid w-64 grid-cols-7',
+                  item: {
+                    base: 'block flex-1 cursor-pointer rounded-lg border-0 text-center text-sm font-semibold leading-9 hover:bg-gray-700 hover:text-white text-gray-300',
+                    selected: 'bg-blue-600 text-white hover:bg-blue-600',
                   },
                 },
-                views: {
-                  days: {
-                    items: {
-                      base: 'grid w-64 grid-cols-7',
-                      item: {
-                        base: 'block flex-1 cursor-pointer rounded-lg border-0 text-center text-sm font-semibold leading-9 hover:bg-gray-700 hover:text-white text-gray-300',
-                        selected: 'bg-blue-600 text-white hover:bg-blue-600',
-                      },
-                    },
-                  },
-                },
-              }}
-            />
-          </div>
-        </div>
+              },
+            },
+          }}
+        />
+      </FormGroup>
 
+      <div className='lg:ml-[33.33%]'>
         <button
           type='submit'
-          className='inline-flex items-center py-3 font-semibold tracking-tighter text-white transition duration-500 ease-in-out transform bg-transparent bg-gradient-to-r from-blue-500 to-blue-800 px-14 text-md md:mt-0 focus:shadow-outline'
+          className='inline-flex items-center py-2 rounded-lg font-semibold tracking-tighter text-white transition duration-200 ease-in-out transform bg-transparent bg-gradient-to-r from-blue-500 to-blue-800 px-28 text-md md:mt-0 focus:shadow-outline ml-2.5 hover:scale-105 focus:scale-100'
         >
           <div className='flex text-lg'>
             <span className='justify-center'>Submit</span>
           </div>
         </button>
-      </form>
-    </div>
+      </div>
+    </form>
   );
 }
