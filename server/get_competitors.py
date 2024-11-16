@@ -27,6 +27,12 @@ def get_competitors(industry):
         {"role": "user", "content": my_prompt}
     ]
     )
-    print(completion.choices[0].message.content)
-    print(type(completion.choices[0].message.content))
-    return completion.choices[0].message.content
+    result = completion.choices[0].message.content
+    print(result)
+    print(type(result))
+
+    # Write the result to a file
+    with open('./competitor_info', 'w') as file:
+        file.write(result)
+
+    return result
