@@ -1,7 +1,18 @@
 import Form from './Form';
 import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 
 export default function Main() {
+  const [response, setResponse] = useState('loading');
+
+  useEffect(() => {
+    fetch('http://localhost:8080/api/home')
+      .then((res) => res.json())
+      .then((data) => {
+        setResponse(data);
+      });
+  }, []);
+
   return (
     <section className='text-gray-600 body-font'>
       <div className='max-w-5xl pt-52 pb-24 mx-auto'>
@@ -12,24 +23,9 @@ export default function Main() {
           Input your KPI, industry, and deadline. Let us analyze the data and
           deliver a tailored Gantt chart of tasks to drive your success.
         </h2>
-        <div className='ml-6 text-center'>
-          <Link
-            className='inline-flex items-center py-3 font-semibold text-black transition duration-500 ease-in-out transform bg-transparent bg-white px-7 text-md md:mt-0 hover:text-black hover:bg-white focus:shadow-outline'
-            href='/templates'
-          >
-            <div className='flex text-lg'>
-              <span className='justify-center'>View All Templates</span>
-            </div>
-          </Link>
-          <Link
-            className='inline-flex items-center py-3 font-semibold tracking-tighter text-white transition duration-500 ease-in-out transform bg-transparent ml-11 bg-gradient-to-r from-blue-500 to-blue-800 px-14 text-md md:mt-0 focus:shadow-outline'
-            href='/purchase'
-          >
-            <div className='flex text-lg'>
-              <span className='justify-center'>Purchase</span>
-            </div>
-          </Link>
-        </div>
+        <h2 className='font-8 font-thin lh-6 ld-04 pb-11 text-gray-100 text-center'>
+          {JSON.stringify(response)}
+        </h2>
       </div>
 
       <div className='container flex flex-col items-center justify-center mx-auto'>
@@ -105,6 +101,26 @@ export default function Main() {
           </p>
         </div>
       </div>
+
+      {/* <div className='ml-6 text-center'>
+        <Link
+          className='inline-flex items-center py-3 font-semibold text-black transition duration-500 ease-in-out transform bg-transparent bg-white px-7 text-md md:mt-0 hover:text-black hover:bg-white focus:shadow-outline'
+          href='/templates'
+        >
+          <div className='flex text-lg'>
+            <span className='justify-center'>View All Templates</span>
+          </div>
+        </Link>
+        <Link
+          className='inline-flex items-center py-3 font-semibold tracking-tighter text-white transition duration-500 ease-in-out transform bg-transparent ml-11 bg-gradient-to-r from-blue-500 to-blue-800 px-14 text-md md:mt-0 focus:shadow-outline'
+          href='/purchase'
+        >
+          <div className='flex text-lg'>
+            <span className='justify-center'>Purchase</span>
+          </div>
+        </Link>
+      </div> */}
+
       <div className='pt-32 pb-32 max-w-6xl mx-auto fsac4 md:px-1 px-3'>
         <div className='ktq4'>
           <img src='/api/placeholder/400/300' alt='template preview'></img>
