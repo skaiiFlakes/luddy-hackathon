@@ -186,11 +186,18 @@ def generate_news_sentiment(industry: str = "") -> str:
     sentiment_text = read_sentiment_to_string()
     return sentiment_text
 
-
+def get_sentiment_context(industry: str = "") -> str:
+    context = ""
+    social_sentiment = generate_social_sentiment(industry=industry)
+    for s in social_sentiment:
+        context += s + "\n"
+    context += generate_news_sentiment(industry=industry)
+    return context
 
 if __name__ == "__main__":
     # search_terms = ['beigene', 'tango therapeutics', 'allogene therapeutics']
     # subreddits = ['biotech']
 
-    print(generate_social_sentiment(industry="space"))
-    print(generate_news_sentiment(industry="space"))
+    # print(generate_social_sentiment(industry="space"))
+    # print(generate_news_sentiment(industry="space"))
+    print(get_sentiment_context("space"))
