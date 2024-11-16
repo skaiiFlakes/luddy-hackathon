@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Label, Select, TextInput } from 'flowbite-react';
-// import { HiMail } from 'react-icons/hi';
 
 const FormGroup = ({
   label,
@@ -22,73 +21,83 @@ const FormGroup = ({
 
 export default function Form() {
   const [industry, setIndustry] = useState('');
-  const [kpi, setKpi] = useState('CAC');
+  const [kpi, setKpi] = useState('Gross Sales');
   const [currentStatus, setCurrentStatus] = useState('');
   const [targetStatus, setTargetStatus] = useState('');
   const [deadline, setDeadline] = useState('');
 
   const kpis: {
-    [key: string]: { description: string; unit: string };
+    [key: string]: { description: string; unit: string; abbr: string };
   } = {
-    CAC: {
+    'Customer Acquisition Cost': {
       description:
-        'Customer Acquisition Cost - The total cost of acquiring a new customer, including marketing and sales expenses.',
+        'The total cost of acquiring a new customer, including marketing and sales expenses.',
       unit: 'USD',
+      abbr: 'CAC',
     },
     'Churn Rate': {
       description:
-        'Churn Rate - The percentage of customers who stop using your product/service over a given time period.',
+        'The percentage of customers who stop using your product/service over a given time period.',
       unit: '%',
+      abbr: 'CR',
     },
     'Average Order Size': {
       description:
-        'Average Order Size - The average monetary value of each order placed by customers.',
+        'The average monetary value of each order placed by customers.',
       unit: 'USD',
+      abbr: 'AOS',
     },
-    MRR: {
+    'Monthly Recurring Revenue': {
       description:
-        'Monthly Recurring Revenue - Predictable revenue generated each month from subscriptions.',
+        'Predictable revenue generated each month from subscriptions.',
       unit: 'USD',
+      abbr: 'MRR',
     },
-    ARR: {
-      description:
-        'Annual Recurring Revenue - Predictable revenue generated annually from subscriptions.',
+    'Annual Recurring Revenue': {
+      description: 'Predictable revenue generated annually from subscriptions.',
       unit: 'USD',
+      abbr: 'ARR',
     },
     'Cash Runway': {
       description:
-        'Cash Runway - The amount of time a company can continue operating with its current cash reserves.',
+        'The amount of time a company can continue operating with its current cash reserves.',
       unit: 'mos.',
+      abbr: 'CR',
     },
     'Burn Rate': {
       description:
-        'Burn Rate - The rate at which a company spends its cash reserves on operating expenses.',
+        'The rate at which a company spends its cash reserves on operating expenses.',
       unit: 'USD',
+      abbr: 'BR',
     },
     'K-factor': {
       description:
-        'K-factor - The growth rate of a product through viral customer acquisition.',
+        'The growth rate of a product through viral customer acquisition.',
       unit: '',
+      abbr: 'KF',
     },
     'Gross Sales': {
       description:
-        'Gross Sales - Total revenue generated before deductions for returns, discounts, and other expenses.',
+        'Total revenue generated before deductions for returns, discounts, and other expenses.',
       unit: 'USD',
+      abbr: 'GS',
     },
-    MAU: {
+    'Monthly Active Users': {
       description:
-        'Monthly Active Users - The number of unique users who interact with your product in a month.',
+        'The number of unique users who interact with your product in a month.',
       unit: '#',
+      abbr: 'MAU',
     },
-    NPS: {
+    'Net Promoter Score': {
       description:
-        'Net Promoter Score - Measures customer satisfaction and likelihood to recommend.',
+        'Measures customer satisfaction and likelihood to recommend.',
       unit: '',
+      abbr: 'NPS',
     },
     'LVT/CAC': {
-      description:
-        'Lifetime Value to Customer Acquisition Cost ratio - Measures the return on customer acquisition investment.',
+      description: 'Measures the return on customer acquisition investment.',
       unit: '',
+      abbr: 'LVT/CAC',
     },
   };
 
@@ -230,7 +239,9 @@ export default function Form() {
             theme={{
               field: {
                 input: {
-                  colors: { gray: 'bg-gray-800 border-gray-500 text-white' },
+                  colors: {
+                    gray: 'bg-gray-800 border-gray-500 text-white',
+                  },
                 },
               },
             }}

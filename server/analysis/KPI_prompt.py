@@ -12,15 +12,15 @@ def generate_prompt(data):
     """
     if 'KPI' not in data.columns or 'Specific Inputs, design additions' not in data.columns:
         raise ValueError("Data must contain 'KPI' and 'Specific Inputs, design additions' columns.")
-    
+
     # Build the prompt
     prompt = "Analyze the following financial metrics with the given inputs:\n\n"
-    
+
     for _, row in data.iterrows():
         kpi = row['KPI']
         inputs = row['Specific Inputs, design additions']
         prompt += f"- **{kpi}**: {inputs}\n"
-    
+
     prompt += "\nProvide 10 actionable strategies based on KPI provided, highlighting trends, recommendations, and areas for improvement."
     return prompt
 

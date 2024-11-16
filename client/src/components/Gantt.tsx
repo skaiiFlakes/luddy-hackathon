@@ -11,9 +11,12 @@ import {
   PdfExport,
   ExcelExport,
 } from '@syncfusion/ej2-react-gantt';
+import { enableRipple } from '@syncfusion/ej2-base';
 import { PdfColor } from '@syncfusion/ej2-pdf-export';
 
-function Gantt({ data }) {
+enableRipple(true);
+
+function Gantt({ data }: { data: any }) {
   let ganttInst: GanttComponent | null;
   const editOptions: any = {
     allowEditing: true,
@@ -94,8 +97,14 @@ function Gantt({ data }) {
 
   return (
     <div>
+      <p className='mx-auto pb-5 text-xl text-center text-gray-700 font-normal leading-relaxed fs521 lg:w-2/3'>
+        Expand each strategy to view subtasks.
+      </p>
+
       <GanttComponent
-        ref={(gantt) => (ganttInst = gantt)}
+        ref={(gantt: GanttComponent | null) => {
+          ganttInst = gantt;
+        }}
         dataSource={data}
         taskFields={taskValues}
         editSettings={editOptions}
