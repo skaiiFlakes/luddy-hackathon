@@ -66,10 +66,6 @@ export default function Form({
 
       const data = await response.json();
       setResponse(data);
-
-      setCurrentStatus('');
-      setTargetStatus('');
-      setDeadline(new Date());
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
@@ -172,7 +168,9 @@ export default function Form({
         >
           {Object.keys(kpis).map((key) => (
             <option key={key} value={key}>
-              {key}
+              {key} {'('}
+              {kpis[key].abbr}
+              {')'}
             </option>
           ))}
         </Select>
@@ -187,7 +185,7 @@ export default function Form({
         </div>
       )}
 
-      <FormGroup label='Current Status'>
+      <FormGroup label={`Current ${kpis[kpi].abbr}`}>
         <div className='flex'>
           {kpis[kpi].unit !== '' && (
             <div className='text-sm text-gray-400 pt-3 pr-4'>
@@ -214,7 +212,7 @@ export default function Form({
         </div>
       </FormGroup>
 
-      <FormGroup label='Target Status'>
+      <FormGroup label={`Target ${kpis[kpi].abbr}`}>
         <div className='flex'>
           {kpis[kpi].unit !== '' && (
             <div className='text-sm text-gray-400 pt-3 pr-4'>
@@ -258,7 +256,7 @@ export default function Form({
       <div className='lg:ml-[33.33%]'>
         <button
           type='submit'
-          className='inline-flex items-center py-2 rounded-lg font-semibold tracking-tighter text-white transition duration-200 ease-in-out transform bg-transparent bg-gradient-to-r from-blue-500 to-blue-800 px-28 text-md md:mt-0 focus:shadow-outline ml-2.5 hover:scale-105 focus:scale-100'
+          className='inline-flex items-center py-2 rounded-lg font-semibold tracking-tighter text-white transition duration-200 ease-in-out transform bg-transparent bg-gradient-to-r from-blue-500 to-blue-800 px-28 text-md md:mt-0 focus:shadow-outline lg:ml-2.5 hover:scale-105 focus:scale-100'
         >
           <div className='flex text-lg'>
             <span className='justify-center'>Submit</span>

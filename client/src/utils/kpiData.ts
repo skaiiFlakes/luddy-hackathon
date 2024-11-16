@@ -74,7 +74,7 @@ export const kpis: KpiDictionary = {
     unit: '',
     abbr: 'NPS',
   },
-  'LVT/CAC': {
+  'Customer Lifetime Value to Customer Acquisition Cost Ratio': {
     description: 'Measures the return on customer acquisition investment.',
     unit: '',
     abbr: 'LVT/CAC',
