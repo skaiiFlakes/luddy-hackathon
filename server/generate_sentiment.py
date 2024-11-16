@@ -5,6 +5,9 @@ from scraping import parse_csv as pc
 from scraping import social_scraping as ss
 from sentiment import social_sentiment_analysis as ssa
 from get_competitors import get_competitors as gc
+from scraping import news_scraping as ns
+from scraping import financial_news_scraping as fns
+from sentiment import news_sentiment_analysis as nsa
 
 def generate_config(subreddits: list[str] = [],
                     search_terms: list[str] = [],
@@ -111,7 +114,7 @@ def generate_social_sentiment(industry: str = "",
     # Parse the competitor_info to extract top_companies and subreddits
     competitor_info = ast.literal_eval(competitor_info)
     top_companies = competitor_info[0]
-    subreddits = competitor_info[1]
+    subreddits = competitor_info[2]
     # Generate config for scraping
     generate_config(subreddits=subreddits, search_terms=top_companies, config_file=config_file, sort_method='relevant')
     # Do scraping to get csv
@@ -146,9 +149,48 @@ def generate_social_sentiment(industry: str = "",
     ]
     return summary_strings
 
+def read_sentiment_to_string(file_path='news_sentiment.txt') -> str:
+    """Read the news sentiment file and return its contents as a string"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            return f.read()
+    except FileNotFoundError:
+        return "Error: news_sentiment.txt file not found"
+    except Exception as e:
+        return f"Error reading file: {str(e)}"
+
+def generate_news_sentiment(industry: str = "") -> str:
+    # Get info from ChatGPT
+    # Check if the competitor_info file exists
+    if not os.path.exists('./competitor_info.txt'):
+        print("NOTFOUND")
+        competitor_info = gc(industry)
+        with open('./competitor_info.txt', 'w') as file:
+            file.write(competitor_info)
+    else:
+        with open('./competitor_info.txt', 'r') as file:
+            competitor_info = file.read()
+
+    # Parse the competitor_info to extract top_companies and subreddits
+    competitor_info = ast.literal_eval(competitor_info)
+    top_companies = competitor_info[0]
+    top_companies_tickers = competitor_info[1]
+    # Run general news scraping
+    general_news_path = ns.get_multiple_companies_headlines(api_key='', companies=top_companies, output_file='../general_news.csv', headlines_per_company=5)
+    # Run financial news scraping
+    financial_news_path = fns.get_company_news(top_companies_tickers, max_headlines=5)
+    # Run sentiment analysis
+    analyzer = nsa.HeadlineSentimentAnalyzer()
+    analyzer.process_csv_files(news_csv=general_news_path, financial_csv=financial_news_path)
+    # Return sentiment
+    sentiment_text = read_sentiment_to_string()
+    return sentiment_text
+
+
 
 if __name__ == "__main__":
     # search_terms = ['beigene', 'tango therapeutics', 'allogene therapeutics']
     # subreddits = ['biotech']
 
     print(generate_social_sentiment(industry="space"))
+    print(generate_news_sentiment(industry="space"))
