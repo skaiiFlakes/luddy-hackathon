@@ -179,7 +179,7 @@ def generate_news_sentiment(industry: str = "") -> str:
     top_companies = competitor_info[0]
     top_companies_tickers = competitor_info[1]
     # Run general news scraping
-    general_news_path = ns.get_multiple_companies_headlines(api_key=os.environ.get('REDDIT_CLIENT_ID'), companies=top_companies, output_file='../general_news.csv', headlines_per_company=5)
+    general_news_path = ns.get_multiple_companies_headlines(api_key=os.environ.get('NEWS_SCRAPING_API'), companies=top_companies, output_file='../general_news.csv', headlines_per_company=5)
     # Run financial news scraping
     financial_news_path = fns.get_company_news(top_companies_tickers, max_headlines=5)
     # Run sentiment analysis

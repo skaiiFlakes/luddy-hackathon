@@ -7,7 +7,7 @@ import re
 from datetime import datetime
 from collections import defaultdict
 from typing import Dict, List, Optional, Union
-
+import ssl
 
 class SocialSentiment:
     def __init__(self, sector: str = "tech"):
@@ -19,9 +19,15 @@ class SocialSentiment:
         """
         import nltk
         try:
+            _create_unverified_https_context = ssl._create_unverified_context
+        except AttributeError:
+            pass
+        else:
+            ssl._create_default_https_context = _create_unverified_https_context
+        try:
             nltk.data.find('sentiment/vader_lexicon.zip')
         except LookupError:
-            nltk.download('vader_lexicon')
+            nltk.downloader.download('vader_lexicon')
 
         self.vader = SentimentIntensityAnalyzer()
 
