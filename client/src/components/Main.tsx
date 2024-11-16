@@ -1,9 +1,20 @@
 import Form from './Form';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-
+import Gantt from './Gantt';
+import { Target, Clock, TrendingUp, LineChart } from 'lucide-react';
+// import { sampleGanttData } from '../sampleGanttData';
+import TechStack from './TechStack';
 export default function Main() {
-  const [response, setResponse] = useState('loading');
+  interface ResponseData {
+    outputs: {
+      recommendations: any[];
+    };
+  }
+
+  const [response, setResponse] = useState<ResponseData>({
+    outputs: { recommendations: [] },
+  });
 
   useEffect(() => {
     fetch('http://localhost:8080/api/home')
@@ -15,145 +26,112 @@ export default function Main() {
 
   return (
     <section className='text-gray-600 body-font'>
-      <div className='max-w-5xl pt-44 pb-4 mx-auto'>
+      <div className='max-w-5xl pt-56 pb-16 mx-auto'>
         <h1 className='text-80 text-center font-4 lh-6 ld-04 font-bold text-white mb-6'>
-          Turn Your KPI into Actionable Plans
+          Turn Your KPIs into Actionable Plans
         </h1>
         <h2 className='text-2xl font-4 font-semibold lh-6 ld-04 pb-11 text-gray-700 text-center'>
           Input your KPI, industry, and deadline. Let us analyze the data
           <br /> and deliver a tailored Gantt chart of tasks to drive your
           success.
         </h2>
-        {/* <h2 className='font-8 font-thin lh-6 ld-04 pb-11 text-gray-100 text-center'>
-          {JSON.stringify(response)}
-        </h2> */}
       </div>
-
-      <div className='container pt-12 pb-24 max-w-4xl mx-auto justify-center items-center'>
-        <div className='ktq4 '>
+      <div className='container pt-12 pb-36 max-w-4xl mx-auto justify-center items-center'>
+        <div className='ktq4'>
           <Form />
         </div>
       </div>
 
+      {response && <Gantt data={response.outputs.recommendations} />}
+
+      <TechStack />
+
       <h2 className='pt-40 mb-1 text-2xl font-semibold tracking-tighter text-center text-gray-200 lg:text-7xl md:text-6xl'>
-        Your mother.
+        Planning made simple.
       </h2>
       <br></br>
       <p className='mx-auto text-xl text-center text-gray-300 font-normal leading-relaxed fs521 lg:w-2/3'>
-        Here is our collection of free to use templates made with Next.js &
-        styled with Tailwind CSS.
+        Our intelligent platform helps you break down complex KPI targets into
+        manageable, <br />
+        time-bound action items with clear tasks and measurable outcomes.
       </p>
       <div className='pt-12 pb-24 max-w-4xl mx-auto fsac4 md:px-1 px-3'>
         <div className='ktq4'>
-          <img
-            className='w-10'
-            src='/api/placeholder/40/40'
-            alt='feature icon'
-          ></img>
+          <Target className='w-10 h-10 text-blue-500' />
           <h3 className='pt-3 font-semibold text-lg text-white'>
-            Lorem ipsum dolor sit amet
+            Smart Goal Setting
           </h3>
           <p className='pt-2 value-text text-md text-gray-200 fkrr1'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
-            porttitor.
+            Transform high-level KPIs into specific, measurable objectives with
+            our AI-powered goal breakdown system. Get clear metrics and
+            milestones for every stage of your journey.
           </p>
         </div>
         <div className='ktq4'>
-          <img
-            className='w-10'
-            src='/api/placeholder/40/40'
-            alt='feature icon'
-          ></img>
+          <Clock className='w-10 h-10 text-blue-500' />
           <h3 className='pt-3 font-semibold text-lg text-white'>
-            Lorem ipsum dolor sit amet
+            Timeline Optimization
           </h3>
           <p className='pt-2 value-text text-md text-gray-200 fkrr1'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
-            porttitor.
+            Our intelligent scheduling algorithm creates realistic timelines
+            based on your industry benchmarks and resource constraints. Stay on
+            track with automated progress tracking and adjustments.
           </p>
         </div>
         <div className='ktq4'>
-          <img
-            className='w-10'
-            src='/api/placeholder/40/40'
-            alt='feature icon'
-          ></img>
+          <TrendingUp className='w-10 h-10 text-blue-500' />
           <h3 className='pt-3 font-semibold text-lg text-white'>
-            Lorem ipsum dolor sit amet
+            Finance-Driven Insights
           </h3>
           <p className='pt-2 value-text text-md text-gray-200 fkrr1'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
-            porttitor.
+            Enhance your KPI planning with stock insights. Our platform analyzes
+            market conditions, cost structures, and revenue patterns to provide
+            contextual recommendations that align with your financial goals.
           </p>
         </div>
         <div className='ktq4'>
-          <img
-            className='w-10'
-            src='/api/placeholder/40/40'
-            alt='feature icon'
-          ></img>
+          <LineChart className='w-10 h-10 text-blue-500' />
           <h3 className='pt-3 font-semibold text-lg text-white'>
-            Lorem ipsum dolor sit amet
+            Market Sentiment Analytics
           </h3>
           <p className='pt-2 value-text text-md text-gray-200 fkrr1'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
-            porttitor.
+            Stay ahead with real-time market sentiment analysis. Our AI
+            processes customer feedback, social media trends, and industry
+            signals to help you adjust your KPI strategies based on market
+            dynamics.
           </p>
         </div>
       </div>
-      {/* <div className='ml-6 text-center'>
-        <Link
-          className='inline-flex items-center py-3 font-semibold text-black transition duration-500 ease-in-out transform bg-transparent bg-white px-7 text-md md:mt-0 hover:text-black hover:bg-white focus:shadow-outline'
-          href='/templates'
-        >
-          <div className='flex text-lg'>
-            <span className='justify-center'>View All Templates</span>
-          </div>
-        </Link>
-        <Link
-          className='inline-flex items-center py-3 font-semibold tracking-tighter text-white transition duration-500 ease-in-out transform bg-transparent ml-11 bg-gradient-to-r from-blue-500 to-blue-800 px-14 text-md md:mt-0 focus:shadow-outline'
-          href='/purchase'
-        >
-          <div className='flex text-lg'>
-            <span className='justify-center'>Purchase</span>
-          </div>
-        </Link>
-      </div> */}
-      <h2 className='font-8 font-thin lh-6 ld-04 pb-11 text-gray-100 text-center'>
-        {JSON.stringify(response)}
-      </h2>
+      {/*
       <div className='pt-32 pb-32 max-w-6xl mx-auto fsac4 md:px-1 px-3'>
         <div className='ktq4'>
-          <img src='/api/placeholder/400/300' alt='template preview'></img>
+          <img src='/api/placeholder/400/300' alt='Sales KPI Template'></img>
           <h3 className='pt-3 font-semibold text-lg text-white'>
-            Lorem ipsum dolor sit amet
+            Sales Performance KPI Template
           </h3>
           <p className='pt-2 value-text text-md text-gray-200 fkrr1'>
-            Fusce pharetra ligula mauris, quis faucibus lectus elementum vel.
-            Nullam vehicula, libero at euismod tristique, neque ligula faucibus
-            urna, quis ultricies massa enim in nunc. Vivamus ultricies, quam ut
-            rutrum blandit, turpis massa ornare velit, in sodales tellus ex nec
-            odio.
+            Accelerate your sales team's performance with our comprehensive KPI
+            template. Includes proven strategies for pipeline management,
+            conversion rate optimization, and revenue growth. Perfect for B2B
+            and B2C sales teams looking to exceed their targets.
           </p>
         </div>
         <div className='ktq4'>
-          <img src='/api/placeholder/400/300' alt='template preview'></img>
+          <img
+            src='/api/placeholder/400/300'
+            alt='Customer Success Template'
+          ></img>
           <h3 className='pt-3 font-semibold text-lg text-white'>
-            Lorem ipsum dolor sit amet
+            Customer Success Metrics Template
           </h3>
           <p className='pt-2 value-text text-md text-gray-200 fkrr1'>
-            Fusce pharetra ligula mauris, quis faucibus lectus elementum vel.
-            Nullam vehicula, libero at euismod tristique, neque ligula faucibus
-            urna, quis ultricies massa enim in nunc. Vivamus ultricies, quam ut
-            rutrum blandit, turpis massa ornare velit, in sodales tellus ex nec
-            odio.
+            Drive customer satisfaction and retention with our customer success
+            KPI template. Features detailed action plans for improving NPS,
+            reducing churn, and increasing customer lifetime value. Built on
+            best practices from leading SaaS companies.
           </p>
         </div>
-      </div>
+      </div> */}
       <section className='relative pb-24'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 text-center'>
           <div className='py-24 md:py-36'>
@@ -161,11 +139,11 @@ export default function Main() {
               Subscribe to our newsletter
             </h1>
             <h1 className='mb-9 text-2xl font-semibold text-gray-200'>
-              Enter your email address and get our newsletters straight away.
+              Get expert KPI insights and planning tips delivered to your inbox.
             </h1>
             <input
               type='email'
-              placeholder='jack@example.com'
+              placeholder='g4ntt@iu.edu'
               name='email'
               className='border border-gray-600 w-1/4 pr-2 pl-2 py-3 mt-2 rounded-md text-gray-800 font-semibold hover:border-gray-700 bg-black'
             />

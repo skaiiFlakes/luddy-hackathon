@@ -2,8 +2,44 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 @import 'flowbite/dist/flowbite.min.css';
+@import '../../node_modules/@syncfusion/ej2-base/styles/fluent-dark.css';
+@import '../../node_modules/@syncfusion/ej2-base/styles/fluent-dark.css';
+@import '../../node_modules/@syncfusion/ej2-buttons/styles/fluent-dark.css';
+@import '../../node_modules/@syncfusion/ej2-calendars/styles/fluent-dark.css';
+@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/fluent-dark.css';
+@import '../../node_modules/@syncfusion/ej2-gantt/styles/fluent-dark.css';
+@import '../../node_modules/@syncfusion/ej2-grids/styles/fluent-dark.css';
+@import '../../node_modules/@syncfusion/ej2-inputs/styles/fluent-dark.css';
+@import '../../node_modules/@syncfusion/ej2-layouts/styles/fluent-dark.css';
+@import '../../node_modules/@syncfusion/ej2-lists/styles/fluent-dark.css';
+@import '../../node_modules/@syncfusion/ej2-navigations/styles/fluent-dark.css';
+@import '../../node_modules/@syncfusion/ej2-popups/styles/fluent-dark.css';
+@import '../../node_modules/@syncfusion/ej2-richtexteditor/styles/fluent-dark.css';
+@import '../../node_modules/@syncfusion/ej2-treegrid/styles/fluent-dark.css';
 @import url(//db.onlinewebfonts.com/c/e5c490a944bc2b2746f0c851501e46c7?family=AvenirNextW10-Bold);
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.e-gantt .e-gantt-parent-taskbar,
+.e-gantt .e-gantt-parent-taskbar .e-taskbar-main-container,
+.e-gantt .e-gantt-parent-taskbar .e-gantt-task-parent,
+.e-gantt .e-gantt-parent-taskbar.e-taskbar-main-container,
+.e-gantt .e-gantt-parent-taskbar .e-task-wrapper {
+  background-color: #3053b5 !important;
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.e-gantt .e-gantt-child-taskbar,
+.e-gantt .e-gantt-child-taskbar .e-taskbar-main-container,
+.e-gantt .e-gantt-child-taskbar .e-gantt-task-parent,
+.e-gantt .e-gantt-child-taskbar.e-taskbar-main-container,
+.e-gantt .e-gantt-child-taskbar .e-task-wrapper {
+  background-color: #5c8de8 !important;
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
 
 html,
 body {
