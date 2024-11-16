@@ -123,6 +123,9 @@ export default function Main() {
           </div>
         </Link>
       </div> */}
+      <h2 className='font-8 font-thin lh-6 ld-04 pb-11 text-gray-100 text-center'>
+        {JSON.stringify(response)}
+      </h2>
       <div className='pt-32 pb-32 max-w-6xl mx-auto fsac4 md:px-1 px-3'>
         <div className='ktq4'>
           <img src='/api/placeholder/400/300' alt='template preview'></img>
