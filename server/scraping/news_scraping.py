@@ -63,7 +63,7 @@ def get_industry_headlines(api_key: str, industry: str, output_file: str = 'indu
         raise IOError(f"Failed to write to CSV file: {str(e)}")
 
 def get_multiple_companies_headlines(api_key: str, companies: list[str],
-                                     output_file: str = '../company_headlines.csv',
+                                     output_file: str = './general_news.csv',
                                      headlines_per_company: int = 5) -> str:
     """
     Fetch headlines for multiple companies and save all to a single CSV file.
