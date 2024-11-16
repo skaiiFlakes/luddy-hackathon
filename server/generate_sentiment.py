@@ -140,7 +140,7 @@ def generate_social_sentiment(industry: str = "",
     # Get sentiment
     if not to_analyze:
         return ""
-    analyzer = ssa.SocialSentiment(sector='tech')
+    analyzer = ssa.SocialSentiment(sector=industry)
     sentiment = analyzer.analyze_batch(to_analyze, include_raw=True)
     summary = analyzer.summarize_sentiment(sentiment)
     summary_strings = [
