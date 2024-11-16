@@ -256,10 +256,10 @@ export default function Form({
       <div className='lg:ml-[33.33%]'>
         <button
           type='submit'
-          className='inline-flex items-center py-2 rounded-lg font-semibold tracking-tighter text-white transition duration-200 ease-in-out transform bg-transparent bg-gradient-to-r from-blue-500 to-blue-800 px-28 text-md md:mt-0 focus:shadow-outline lg:ml-2.5 hover:scale-105 focus:scale-100'
+          className='inline-flex items-center py-2 rounded-lg font-semibold tracking-tighter text-white transition duration-200 ease-in-out transform bg-transparent bg-gradient-to-r from-blue-500 to-blue-800 px-20 text-md md:mt-0 focus:shadow-outline lg:ml-2.5 hover:scale-105 focus:scale-100'
         >
           <div className='flex text-lg'>
-            <span className='justify-center'>Submit</span>
+            <span className='justify-center'>Generate G4NTT</span>
           </div>
         </button>
       </div>
