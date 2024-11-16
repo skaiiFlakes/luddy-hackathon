@@ -2,6 +2,7 @@ import openai
 import tiktoken
 import os
 from dotenv import load_dotenv
+import generate_sentiment as gs
 
 def count_tokens(text, model="gpt-3.5-turbo"):
     """
@@ -53,6 +54,7 @@ financial_metrics = "10% revenue growth, 15% profit margin"
 social_media_sentiment = "Positive sentiment, key phrases: 'great product', 'excellent service'"
 news_sentiment = "Neutral sentiment, key phrases: 'new product launch', 'industry trends'"
 financial_headline_sentiment = "Negative sentiment, key phrases: 'declining revenue', 'increased competition'"
+sentiments = gs.get_sentiment_context(industry)
 
 my_prompt = """
 **Inputs:**
@@ -65,9 +67,7 @@ my_prompt = """
     - Industry name: %s.
     - Financial health: %s.
 3. **Sentiment Analysis:**
-    - Social media sentiment and key phrases: %s.
-    - News sentiment and key phrases: %s.
-    - Financial headline sentiment and key phrases: %s.
+    - Social media, news, and financial headline sentiment analysis: %s
 
 **Tasks:**
 
@@ -119,7 +119,7 @@ my_prompt = """
 - Ensure the recommendations are actionable and prioritize tasks based on the provided data and urgency.
 - The timeline should align with the stated KPI improvement deadline and consider dependencies or sequencing of tasks.
 - Focus on strategies that leverage positive sentiment trends, address financial or competitive gaps, and align with industry benchmarks
-""" % (kpi, current_kpi, desired_kpi, deadline, industry, financial_metrics, social_media_sentiment, news_sentiment, financial_headline_sentiment)
+""" % (kpi, current_kpi, desired_kpi, deadline, industry, financial_metrics, sentiments)
 
 # sample_text = my_prompt
 # token_count = count_tokens(sample_text)

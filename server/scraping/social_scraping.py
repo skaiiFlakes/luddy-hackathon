@@ -46,7 +46,7 @@ class RedditMultiScraper:
             # Store other config parameters as instance variables
             self.search_terms = config.get('search_terms', [])
             self.subreddits = config.get('subreddits', [])
-            self.posts_per_search = config.get('posts_per_search', 10)
+            self.posts_per_search = config.get('posts_per_search', 5)
             self.comments_per_post = config.get('comments_per_post', 4)
             self.sort_method = config.get('sort_method', 'hot')
             self.time_filter = config.get('time_filter', 'all')
