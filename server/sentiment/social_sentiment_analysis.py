@@ -176,6 +176,38 @@ class SocialSentiment:
             'fanboy': -0.5,
             'salty': -1.0,
 
+            # Positive amplifiers
+            'literally': 1.2,
+            'actually': 1.1,
+            'officially': 1.2,
+            'legitimately': 1.2,
+            'absolutely': 1.3,
+
+            # Negative amplifiers
+            'supposedly': 0.8,
+            'apparently': 0.9,
+            'allegedly': 0.7,
+            'lowkey': 0.9,
+            'kinda': 0.8,
+
+            # Trend indicators
+            'trending': 1.2,
+            'viral': 1.2,
+            'breaking': 1.1,
+            'exclusive': 1.2,
+
+            # Tech emphasis
+            'ai-powered': 1.2,
+            'blockchain': 1.1,
+            'cloud-based': 1.1,
+            'digital': 1.1,
+
+            # Business emphasis
+            'enterprise': 1.2,
+            'professional': 1.1,
+            'corporate': 1.0,
+            'startup': 1.1,
+
             # Additional Emojis
             '💎': 1.5,  # Often used for "diamond hands" or valuable
             '🚀': 1.5,  # Strong positive/growth
@@ -194,219 +226,228 @@ class SocialSentiment:
             '🏆': 1.5,  # Victory/achievement
             '⭐': 1.0,  # Star/quality
             '💯': 1.5,  # Perfect/complete agreement
-
-            # Common emojis in professional context
-            '📈': 1.5,
-            '📊': 0.0,
-            '🚀': 1.5,
-            '💡': 1.0,
-            '🎯': 1.0,
-            '🤝': 1.0,
-            '💪': 1.0,
-            '📉': -1.5,
+            '‼️': 1.5,  # Double exclamation
+            '⁉️': 1.3,  # Exclamation question
+            '✨': 1.2,  # Sparkles (emphasis)
+            '❤️': 1.0,  # Love/appreciation
+            '👍': 1.0,  # Thumbs up
+            '💡': 1.0,  # Idea
+            '📊': 0.0
         }
 
         # Sector-specific lexicons
         self.sector_lexicons = {
-            'tech': {
-                # Product Development
-                'bugfix': 0.5,
-                'patch': 0.0,
-                'release': 0.5,
-                'launch': 1.0,
-                'beta': 0.0,
-                'stable': 1.0,
-                'unstable': -1.5,
-                'deployment': 0.0,
-                'rollout': 0.0,
+            'automotive': {
+            # Professional terms
+            'recall': -2.0,
+            'safety': 1.0,
+            'emissions': 0.0,
+            'efficiency': 1.0,
+            'reliability': 1.5,
+            'warranty': 0.5,
+            'defect': -1.5,
+            'mileage': 0.5,
 
-                # Technical Performance
-                'latency': -1.0,
-                'downtime': -2.0,
-                'uptime': 1.5,
-                'reliable': 2.0,
-                'unreliable': -2.0,
-                'scalable': 1.5,
-                'responsive': 1.5,
-                'unresponsive': -1.5,
+            # Industry innovation
+            'ev': 1.0,
+            'autonomous': 1.0,
+            'self-driving': 1.0,
+            'electric': 1.0,
+            'hybrid': 0.5,
+            'hydrogen': 0.5,
 
-                # Features & Integration
-                'integration': 1.0,
-                'compatibility': 1.0,
-                'incompatible': -1.5,
-                'functionality': 0.0,
-                'feature': 0.5,
-                'interface': 0.0,
-                'api': 0.0,
-                'sdk': 0.0,
+            # Social media
+            'gas guzzler': -1.5,
+            'dream car': 2.0,
+            'ricer': -1.0,
+            'sleeper': 1.5,
+            'clean': 1.5,
+            'mint': 1.5,
+            'beater': -1.0,
+            'lemon': -1.5,
 
-                # Tech Innovation
-                'ai': 0.5,
-                'ml': 0.5,
-                'cloud': 0.5,
-                'blockchain': 0.5,
-                'quantum': 0.5,
-                'innovation': 1.5,
-                'cutting-edge': 1.5,
-                'state-of-the-art': 1.5,
+            # Emojis
+            '🚗': 0.5,
+            '🏎️': 1.0,
+            '⚡': 1.0,
+            '🔋': 0.5,
+            '🚙': 0.5,
+        },
 
-                # Tech Community Terms
-                'stack': 0.0,
-                'repo': 0.0,
-                'codebase': 0.0,
-                'legacy code': -0.5,
-                'technical debt': -1.0,
-                'spaghetti code': -1.5,
-                'clean code': 1.5,
-                'bloated': -1.5,
-                'lightweight': 1.5,
-                'workaround': -0.5,
-                'hack': -0.5,
-                'backdoor': -1.5,
-                'exploit': -1.5,
+        'banking': {
+            # Professional terms
+            'liquidity': 0.5,
+            'assets': 0.5,
+            'portfolio': 0.0,
+            'default': -2.0,
+            'leverage': 0.0,
+            'yield': 0.5,
+            'dividend': 1.0,
+            'mortgage': 0.0,
 
-                # Tech Product Discussion
-                'fanboy': -0.5,
-                'ecosystem': 0.5,
-                'vendor lock': -1.5,
-                'backwards compatible': 1.0,
-                'future proof': 1.5,
-                'overpriced': -1.5,
-                'worth it': 1.5,
-                'premium': 1.0,
-                'bloatware': -1.5,
+            # Risk terms
+            'risk': -0.5,
+            'exposure': -0.5,
+            'hedge': 0.5,
+            'collateral': 0.0,
 
-                # Development Terms
-                'refactor': 0.0,
-                'optimize': 1.0,
-                'deprecate': -0.5,
-                'sunset': -0.5,
-                'kill': -1.0,  # as in "killing a feature"
-                'deadcode': -1.0,
-                'bottleneck': -1.0,
-            },
+            # Social media
+            'rugpull': -2.0,
+            'ponzi': -2.0,
+            'printer': -1.0,
+            'whale': 1.0,
+            'bagholder': -1.5,
+            'diamond hands': 1.5,
+            'paper hands': -1.0,
 
-            'business': {
-                # Financial Performance
-                'profitable': 2.0,
-                'unprofitable': -2.0,
-                'margin': 0.0,
-                'revenue': 0.0,
-                'profit': 1.5,
-                'loss': -1.5,
-                'valuation': 0.0,
-                'roi': 0.0,
+            # Emojis
+            '🏦': 0.0,
+            '💰': 1.0,
+            '💸': -1.0,
+            '📈': 1.5,
+        },
 
-                # Market Performance
-                'marketshare': 0.0,
-                'competitive': 1.0,
-                'competition': 0.0,
-                'industry': 0.0,
-                'sector': 0.0,
-                'market': 0.0,
+        'construction': {
+            # Professional terms
+            'development': 0.5,
+            'completion': 1.0,
+            'delay': -1.5,
+            'on-schedule': 1.5,
+            'over-budget': -1.5,
+            'under-budget': 1.5,
+            'permit': 0.0,
+            'inspection': 0.0,
 
-                # Operations
-                'efficiency': 1.5,
-                'inefficiency': -1.5,
-                'productivity': 1.5,
-                'operational': 0.0,
-                'logistics': 0.0,
-                'supply': 0.0,
-                'demand': 0.0,
+            # Quality terms
+            'quality': 1.0,
+            'defect': -1.5,
+            'structurally sound': 1.5,
+            'code compliant': 1.0,
 
-                # Strategy
-                'strategy': 0.0,
-                'strategic': 0.5,
-                'roadmap': 0.5,
-                'vision': 0.5,
-                'mission': 0.5,
-                'goals': 0.5,
+            # Social media
+            'eyesore': -1.5,
+            'beautiful': 1.5,
+            'prime location': 1.5,
+            'nightmare': -2.0,
 
-                # Business Community Terms
-                'unicorn': 1.5,
-                'cash cow': 1.5,
-                'burn rate': -0.5,
-                'runway': 0.0,
-                'pivot': 0.0,
-                'bootstrapped': 1.0,
-                'funded': 1.0,
-                'series a': 1.0,
-                'angel': 1.0,
-                'vc': 0.0,
+            # Emojis
+            '🏗️': 0.5,
+            '🏢': 0.5,
+            '🏠': 0.5,
+            '🚧': 0.0,
+        },
 
-                # Market Discussion
-                'bearish': -1.0,
-                'bullish': 1.0,
-                'priced in': 0.0,
-                'undervalued': 1.0,
-                'overvalued': -1.0,
-                'moat': 1.5,
-                'competitive edge': 1.5,
+        'education': {
+            # Professional terms
+            'accredited': 1.0,
+            'enrollment': 0.0,
+            'graduation': 1.5,
+            'curriculum': 0.0,
+            'academic': 0.5,
+            'research': 0.5,
 
-                # Business Performance
-                'crushing it': 2.0,
-                'killing it': 2.0,
-                'bleeding': -1.5,
-                'hemorrhaging': -2.0,
-                'printing': 1.5,  # as in "printing money"
-            },
+            # Performance terms
+            'achievement': 1.5,
+            'performance': 0.5,
+            'grades': 0.0,
+            'scores': 0.0,
 
-            'fintech': {
-                # Financial Technology
-                'payment': 0.0,
-                'transaction': 0.0,
-                'processing': 0.0,
-                'settlement': 0.0,
-                'encryption': 1.0,
-                'security': 1.0,
-                'breach': -2.0,
-                'fraud': -2.0,
+            # Social media
+            'crushing it': 1.5,
+            'struggling': -1.0,
+            'stress': -1.0,
+            'easy a': 1.0,
 
-                # Performance
-                'throughput': 0.0,
-                'volume': 0.0,
-                'capacity': 0.0,
-                'compliance': 1.0,
-                'non-compliant': -1.5,
-                'regulatory': 0.0,
+            # Emojis
+            '🎓': 1.0,
+            '📚': 0.5,
+            '✏️': 0.0,
+            '🏫': 0.0,
+        },
 
-                # User Experience
-                'user-friendly': 1.5,
-                'intuitive': 1.5,
-                'friction': -1.0,
-                'frictionless': 1.5,
-                'seamless': 1.5
-            },
+        'energy': {
+            # Professional terms
+            'renewable': 1.5,
+            'sustainable': 1.5,
+            'efficiency': 1.0,
+            'capacity': 0.0,
+            'grid': 0.0,
+            'infrastructure': 0.0,
 
-            'enterprise': {
-                # Enterprise Solutions
-                'solution': 0.5,
-                'enterprise': 0.0,
-                'infrastructure': 0.0,
-                'platform': 0.0,
-                'service': 0.0,
+            # Environmental impact
+            'clean': 1.5,
+            'emissions': -0.5,
+            'carbon': -0.5,
+            'green': 1.0,
 
-                # Implementation
-                'implementation': 0.0,
-                'deployment': 0.0,
-                'adoption': 0.5,
-                'migration': 0.0,
-                'integration': 0.5,
+            # Social media
+            'dirty energy': -1.5,
+            'clean energy': 1.5,
+            'power outage': -1.5,
+            'blackout': -2.0,
 
-                # Support
-                'support': 0.5,
-                'maintenance': 0.0,
-                'upgrade': 0.5,
-                'downgrade': -0.5,
-                'sla': 0.0,
+            # Emojis
+            '⚡': 1.0,
+            '🔋': 0.5,
+            '☀️': 1.0,
+            '💨': 0.5,
+        },
 
-                # Security
-                'security': 1.0,
-                'vulnerability': -1.5,
-                'patch': 0.5,
-                'update': 0.5,
-                'breach': -2.0
-            }
+        'fashion': {
+            # Professional terms
+            'collection': 0.5,
+            'designer': 1.0,
+            'sustainable': 1.0,
+            'luxury': 1.5,
+            'premium': 1.0,
+            'fast fashion': -0.5,
+
+            # Trend terms
+            'trending': 1.5,
+            'viral': 1.5,
+            'statement': 1.0,
+            'iconic': 2.0,
+
+            # Social media
+            'slay': 2.0,
+            'fire': 1.5,
+            'basic': -1.0,
+            'drip': 1.5,
+
+            # Emojis
+            '👗': 0.5,
+            '👠': 0.5,
+            '💅': 1.0,
+            '✨': 1.0,
+        },
+
+        'food_and_beverage': {
+            # Professional terms
+            'organic': 1.0,
+            'sustainable': 1.0,
+            'quality': 1.0,
+            'fresh': 1.0,
+            'recall': -2.0,
+            'contamination': -2.0,
+
+            # Experience terms
+            'delicious': 1.5,
+            'taste': 0.0,
+            'flavor': 0.0,
+            'experience': 0.5,
+
+            # Social media
+            'bussin': 2.0,
+            'mid': -1.0,
+            'overrated': -1.0,
+            'underrated': 1.0,
+
+            # Emojis
+            '🍽️': 0.5,
+            '🍷': 0.5,
+            '👨‍🍳': 1.0,
+            '😋': 1.5,
+        }
         }
 
         # Add sector-specific lexicon
