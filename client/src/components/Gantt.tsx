@@ -13,6 +13,7 @@ import {
 } from '@syncfusion/ej2-react-gantt';
 import { enableRipple } from '@syncfusion/ej2-base';
 import { PdfColor } from '@syncfusion/ej2-pdf-export';
+import { LuExternalLink } from 'react-icons/lu';
 
 enableRipple(true);
 
@@ -48,6 +49,21 @@ function Gantt({ data }: { data: any }) {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const handleTaskbarClick = (args: any) => {
+    console.log('Taskbar clicked:', args.data);
+  };
+
+  const handleButtonClick = (id: any) => {
+    console.log(id, 'clicked');
+    const element = document.getElementById(`task-${id}`);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }
+  };
 
   const toolbarBtnClick = (args: any) => {
     if (!ganttRef.current) return;
@@ -109,10 +125,12 @@ function Gantt({ data }: { data: any }) {
         taskFields={taskValues}
         editSettings={editOptions}
         splitterSettings={splitterSettings}
+        onTaskbarClick={handleTaskbarClick}
+        rowHeight={50}
+        taskbarHeight={15}
         toolbar={[
           'Add',
           'Edit',
-          'Delete',
           'Update',
           'Cancel',
           'ExpandAll',
@@ -141,6 +159,21 @@ function Gantt({ data }: { data: any }) {
             maxWidth='80'
           ></ColumnDirective>
           <ColumnDirective field='Duration' maxWidth='75'></ColumnDirective>
+          <ColumnDirective
+            field='TaskID'
+            headerText=' '
+            width='30'
+            template={(props: any) =>
+              props.TaskID % 4 === 1 ? (
+                <button
+                  onClick={() => handleButtonClick(props.TaskID)}
+                  className='text-gray-500 group-hover:text-gray-700 transition-colors duration-300'
+                >
+                  <LuExternalLink style={{ fontSize: '16px' }} />
+                </button>
+              ) : null
+            }
+          ></ColumnDirective>
         </ColumnsDirective>
       </GanttComponent>
     </div>

@@ -34,26 +34,23 @@
       {
         "TaskID": 1,
         "TaskName": "Leverage Positive Social Media Sentiment",
-        "Description": "Utilize positive social media sentiment to attract new customers and increase brand loyalty.",
+        "Description": "Focus on retaining existing customers through targeted strategies and personalized experiences to increase customer lifetime value.",
         "subtasks": [
           {
             "TaskID": 2,
             "TaskName": "Run targeted social media campaigns highlighting 'great product'",
-            "Description": "Create engaging social media content emphasizing the 'great product' key phrase to increase customer interest and engagement.",
             "StartDate": "2022-09-01",
             "Duration": 30
           },
           {
             "TaskID": 3,
             "TaskName": "Implement referral programs based on 'excellent service'",
-            "Description": "Develop referral programs that reward existing customers for recommending the service, leveraging the 'excellent service' key phrase to attract new users.",
             "StartDate": "2022-09-30",
             "Duration": 45
           },
           {
             "TaskID": 4,
             "TaskName": "Engage with social media influencers to promote 'great product'",
-            "Description": "Collaborate with influencers to showcase the 'great product,' reaching a wider audience and potentially increasing customer base.",
             "StartDate": "2022-10-15",
             "Duration": 60
           }
@@ -62,26 +59,23 @@
       {
         "TaskID": 5,
         "TaskName": "Launch New Product to Align with Industry Trends",
-        "Description": "Introduce a new product that aligns with current industry trends to attract new customers and generate buzz.",
+        "Description": "Focus on retaining existing customers through targeted strategies and personalized experiences to increase customer lifetime value.",
         "subtasks": [
           {
             "TaskID": 6,
             "TaskName": "Conduct market research on emerging industry trends",
-            "Description": "Gather data on emerging technology trends to identify opportunities for launching a new product that caters to market demand.",
             "StartDate": "2022-09-15",
             "Duration": 45
           },
           {
             "TaskID": 7,
             "TaskName": "Develop and test prototype based on research findings",
-            "Description": "Create a prototype of the new product based on market research insights and conduct testing to ensure product-market fit.",
             "StartDate": "2022-10-30",
             "Duration": 60
           },
           {
             "TaskID": 8,
             "TaskName": "Plan a strategic marketing campaign for the new product launch",
-            "Description": "Devise a marketing strategy that highlights the new product's features, benefits, and alignment with industry trends to attract customers and drive sales.",
             "StartDate": "2022-12-30",
             "Duration": 30
           }
@@ -90,26 +84,23 @@
       {
         "TaskID": 9,
         "TaskName": "Optimize Revenue Growth",
-        "Description": "Focus on strategies to improve revenue growth to support scaling operations and customer acquisition.",
+        "Description": "Focus on retaining existing customers through targeted strategies and personalized experiences to increase customer lifetime value.",
         "subtasks": [
           {
             "TaskID": 10,
             "TaskName": "Diversify revenue streams through partnerships",
-            "Description": "Explore partnership opportunities with complementary businesses to create new revenue streams and increase overall revenue.",
             "StartDate": "2022-09-01",
             "Duration": 45
           },
           {
             "TaskID": 11,
             "TaskName": "Implement dynamic pricing strategies based on market demand",
-            "Description": "Utilize dynamic pricing models to adjust prices based on market demand and maximize revenue potential without compromising customer base.",
             "StartDate": "2022-10-15",
             "Duration": 60
           },
           {
             "TaskID": 12,
             "TaskName": "Launch premium service tiers for higher profit margins",
-            "Description": "Introduce premium service tiers with added value propositions to attract customers willing to pay more, thereby increasing profit margins.",
             "StartDate": "2022-11-30",
             "Duration": 30
           }
@@ -118,26 +109,23 @@
       {
         "TaskID": 13,
         "TaskName": "Enhance Customer Service Experience",
-        "Description": "Improve customer service to retain existing customers, enhance loyalty, and attract new customers through positive word-of-mouth.",
+        "Description": "Focus on retaining existing customers through targeted strategies and personalized experiences to increase customer lifetime value.",
         "subtasks": [
           {
             "TaskID": 14,
             "TaskName": "Implement 24/7 customer support for better accessibility",
-            "Description": "Offer round-the-clock customer support to address queries and issues promptly, improving overall customer satisfaction and retention.",
             "StartDate": "2022-09-01",
             "Duration": 30
           },
           {
             "TaskID": 15,
             "TaskName": "Personalize customer interactions based on data insights",
-            "Description": "Utilize customer data to personalize interactions and offer tailored recommendations, enhancing the overall customer experience.",
             "StartDate": "2022-09-30",
             "Duration": 45
           },
           {
             "TaskID": 16,
             "TaskName": "Collect and analyze customer feedback for continuous improvement",
-            "Description": "Gather feedback from customers to identify pain points and areas for enhancement, enabling continuous improvement of products and services.",
             "StartDate": "2022-10-15",
             "Duration": 60
           }
@@ -146,26 +134,23 @@
       {
         "TaskID": 17,
         "TaskName": "Expand Market Reach through Strategic Partnerships",
-        "Description": "Collaborate with strategic partners to expand market reach, acquire new customers, and enhance brand visibility.",
+        "Description": "Focus on retaining existing customers through targeted strategies and personalized experiences to increase customer lifetime value.",
         "subtasks": [
           {
             "TaskID": 18,
             "TaskName": "Identify potential partners in complementary industries",
-            "Description": "Research and identify potential partners in industries that complement the startup's offerings, paving the way for mutually beneficial collaborations.",
             "StartDate": "2022-09-15",
             "Duration": 45
           },
           {
             "TaskID": 19,
             "TaskName": "Negotiate partnership agreements to leverage each other's strengths",
-            "Description": "Negotiate partnership agreements that capitalize on the strengths of both partners, aiming to maximize market reach and customer acquisition.",
             "StartDate": "2022-10-30",
             "Duration": 60
           },
           {
             "TaskID": 20,
             "TaskName": "Launch joint marketing campaigns to amplify brand exposure",
-            "Description": "Collaborate on marketing campaigns with partners to reach a wider audience, increase brand exposure, and attract new customers from partner networks.",
             "StartDate": "2022-12-15",
             "Duration": 30
           }
@@ -174,26 +159,23 @@
       {
         "TaskID": 21,
         "TaskName": "Implement Data-Driven Decision Making",
-        "Description": "Use data-driven insights to optimize business processes, improve customer targeting, and drive growth.",
+        "Description": "Focus on retaining existing customers through targeted strategies and personalized experiences to increase customer lifetime value.",
         "subtasks": [
           {
             "TaskID": 22,
             "TaskName": "Invest in data analytics tools and expertise",
-            "Description": "Acquire advanced data analytics tools and talent to extract valuable insights from customer data, enabling informed decision-making and targeted strategies.",
             "StartDate": "2022-09-01",
             "Duration": 45
           },
           {
             "TaskID": 23,
             "TaskName": "Segment customers based on behavior and preferences",
-            "Description": "Utilize data analysis to segment customers according to their behavior, preferences, and buying patterns, facilitating personalized marketing and product recommendations.",
             "StartDate": "2022-10-15",
             "Duration": 60
           },
           {
             "TaskID": 24,
             "TaskName": "Implement A/B testing for website and marketing campaigns",
-            "Description": "Conduct A/B tests on website elements and marketing campaigns to optimize performance based on data-driven insights, improving customer engagement and conversion rates.",
             "StartDate": "2022-11-30",
             "Duration": 30
           }
@@ -202,26 +184,23 @@
       {
         "TaskID": 25,
         "TaskName": "Enhance User Experience (UX) Design",
-        "Description": "Optimize user experience on platforms to increase customer satisfaction, retention, and referrals.",
+        "Description": "Focus on retaining existing customers through targeted strategies and personalized experiences to increase customer lifetime value.",
         "subtasks": [
           {
             "TaskID": 26,
             "TaskName": "Conduct UX audit to identify pain points and areas of improvement",
-            "Description": "Evaluate the current UX design to identify pain points, usability issues, and areas that require enhancement to provide a seamless user experience.",
             "StartDate": "2022-09-01",
             "Duration": 30
           },
           {
             "TaskID": 27,
             "TaskName": "Optimize website navigation and mobile responsiveness",
-            "Description": "Enhance website navigation and ensure mobile responsiveness to improve user engagement and accessibility across various devices, leading to a better customer experience.",
             "StartDate": "2022-09-30",
             "Duration": 45
           },
           {
             "TaskID": 28,
             "TaskName": "Implement user feedback loops for continuous UX improvements",
-            "Description": "Establish mechanisms to gather user feedback consistently and implement iterative improvements to the UX design based on user input, ensuring ongoing enhancement.",
             "StartDate": "2022-10-15",
             "Duration": 60
           }
@@ -235,21 +214,18 @@
           {
             "TaskID": 30,
             "TaskName": "Implement loyalty programs and rewards for repeat purchases",
-            "Description": "Introduce loyalty programs that incentivize repeat purchases and offer rewards to loyal customers, encouraging retention and building customer loyalty.",
             "StartDate": "2022-09-01",
             "Duration": 30
           },
           {
             "TaskID": 31,
             "TaskName": "Send personalized offers and recommendations based on customer history",
-            "Description": "Utilize customer purchase history and preferences to send personalized offers and product recommendations, enhancing customer engagement and retention.",
             "StartDate": "2022-09-30",
             "Duration": 45
           },
           {
             "TaskID": 32,
             "TaskName": "Implement customer feedback surveys to understand needs and preferences",
-            "Description": "Deploy customer feedback surveys to gather insights on customer needs and preferences, enabling tailored strategies to improve retention and satisfaction.",
             "StartDate": "2022-10-15",
             "Duration": 60
           }
@@ -258,26 +234,23 @@
       {
         "TaskID": 33,
         "TaskName": "Enhance Competitive Positioning",
-        "Description": "Differentiate the startup from competitors by enhancing unique value propositions, product offerings, and market positioning.",
+        "Description": "Focus on retaining existing customers through targeted strategies and personalized experiences to increase customer lifetime value.",
         "subtasks": [
           {
             "TaskID": 34,
             "TaskName": "Conduct competitive analysis to identify strengths and weaknesses",
-            "Description": "Perform a comprehensive analysis of competitors to understand their strategies, strengths, and weaknesses, identifying opportunities for differentiation.",
             "StartDate": "2022-09-15",
             "Duration": 45
           },
           {
             "TaskID": 35,
             "TaskName": "Develop a unique selling proposition based on customer feedback",
-            "Description": "Craft a unique selling proposition that resonates with customer needs and preferences, highlighting key differentiators that set the startup apart from competitors.",
             "StartDate": "2022-10-30",
             "Duration": 60
           },
           {
             "TaskID": 36,
             "TaskName": "Revise pricing strategy to offer competitive yet profitable pricing",
-            "Description": "Adjust pricing strategies to remain competitive while ensuring profitability, taking into account market dynamics and customer perceptions.",
             "StartDate": "2022-12-15",
             "Duration": 30
           }
@@ -286,26 +259,23 @@
       {
         "TaskID": 37,
         "TaskName": "Invest in Customer Acquisition Channels",
-        "Description": "Expand customer acquisition channels to reach new audiences and drive customer growth.",
+        "Description": "Focus on retaining existing customers through targeted strategies and personalized experiences to increase customer lifetime value.",
         "subtasks": [
           {
             "TaskID": 38,
             "TaskName": "Optimize SEO and SEM strategies for higher online visibility",
-            "Description": "Enhance Search Engine Optimization (SEO) and Search Engine Marketing (SEM) strategies to boost online visibility, attract organic traffic, and increase customer acquisition.",
             "StartDate": "2022-09-01",
             "Duration": 45
           },
           {
             "TaskID": 39,
             "TaskName": "Explore influencer partnerships for targeted audience reach",
-            "Description": "Collaborate with influencers to leverage their reach and credibility, targeting specific audience segments and driving customer acquisition through influencer marketing.",
             "StartDate": "2022-10-15",
             "Duration": 60
           },
           {
             "TaskID": 40,
             "TaskName": "Launch targeted email marketing campaigns for lead generation",
-            "Description": "Develop personalized email marketing campaigns targeting leads and prospects to nurture relationships, drive conversions, and acquire new customers.",
             "StartDate": "2022-11-30",
             "Duration": 30
           }
