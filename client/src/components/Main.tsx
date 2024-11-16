@@ -15,7 +15,7 @@ export default function Main() {
     };
   }
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [response, setResponse] = useState<ResponseData>({
     outputs: { recommendations: [] },
