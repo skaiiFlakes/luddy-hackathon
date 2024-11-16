@@ -14,10 +14,10 @@ def get_competitors(industry):
 
 
     my_prompt = """
-    List the top three mid to large-cap competitors of a new startup in the %s industry space and list one subreddit on which information about all companies is likely to be found
+    List the top three mid to large-cap competitors of a new startup in the %s industry space by name and ticker symbol and list one subreddit on which information about all companies is likely to be found
     Output as a list where the first element is a list of strings of the top competitors and the second element is a list containing a string of the one subreddit
     format:
-    [['company1', 'company2', 'company3'], ['subreddit_name']]
+    [['company1', 'company2', 'company3'], ['ticker1', 'ticker2', ticker3'], ['subreddit_name']]
     """ % industry
 
 
