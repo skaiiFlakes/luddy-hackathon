@@ -1,4 +1,5 @@
 import Form from './Form';
+import Link from 'next/link';
 
 export default function Main() {
   return (
@@ -12,22 +13,22 @@ export default function Main() {
           deliver a tailored Gantt chart of tasks to drive your success.
         </h2>
         <div className='ml-6 text-center'>
-          <a
+          <Link
             className='inline-flex items-center py-3 font-semibold text-black transition duration-500 ease-in-out transform bg-transparent bg-white px-7 text-md md:mt-0 hover:text-black hover:bg-white focus:shadow-outline'
-            href='/'
+            href='/templates'
           >
             <div className='flex text-lg'>
               <span className='justify-center'>View All Templates</span>
             </div>
-          </a>
-          <a
+          </Link>
+          <Link
             className='inline-flex items-center py-3 font-semibold tracking-tighter text-white transition duration-500 ease-in-out transform bg-transparent ml-11 bg-gradient-to-r from-blue-500 to-blue-800 px-14 text-md md:mt-0 focus:shadow-outline'
-            href='/'
+            href='/purchase'
           >
             <div className='flex text-lg'>
               <span className='justify-center'>Purchase</span>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -44,7 +45,11 @@ export default function Main() {
       </p>
       <div className='pt-12 pb-24 max-w-4xl mx-auto fsac4 md:px-1 px-3'>
         <div className='ktq4'>
-          <img className='w-10' src='https://nine4.app/favicon.png'></img>
+          <img
+            className='w-10'
+            src='/api/placeholder/40/40'
+            alt='feature icon'
+          ></img>
           <h3 className='pt-3 font-semibold text-lg text-white'>
             Lorem ipsum dolor sit amet
           </h3>
@@ -55,7 +60,11 @@ export default function Main() {
           </p>
         </div>
         <div className='ktq4'>
-          <img className='w-10' src='https://nine4.app/favicon.png'></img>
+          <img
+            className='w-10'
+            src='/api/placeholder/40/40'
+            alt='feature icon'
+          ></img>
           <h3 className='pt-3 font-semibold text-lg text-white'>
             Lorem ipsum dolor sit amet
           </h3>
@@ -66,7 +75,11 @@ export default function Main() {
           </p>
         </div>
         <div className='ktq4'>
-          <img className='w-10' src='https://nine4.app/favicon.png'></img>
+          <img
+            className='w-10'
+            src='/api/placeholder/40/40'
+            alt='feature icon'
+          ></img>
           <h3 className='pt-3 font-semibold text-lg text-white'>
             Lorem ipsum dolor sit amet
           </h3>
@@ -77,7 +90,11 @@ export default function Main() {
           </p>
         </div>
         <div className='ktq4'>
-          <img className='w-10' src='https://nine4.app/favicon.png'></img>
+          <img
+            className='w-10'
+            src='/api/placeholder/40/40'
+            alt='feature icon'
+          ></img>
           <h3 className='pt-3 font-semibold text-lg text-white'>
             Lorem ipsum dolor sit amet
           </h3>
@@ -90,7 +107,7 @@ export default function Main() {
       </div>
       <div className='pt-32 pb-32 max-w-6xl mx-auto fsac4 md:px-1 px-3'>
         <div className='ktq4'>
-          <img src='https://nine4.app/images/nine4-3.png'></img>
+          <img src='/api/placeholder/400/300' alt='template preview'></img>
           <h3 className='pt-3 font-semibold text-lg text-white'>
             Lorem ipsum dolor sit amet
           </h3>
@@ -103,7 +120,7 @@ export default function Main() {
           </p>
         </div>
         <div className='ktq4'>
-          <img src='https://nine4.app/images/nine4-3.png'></img>
+          <img src='/api/placeholder/400/300' alt='template preview'></img>
           <h3 className='pt-3 font-semibold text-lg text-white'>
             Lorem ipsum dolor sit amet
           </h3>
@@ -129,15 +146,14 @@ export default function Main() {
               type='email'
               placeholder='jack@example.com'
               name='email'
-              autocomplete='email'
               className='border border-gray-600 w-1/4 pr-2 pl-2 py-3 mt-2 rounded-md text-gray-800 font-semibold hover:border-gray-700 bg-black'
-            />{' '}
-            <a
+            />
+            <Link
               className='inline-flex items-center px-14 py-3 mt-2 ml-2 font-medium text-black transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-white'
-              href='/'
+              href='/subscribe'
             >
               <span className='justify-center'>Subscribe</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

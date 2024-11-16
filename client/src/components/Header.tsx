@@ -146,7 +146,7 @@ export default function Header() {
               Careers
             </Link>
           </div>
-          <a
+          <Link
             href='https://twitter.com/'
             rel='noopener noreferrer'
             target='_blank'
@@ -166,8 +166,8 @@ export default function Header() {
                 fill='white'
               ></path>
             </svg>
-          </a>
-          <a
+          </Link>
+          <Link
             data-v-54e46119=''
             href='https://github.com/'
             rel='noopener noreferrer'
@@ -192,7 +192,7 @@ export default function Header() {
                 fill='white'
               ></path>
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </header>
