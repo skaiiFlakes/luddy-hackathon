@@ -1,0 +1,96 @@
+```json
+{
+  "inputs": {
+    "KPIs": {
+      "current": {
+        "revenue_growth": { "value": 5.2, "unit": "%" },
+        "customer_retention": { "value": 72, "unit": "%" }
+      },
+      "desired": {
+        "revenue_growth": { "value": 10, "unit": "%" },
+        "customer_retention": { "value": 80, "unit": "%" }
+      },
+      "deadline": "2023-12-31"
+    },
+    "industry": {
+      "name": "E-commerce - Apparel",
+      "financial_health": {
+        "industry_average": { "revenue_growth": 8, "profit_margin": 10 },
+        "top_competitors": [
+          { "name": "Competitor X", "revenue_growth": 12, "profit_margin": 15 },
+          { "name": "Competitor Y", "revenue_growth": 10, "profit_margin": 13 }
+        ]
+      }
+    },
+    "sentiment_analysis": {
+      "social_media": { "sentiment": "balanced", "key_phrases": ["fast shipping", "variety of products"] },
+      "news": { "sentiment": "positive", "key_phrases": ["rising demand", "market expansion"] },
+      "financial_headlines": { "sentiment": "neutral", "key_phrases": ["investment challenges", "revenue diversification"] }
+    }
+  },
+  "outputs": {
+    "recommendations": [
+      {
+        "task": "Optimize Supply Chain Efficiency",
+        "summary": "Enhance operational processes for faster delivery and cost savings.",
+        "details": "Implement data-driven strategies to streamline logistics and reduce lead times.",
+        "timeline": { "start": "2023-01-15", "end": "2023-04-15" }
+      },
+      {
+        "task": "Personalize Customer Experience",
+        "summary": "Increase customer loyalty through personalized recommendations.",
+        "details": "Utilize AI algorithms to tailor product suggestions and improve engagement.",
+        "timeline": { "start": "2023-02-01", "end": "2023-06-30" }
+      },
+      {
+        "task": "Implement Dynamic Pricing",
+        "summary": "Optimize pricing strategies based on market trends and competitor analysis.",
+        "details": "Use machine learning algorithms to adjust prices dynamically for improved competitiveness.",
+        "timeline": { "start": "2023-01-10", "end": "2023-03-31" }
+      },
+      {
+        "task": "Enhance Mobile Shopping Experience",
+        "summary": "Cater to the growing mobile user base with a mobile-first approach.",
+        "details": "Invest in responsive design and mobile app features to boost conversion rates.",
+        "timeline": { "start": "2023-02-15", "end": "2023-05-31" }
+      },
+      {
+        "task": "Strategic Marketing Partnerships",
+        "summary": "Collaborate with influencers and complementary brands for increased visibility.",
+        "details": "Identify key partners to reach new audiences and drive brand awareness.",
+        "timeline": { "start": "2023-01-20", "end": "2023-05-31" }
+      },
+      {
+        "task": "Improve Returns Process",
+        "summary": "Enhance customer satisfaction by simplifying and speeding up returns.",
+        "details": "Implement a user-friendly returns portal and proactive communication on return status.",
+        "timeline": { "start": "2023-03-01", "end": "2023-06-30" }
+      },
+      {
+        "task": "Expand Product Catalog",
+        "summary": "Diversify offerings to capture a wider market segment.",
+        "details": "Analyze customer preferences and market gaps to introduce new product categories.",
+        "timeline": { "start": "2023-02-01", "end": "2023-07-31" }
+      },
+      {
+        "task": "Invest in Customer Feedback Analysis",
+        "summary": "Leverage feedback for continuous product and service improvements.",
+        "details": "Deploy sentiment analysis tools to extract actionable insights from customer reviews.",
+        "timeline": { "start": "2023-01-05", "end": "2023-12-31" }
+      },
+      {
+        "task": "Enhance Social Media Engagement",
+        "summary": "Boost brand presence and customer interactions on social platforms.",
+        "details": "Develop a content calendar focusing on user-generated content and interactive posts.",
+        "timeline": { "start": "2023-01-15", "end": "2023-06-30" }
+      },
+      {
+        "task": "Implement Loyalty Program",
+        "summary": "Encourage repeat purchases and brand advocacy through a loyalty rewards system.",
+        "details": "Design a tiered rewards program linked to customer engagement and purchase frequency.",
+        "timeline": { "start": "2023-02-15", "end": "2023-04-30" }
+      }
+    ]
+  }
+}
+```
