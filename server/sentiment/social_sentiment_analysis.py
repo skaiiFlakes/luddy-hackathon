@@ -84,6 +84,117 @@ class SocialSentiment:
             'dominant': 1.5,
             'niche': 0.0,
 
+            # Reddit/Twitter Tech Enthusiasm
+            'based': 1.5,
+            'goated': 2.0,
+            'fire': 1.5,
+            'ship': 1.0,  # as in "shipping features"
+            'shipped': 1.0,
+            'shipping': 1.0,
+            'clutch': 1.5,
+            'peak': 1.5,
+            'huge': 1.5,
+            'massive': 1.5,
+            'major': 1.0,
+            'elite': 1.5,
+            'valid': 1.0,
+            'chad': 1.5,
+
+            # Tech/Business Criticism
+            'copium': -1.5,
+            'hopium': -1.0,
+            'mid': -1.0,
+            'yikes': -1.5,
+            'oof': -1.0,
+            'rip': -1.5,
+            'dead': -1.5,
+            'trash': -2.0,
+            'garbage': -2.0,
+            'joke': -1.5,
+            'scam': -2.0,
+            'sus': -1.0,
+            'sketchy': -1.5,
+            'yeet': -1.0,
+            'aged poorly': -1.5,
+            'aged like milk': -2.0,
+            'aged like wine': 1.5,
+
+            # Tech Community Slang
+            'bullish': 1.5,
+            'bearish': -1.5,
+            'hodl': 1.0,
+            'fud': -1.5,
+            'shill': -1.0,
+            'bagholder': -1.5,
+            'paper hands': -1.0,
+            'diamond hands': 1.0,
+            'moonshot': 1.0,
+            'mooning': 1.5,
+            'tanking': -1.5,
+            'dumping': -1.5,
+
+            # Common Abbreviations
+            'tbh': 0.0,
+            'imo': 0.0,
+            'imho': 0.0,
+            'fwiw': 0.0,
+            'til': 0.5,
+            'eli5': 0.0,
+            'tldr': 0.0,
+            'afaik': 0.0,
+            'iykyk': 0.5,
+
+            # Tech/Business Success
+            'w': 1.5,
+            'dub': 1.5,
+            'win': 1.5,
+            'winning': 1.5,
+            'stonks': 1.0,
+            'banger': 1.5,
+            'slaps': 1.5,
+            'crushing it': 2.0,
+            'killing it': 2.0,
+            'smashing it': 2.0,
+
+            # Tech/Business Failure
+            'l': -1.5,
+            'fail': -1.5,
+            'failing': -1.5,
+            'flopped': -1.5,
+            'trainwreck': -2.0,
+            'disaster': -2.0,
+            'mess': -1.5,
+            'rekt': -1.5,
+
+            # Common Tech Topics
+            'collab': 1.0,
+            'partnership': 1.0,
+            'stack': 0.0,
+            'ecosystem': 0.5,
+            'community': 0.5,
+            'toxic': -1.5,
+            'fanboy': -0.5,
+            'salty': -1.0,
+
+            # Additional Emojis
+            '💎': 1.5,  # Often used for "diamond hands" or valuable
+            '🚀': 1.5,  # Strong positive/growth
+            '🔥': 1.5,  # Hot/successful
+            '🐂': 1.0,  # Bullish
+            '🐻': -1.0,  # Bearish
+            '🤡': -1.5,  # Mockery
+            '💀': -1.0,  # Dead/failed
+            '👀': 0.5,  # Interest/attention
+            '📈': 1.5,  # Stonks/growth
+            '📉': -1.5,  # Decline
+            '🎯': 1.0,  # On target
+            '🧠': 1.0,  # Smart/intellectual
+            '🤝': 1.0,  # Deal/agreement
+            '💪': 1.0,  # Strong
+            '🏆': 1.5,  # Victory/achievement
+            '⭐': 1.0,  # Star/quality
+            '💯': 1.5,  # Perfect/complete agreement
+
             # Common emojis in professional context
             '📈': 1.5,
             '📊': 0.0,
@@ -137,7 +248,42 @@ class SocialSentiment:
                 'quantum': 0.5,
                 'innovation': 1.5,
                 'cutting-edge': 1.5,
-                'state-of-the-art': 1.5
+                'state-of-the-art': 1.5,
+
+                # Tech Community Terms
+                'stack': 0.0,
+                'repo': 0.0,
+                'codebase': 0.0,
+                'legacy code': -0.5,
+                'technical debt': -1.0,
+                'spaghetti code': -1.5,
+                'clean code': 1.5,
+                'bloated': -1.5,
+                'lightweight': 1.5,
+                'workaround': -0.5,
+                'hack': -0.5,
+                'backdoor': -1.5,
+                'exploit': -1.5,
+
+                # Tech Product Discussion
+                'fanboy': -0.5,
+                'ecosystem': 0.5,
+                'vendor lock': -1.5,
+                'backwards compatible': 1.0,
+                'future proof': 1.5,
+                'overpriced': -1.5,
+                'worth it': 1.5,
+                'premium': 1.0,
+                'bloatware': -1.5,
+
+                # Development Terms
+                'refactor': 0.0,
+                'optimize': 1.0,
+                'deprecate': -0.5,
+                'sunset': -0.5,
+                'kill': -1.0,  # as in "killing a feature"
+                'deadcode': -1.0,
+                'bottleneck': -1.0,
             },
 
             'business': {
@@ -174,7 +320,35 @@ class SocialSentiment:
                 'roadmap': 0.5,
                 'vision': 0.5,
                 'mission': 0.5,
-                'goals': 0.5
+                'goals': 0.5,
+
+                # Business Community Terms
+                'unicorn': 1.5,
+                'cash cow': 1.5,
+                'burn rate': -0.5,
+                'runway': 0.0,
+                'pivot': 0.0,
+                'bootstrapped': 1.0,
+                'funded': 1.0,
+                'series a': 1.0,
+                'angel': 1.0,
+                'vc': 0.0,
+
+                # Market Discussion
+                'bearish': -1.0,
+                'bullish': 1.0,
+                'priced in': 0.0,
+                'undervalued': 1.0,
+                'overvalued': -1.0,
+                'moat': 1.5,
+                'competitive edge': 1.5,
+
+                # Business Performance
+                'crushing it': 2.0,
+                'killing it': 2.0,
+                'bleeding': -1.5,
+                'hemorrhaging': -2.0,
+                'printing': 1.5,  # as in "printing money"
             },
 
             'fintech': {
