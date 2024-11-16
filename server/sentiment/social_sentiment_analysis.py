@@ -543,6 +543,64 @@ class SocialSentiment:
 
         return result
 
+    def summarize_sentiment(self, df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Generate summary of analyzed posts by grouping similar texts based on their first 4 words.
+
+        Args:
+            df (pd.DataFrame): DataFrame with columns 'original_text' and 'sentiment_score'
+
+        Returns:
+            pd.DataFrame: DataFrame with columns:
+                - group_text: First 4 words of the text
+                - average_sentiment_score: Mean sentiment score for the group
+                - closest_post: Original text with sentiment closest to group average
+                - second_closest_post: Original text with second closest sentiment to group average
+        """
+
+        # Extract the first four words of the original text
+        def get_first_4_words(text):
+            return ' '.join(str(text).split()[:4])
+
+        df['group_text'] = df['original_text'].apply(get_first_4_words)
+
+        # Group by the extracted text and calculate the average sentiment score
+        summary = df.groupby('group_text').agg(
+            average_sentiment_score=('sentiment_score', 'mean')
+        ).reset_index()
+
+        # Merge the average sentiment scores back with the original DataFrame
+        df_with_avg = df.merge(summary, on='group_text')
+
+        # Find the closest and second closest posts to the average sentiment score
+        def find_closest_posts(group):
+            # Calculate absolute difference from average
+            avg_score = group['average_sentiment_score'].iloc[0]
+            differences = abs(group['sentiment_score'] - avg_score)
+
+            # Get indices of two smallest differences
+            closest_indices = differences.nsmallest(2).index
+
+            # Get the corresponding posts
+            closest_posts = group.loc[closest_indices, 'original_text'].tolist()
+
+            return pd.Series({
+                'closest_post': closest_posts[0] if len(closest_posts) > 0 else None,
+                'second_closest_post': closest_posts[1] if len(closest_posts) > 1 else None
+            })
+
+        # Apply the function to find closest posts for each group
+        closest_posts_df = df_with_avg.groupby('group_text', group_keys=False).apply(find_closest_posts).reset_index()
+
+        # Merge all results
+        final_summary = summary.merge(closest_posts_df, on='group_text')
+
+        # Return sorted by average sentiment score
+        return final_summary[
+            ['group_text', 'average_sentiment_score', 'closest_post', 'second_closest_post']].sort_values(
+            'average_sentiment_score', ascending=False
+        )
+
 
 # Example usage
 if __name__ == "__main__":
