@@ -1,0 +1,14 @@
+# Reddit API Credentials
+CLIENT_ID=
+CLIENT_SECRET=
+USER_AGENT=sentiment/1.0
+
+# Search Parameters
+search_terms=CompanyA, CompanyB, CompanyC
+subreddits=stocks
+
+# Scraping Settings
+posts_per_search=10
+comments_per_post=5
+sort_method=relevant
+time_filter=month

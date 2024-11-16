@@ -9,6 +9,9 @@ from scraping import news_scraping as ns
 from scraping import financial_news_scraping as fns
 from sentiment import news_sentiment_analysis as nsa
 
+from dotenv import load_dotenv
+load_dotenv()
+
 def generate_config(subreddits: list[str] = [],
                     search_terms: list[str] = [],
                     posts_per_search: int = 10,
@@ -176,7 +179,7 @@ def generate_news_sentiment(industry: str = "") -> str:
     top_companies = competitor_info[0]
     top_companies_tickers = competitor_info[1]
     # Run general news scraping
-    general_news_path = ns.get_multiple_companies_headlines(api_key='', companies=top_companies, output_file='../general_news.csv', headlines_per_company=5)
+    general_news_path = ns.get_multiple_companies_headlines(api_key=os.environ.get('REDDIT_CLIENT_ID'), companies=top_companies, output_file='../general_news.csv', headlines_per_company=5)
     # Run financial news scraping
     financial_news_path = fns.get_company_news(top_companies_tickers, max_headlines=5)
     # Run sentiment analysis

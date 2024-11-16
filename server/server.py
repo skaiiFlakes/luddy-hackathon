@@ -12,22 +12,22 @@ def return_home():
 
 @app.route('/api/submit', methods=['POST'])
 def submit_form():
-    if not request.is_json:
-        return jsonify({'error': 'Content type must be application/json'}), 400
-
-    data = request.get_json()
-
-    # Validate required fields
-    required_fields = ['industry', 'kpi', 'currentStatus', 'targetStatus', 'deadline']
-    missing_fields = [field for field in required_fields if field not in data]
-
-    if missing_fields:
-        return jsonify({
-            'error': f'Missing required fields: {", ".join(missing_fields)}'
-        }), 400
-
     try:
-        # Process the form data with your prompt function
+        if not request.is_json:
+            return jsonify({'error': 'Content type must be application/json'}), 400
+
+        data = request.get_json()
+
+        # Validate required fields
+        required_fields = ['industry', 'kpi', 'currentStatus', 'targetStatus', 'deadline']
+        missing_fields = [field for field in required_fields if field not in data]
+
+        if missing_fields:
+            return jsonify({
+                'error': f'Missing required fields: {", ".join(missing_fields)}'
+            }), 400
+
+            # Process the form data with your prompt function
         result = prompt(data)
         return jsonify(result)
     except Exception as e:

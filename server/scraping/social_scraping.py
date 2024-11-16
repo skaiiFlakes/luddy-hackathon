@@ -1,3 +1,4 @@
+import os
 import praw
 import pandas as pd
 from datetime import datetime
@@ -5,6 +6,8 @@ import time
 from typing import List, Optional
 from itertools import product
 
+from dotenv import load_dotenv
+load_dotenv()
 
 class RedditMultiScraper:
     @staticmethod
@@ -39,9 +42,9 @@ class RedditMultiScraper:
         try:
             config = self.load_config(config_file)
             self.reddit = praw.Reddit(
-                client_id=config['CLIENT_ID'],
-                client_secret=config['CLIENT_SECRET'],
-                user_agent=config['USER_AGENT']
+                client_id=os.environ.get('REDDIT_CLIENT_ID'),
+                client_secret=os.environ.get('REDDIT_CLIENT_SECRET'),
+                user_agent=os.environ.get('REDDIT_USER_AGENT')
             )
             # Store other config parameters as instance variables
             self.search_terms = config.get('search_terms', [])
