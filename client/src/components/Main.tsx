@@ -54,7 +54,10 @@ export default function Main() {
           <div className='pt-12 pb-8 px-10 mx-auto fsac4'>
             {response.outputs.recommendations.map((recommendation, index) => (
               <React.Fragment key={index}>
-                <div id={`task-${index * 4 + 1}`} className='ktq4'>
+                <div
+                  id={`task-${index * 4 + 1}`}
+                  className='ktq4 hover:brightness-150 hover:text-gray-300 transition duration-100'
+                >
                   <h3 className='font-semibold text-lg text-white'>
                     {(index + 1).toString()}. {recommendation.TaskName}
                   </h3>
@@ -67,7 +70,7 @@ export default function Main() {
                     (subtask: any, subindex: any) => (
                       <div
                         key={subindex}
-                        className='bg-gray-900 rounded-lg p-4'
+                        className='bg-gray-900 text-gray-500 rounded-lg p-4 hover:brightness-150 hover:text-gray-300 transition duration-100'
                       >
                         {subtask.TaskName}
                       </div>
@@ -91,7 +94,7 @@ export default function Main() {
       </p>
       <div className='pt-12 pb-24 max-w-4xl mx-auto fsac4 md:px-1 px-3'>
         <div className='ktq4'>
-          <Target className='w-10 h-10 text-blue-500' />
+          <Target className='w-10 h-10 text-blue-500 text-gradient-to-r from-blue-300 to-blue-800' />
           <h3 className='pt-3 font-semibold text-lg text-white'>
             Smart Goal Setting
           </h3>
@@ -102,7 +105,7 @@ export default function Main() {
           </p>
         </div>
         <div className='ktq4'>
-          <Clock className='w-10 h-10 text-blue-500' />
+          <Clock className='w-10 h-10 text-blue-500 text-gradient-to-r from-blue-300 to-blue-800' />
           <h3 className='pt-3 font-semibold text-lg text-white'>
             Timeline Optimization
           </h3>
@@ -113,7 +116,7 @@ export default function Main() {
           </p>
         </div>
         <div className='ktq4'>
-          <TrendingUp className='w-10 h-10 text-blue-500' />
+          <TrendingUp className='w-10 h-10 text-blue-500 text-gradient-to-r from-blue-300 to-blue-800' />
           <h3 className='pt-3 font-semibold text-lg text-white'>
             Finance-Driven Insights
           </h3>
@@ -124,7 +127,7 @@ export default function Main() {
           </p>
         </div>
         <div className='ktq4'>
-          <LineChart className='w-10 h-10 text-blue-500' />
+          <LineChart className='w-10 h-10 text-blue-500 text-gradient-to-r from-blue-300 to-blue-800' />
           <h3 className='pt-3 font-semibold text-lg text-white'>
             Market Sentiment Analytics
           </h3>
