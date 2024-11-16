@@ -1,6 +1,8 @@
 import Form from './Form';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import Gantt from './Gantt';
+import { sampleGanttData } from '../sampleGanttData';
 
 export default function Main() {
   const [response, setResponse] = useState('loading');
@@ -34,6 +36,8 @@ export default function Main() {
           <Form />
         </div>
       </div>
+
+      <Gantt data={sampleGanttData} />
 
       <h2 className='pt-40 mb-1 text-2xl font-semibold tracking-tighter text-center text-gray-200 lg:text-7xl md:text-6xl'>
         Your mother.
