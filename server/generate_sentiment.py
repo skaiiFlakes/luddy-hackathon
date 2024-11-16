@@ -1,6 +1,10 @@
+import os
+import ast
+
 from scraping import parse_csv as pc
 from scraping import social_scraping as ss
 from sentiment import social_sentiment_analysis as ssa
+from get_competitors import get_competitors as gc
 
 def generate_config(subreddits: list[str] = [],
                     search_terms: list[str] = [],
@@ -91,13 +95,25 @@ def generate_config(subreddits: list[str] = [],
 
 
 def generate_social_sentiment(industry: str = "",
-                              top_companies: list[str] = [],
-                              subreddits: list[str] = [],
-                              search_terms: list[str] = [],
                               config_file: str = './reddit_config.txt'
                               ) -> list[str]:
+    # Get info from ChatGPT
+    # Check if the competitor_info file exists
+    if not os.path.exists('./competitor_info.txt'):
+        print("NOTFOUND")
+        competitor_info = gc(industry)
+        with open('./competitor_info.txt', 'w') as file:
+            file.write(competitor_info)
+    else:
+        with open('./competitor_info.txt', 'r') as file:
+            competitor_info = file.read()
+
+    # Parse the competitor_info to extract top_companies and subreddits
+    competitor_info = ast.literal_eval(competitor_info)
+    top_companies = competitor_info[0]
+    subreddits = competitor_info[1]
     # Generate config for scraping
-    generate_config(subreddits=subreddits, search_terms=search_terms, config_file=config_file, sort_method='relevant')
+    generate_config(subreddits=subreddits, search_terms=top_companies, config_file=config_file, sort_method='relevant')
     # Do scraping to get csv
     results = ""
     try:
@@ -132,7 +148,7 @@ def generate_social_sentiment(industry: str = "",
 
 
 if __name__ == "__main__":
-    search_terms = ['spacex', 'L3Harris', 'NextNav']
-    subreddits = ['space']
+    # search_terms = ['beigene', 'tango therapeutics', 'allogene therapeutics']
+    # subreddits = ['biotech']
 
-    print(generate_social_sentiment(search_terms=search_terms, subreddits=subreddits))
+    print(generate_social_sentiment(industry="space"))
