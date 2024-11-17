@@ -1,1 +1,1 @@
-![image](G4NTT Pipeline chart.png)
+![image](G4NTTPipeline.png)
