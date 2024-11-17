@@ -22,7 +22,7 @@ def prompt(inputs):
     print(kpi, current_kpi, desired_kpi, deadline, industry)
 
     sentiment_context = ""
-    sentiment_file = open("../preprocessed_files/" + industry.lower() + "_sentiment.txt", "r")
+    sentiment_file = open("./preprocessed_files/" + industry.lower() + "_sentiment.txt", "r")
     try :
         sentiment_context = sentiment_file.read()
     finally:
@@ -31,7 +31,7 @@ def prompt(inputs):
         return "Sentiment context not found"
 
     financial_context = ""
-    financial_file = open("../preprocessed_files/" + industry + "_financial_analysis.txt", "r")
+    financial_file = open("./preprocessed_files/" + industry + "_financial_analysis.txt", "r")
     try:
         financial_context = financial_file.read()
     finally:
