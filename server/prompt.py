@@ -15,6 +15,7 @@ def prompt(inputs):
     api_key=api_key
     )
 
+    business_description = inputs.get('businessDescription')
     kpi = inputs.get('kpi')
     industry = inputs.get('industry')
     current_kpi = inputs.get('currentStatus')
@@ -54,6 +55,7 @@ def prompt(inputs):
     my_prompt = """
 **Inputs:**
 1. ** BEGIN Startup KPIs:**
+    - Business Description: %s
     - KPI: %s
     - Industry: %s
     - Current KPI performance: %s
@@ -159,7 +161,7 @@ CRITICAL: Your response MUST maintain the exact following JSON property names. D
             ]
         }
     ]
-}""" % (kpi, industry, current_kpi, desired_kpi, deadline, start_date, financial_context, sentiment_context, current_kpi, desired_kpi)
+}""" % (business_description, kpi, industry, current_kpi, desired_kpi, deadline, start_date, financial_context, sentiment_context, current_kpi, desired_kpi)
 
     system_prompt = """You are a precise business strategy analyst who MUST create EXACTLY 10 specific business objectives, each with EXACTLY 3 subtasks (total 40 tasks). You excel at:
 1. Drawing meaningful inferences from data instead of stating raw numbers

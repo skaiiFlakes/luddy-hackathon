@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Label, Select, TextInput } from 'flowbite-react';
+import { Label, Select, TextInput, Textarea } from 'flowbite-react';
 import { kpis } from '../utils/kpiData';
 
 const FormGroup = ({
@@ -31,6 +31,7 @@ export default function Form({
   setError: (error: string | null) => void;
   setResponse: (response: any) => void;
 }) {
+  const [businessDescription, setBusinessDescription] = useState('');
   const [industry, setIndustry] = useState('Information Technology');
   const [kpi, setKpi] = useState('Gross Sales');
   const [currentStatus, setCurrentStatus] = useState('');
@@ -79,6 +80,7 @@ export default function Form({
     await scrollToGantt();
 
     const formData = {
+      businessDescription,
       industry,
       kpi,
       currentStatus,
@@ -114,6 +116,10 @@ export default function Form({
 
   // Effect to log changes
   useEffect(() => {
+    console.log('Business Description changed:', businessDescription);
+  }, [businessDescription]);
+
+  useEffect(() => {
     console.log('Industry changed:', industry);
   }, [industry]);
 
@@ -132,6 +138,12 @@ export default function Form({
   useEffect(() => {
     console.log('Deadline changed:', deadline);
   }, [deadline]);
+
+  const handleDescriptionChange = (
+    event: React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    setBusinessDescription(event.target.value);
+  };
 
   const handleIndustryChange = (
     event: React.ChangeEvent<HTMLSelectElement>
@@ -160,11 +172,29 @@ export default function Form({
   };
 
   const minDate = new Date();
+  minDate.setFullYear(minDate.getFullYear() + 3);
   const maxDate = new Date();
   maxDate.setFullYear(maxDate.getFullYear() + 5);
 
   return (
-    <form onSubmit={handleSubmit} className='space-y-4 '>
+    <form onSubmit={handleSubmit} className='space-y-4'>
+      <FormGroup label='Your Business'>
+        <Textarea
+          className='!focus:ring-blue-500 !focus:border-blue-500 dark'
+          id='businessDescription'
+          required
+          value={businessDescription}
+          onChange={handleDescriptionChange}
+          rows={4}
+          placeholder='Tell us about your business...'
+          style={{
+            backgroundColor: '#121212',
+            border: '1px solid gray',
+            color: 'white',
+          }}
+        />
+      </FormGroup>
+
       <FormGroup label='Industry'>
         <Select
           className='dark'
@@ -261,6 +291,7 @@ export default function Form({
                 input: {
                   colors: {
                     gray: 'bg-gray-800 border-gray-500 text-white',
+                    focus: 'bg-gray-800 border-blue-500 text-white', // Add this line
                   },
                 },
               },
@@ -316,7 +347,10 @@ export default function Form({
           theme={{
             field: {
               input: {
-                colors: { gray: 'bg-gray-800 border-gray-500 text-white' },
+                colors: {
+                  gray: 'bg-gray-800 border-gray-500 text-white',
+                  focus: 'bg-gray-800 border-blue-500 text-white',
+                }, // Add this line
               },
             },
           }}
@@ -325,7 +359,6 @@ export default function Form({
       </FormGroup>
 
       <div className='lg:ml-[33.33%]'>
-        {/* <div className='flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4'> */}
         <button
           type='submit'
           disabled={isLoading}
@@ -340,20 +373,6 @@ export default function Form({
             <span>Generate G4NTT</span>
           </div>
         </button>
-        {/* <button
-            disabled={isLoading}
-            className={`inline-flex items-center justify-center py-2 rounded-lg font-semibold tracking-tighter text-white ease-in-out transform bg-transparent bg-gradient-to-r from-pink-600 to-purple-700 px-10 text-md md:mt-0 focus:shadow-outline lg:ml-2.5 active:scale-95 focus:scale-100 transition duration-300 ${
-              isLoading
-                ? 'brightness-50'
-                : 'hover:brightness-150 focus:brightness-100'
-            }`}
-            style={{ width: '100%' }}
-          >
-            <div className='flex justify-center items-center text-lg'>
-              <span>Run Risk Analysis</span>
-            </div>
-          </button>
-        </div> */}
       </div>
     </form>
   );

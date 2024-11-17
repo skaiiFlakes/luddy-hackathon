@@ -68,65 +68,70 @@ interface RecommendationsDisplayProps {
 const RecommendationsDisplay: React.FC<RecommendationsDisplayProps> = ({
   recommendations,
 }) => {
+  const recommendationsCopy = [...recommendations].sort(
+    (a, b) => a.RiskLevel - b.RiskLevel
+  );
   return (
     <div className='pt-12 pb-8 px-10 mx-auto space-y-6'>
-      {recommendations
-        .sort((a: any, b: any) => a.RiskLevel - b.RiskLevel)
-        .map((recommendation, index) => (
-          <div key={recommendation.TaskID} className='lg:flex lg:gap-6'>
-            <React.Fragment key={index}>
-              <div
-                className={`ktq4 hover:brightness-125 hover:text-gray-300 transition-all duration-300 flex-1 rounded-lg p-4 bg-gray-900
-                ${riskGlowColors[recommendation.RiskLevel]}`}
-              >
-                <div className='flex items-center space-x-4 mb-2'>
-                  <RiskDot risklevel={recommendation.RiskLevel} />
-                </div>
-                <h3 className='font-semibold text-lg text-white'>
-                  {(index + 1).toString()}. {recommendation.TaskName} by{' '}
-                  {format(
-                    addBusinessDays(
-                      parseISO(recommendation.subtasks[2].StartDate),
-                      recommendation.subtasks[2].Duration - 1
-                    ),
-                    'MMM d, yyyy'
-                  )}
-                </h3>
-                <p className='pt-2 value-text text-md text-gray-200 fkrr1'>
-                  {recommendation.Description}
-                </p>
+      {recommendationsCopy.map((recommendation, index) => (
+        <div
+          id={`task-${recommendation.TaskID}`}
+          key={recommendation.TaskID}
+          className='lg:flex lg:gap-6'
+        >
+          <React.Fragment key={index}>
+            <div
+              className={`ktq4 hover:brightness-125 hover:text-gray-300 transition-all duration-300 flex-1 rounded-lg p-4 bg-gray-900
+                    ${riskGlowColors[recommendation.RiskLevel]}`}
+            >
+              <div className='flex items-center space-x-4 mb-2'>
+                <RiskDot risklevel={recommendation.RiskLevel} />
               </div>
-              <div className='lg:w-96 mt-4 lg:mt-0 h-100 flex flex-1 flex-col space-y-2'>
-                {recommendation.subtasks.map((subtask, subindex) => (
-                  <div
-                    key={subindex}
-                    className={`bg-gray-900 text-gray-500 h-full rounded-lg p-4 hover:brightness-125 hover:text-gray-300
-                    transition-all duration-300 ${
-                      riskGlowColors[subtask.RiskLevel]
-                    }`}
-                  >
-                    <div className='flex justify-between items-center w-full h-full'>
-                      <span>{subtask.TaskName}</span>
-                      <>
-                        <div
-                          data-tooltip-id={`risk-${subtask.TaskName}`}
-                          className={`w-3 h-3 rounded-full ${
-                            riskColors[subtask.RiskLevel as RiskSpectrum]
-                          }`}
-                        />
-                        <Tooltip id={`risk-${subtask.TaskName}`}>
-                          <span className='text-sm'>
-                            {riskLabels[subtask.RiskLevel]}
-                          </span>
-                        </Tooltip>
-                      </>
-                    </div>
+              <h3 className='font-semibold text-lg text-white'>
+                {(index + 1).toString()}. {recommendation.TaskName} by{' '}
+                {format(
+                  addBusinessDays(
+                    parseISO(recommendation.subtasks[2].StartDate),
+                    recommendation.subtasks[2].Duration - 1
+                  ),
+                  'MMM d, yyyy'
+                )}
+              </h3>
+              <p className='pt-2 value-text text-md text-gray-200 fkrr1'>
+                {recommendation.Description}
+              </p>
+            </div>
+            <div className='lg:w-96 mt-4 lg:mt-0 h-100 flex flex-1 flex-col space-y-2'>
+              {recommendation.subtasks.map((subtask, subindex) => (
+                <div
+                  key={subindex}
+                  className={`bg-gray-900 text-gray-500 h-full rounded-lg p-4 hover:brightness-125 hover:text-gray-300
+                        transition-all duration-300 ${
+                          riskGlowColors[subtask.RiskLevel]
+                        }`}
+                >
+                  <div className='flex justify-between items-center w-full h-full'>
+                    <span>{subtask.TaskName}</span>
+                    <>
+                      <div
+                        data-tooltip-id={`risk-${subtask.TaskName}`}
+                        className={`w-3 h-3 rounded-full ${
+                          riskColors[subtask.RiskLevel as RiskSpectrum]
+                        }`}
+                      />
+                      <Tooltip id={`risk-${subtask.TaskName}`}>
+                        <span className='text-sm'>
+                          {riskLabels[subtask.RiskLevel]}
+                        </span>
+                      </Tooltip>
+                    </>
                   </div>
-                ))}
-              </div>
-            </React.Fragment>
-          </div>
-        ))}
+                </div>
+              ))}
+            </div>
+          </React.Fragment>
+        </div>
+      ))}
     </div>
   );
 };
