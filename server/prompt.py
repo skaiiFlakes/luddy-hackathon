@@ -94,7 +94,7 @@ You MUST create EXACTLY 10 main business objectives, each with EXACTLY 3 subtask
 3. For each main objective, provide:
     - TaskID: integers 1-10
     - TaskName: A SMART objective that follows this exact format:
-      "[Action Verb] [Specific Metric] from [Current Number with commas] to [Target Number with commas] (include $ if currency)"
+      "[Action Verb] [Specific Metric] to [Target Number with commas] (include $ if currency)"
       Example formats:
       - "Increase monthly revenue from $1,000,000 to $1,500,000"
       - "Reduce customer churn rate from 15%% to 8%%"
@@ -105,6 +105,7 @@ You MUST create EXACTLY 10 main business objectives, each with EXACTLY 3 subtask
       4. Use varied sentence structures without repetitive patterns
     - RiskLevel: integer from 1-5 indicating implementation risk
     - Main Objectives should be made in sequential order
+
 
 
 4. For each subtask, provide:
