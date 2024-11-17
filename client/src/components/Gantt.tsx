@@ -57,7 +57,7 @@ function Gantt({ data }: { data: any }) {
       if (ganttRef.current) {
         ganttRef.current.collapseAll();
       }
-    }, 100);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);
