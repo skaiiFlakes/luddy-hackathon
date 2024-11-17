@@ -172,6 +172,7 @@ export default function Form({
           required
           value={industry}
           onChange={handleIndustryChange}
+          style={{ backgroundColor: '#242424' }}
         >
           {[
             'Automotive',
@@ -208,6 +209,7 @@ export default function Form({
           required
           value={kpi}
           onChange={handleKpiChange}
+          style={{ backgroundColor: '#242424' }}
         >
           {Object.keys(kpis).map((key) => (
             <option key={key} value={key}>
