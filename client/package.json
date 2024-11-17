@@ -11,6 +11,7 @@
   "dependencies": {
     "@syncfusion/ej2-pdf-export": "^27.2.2",
     "@syncfusion/ej2-react-gantt": "^27.2.2",
+    "date-fns": "^4.1.0",
     "flowbite-react": "^0.10.2",
     "lucide-react": "^0.460.0",
     "next": "15.0.3",

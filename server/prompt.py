@@ -19,19 +19,24 @@ def prompt(inputs):
     current_kpi = inputs.get('currentStatus')
     desired_kpi = inputs.get('targetStatus')
     deadline = inputs.get('deadline')
-    print(kpi, current_kpi, desired_kpi, deadline, industry)
 
-    with open("news_sentiment.txt", "r") as f:
-        sentiment_context = f.read()
-    financial_context = ""
+    try:
+        with open(f"preprocessed_files/{industry}_sentiment.txt", "r") as f:
+            sentiment_context = f.read()
+    except:
+        sentiment_context = "No sentiment context available for this industry."
+
+    try:
+        with open(f"preprocessed_files/{industry}_financial_analysis.txt", "r") as f:
+            financial_context = f.read()
+    except:
+        financial_context = "No financial context available for this industry."
 
     # try:
     #     sentiment_context = get_sentiment_context(industry)
     # except Exception as e:
     #     with open("news_sentiment.txt", "r") as f:
             # sentiment_context = f.read()
-
-    print(sentiment_context)
 
 
     my_prompt = """
