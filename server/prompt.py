@@ -3,6 +3,7 @@ from generate_sentiment import get_sentiment_context
 from dotenv import load_dotenv
 import openai
 import os
+import datetime
 
 load_dotenv()
 
@@ -19,6 +20,7 @@ def prompt(inputs):
     current_kpi = inputs.get('currentStatus')
     desired_kpi = inputs.get('targetStatus')
     deadline = inputs.get('deadline')
+    start_date = str(datetime.datetime.now())
     print(kpi, current_kpi, desired_kpi, deadline, industry)
 
     sentiment_context = "Unkown"
@@ -57,6 +59,7 @@ def prompt(inputs):
     - Current KPI performance: %s
     - Desired KPI performance: %s
     - Deadline for improvement: %s
+    - Overall start date: %s
     ** END Startup KPIs **
 2. ** BEGIN Industry Financial Context:**
     %s
@@ -105,9 +108,8 @@ You MUST create EXACTLY 10 main business objectives, each with EXACTLY 3 subtask
     - TaskID: MUST be one of: "A", "B", or "C"
     - TaskName: A specific action item starting with an action verb
     - StartDate: date in ISO format (YYYY-MM-DD)
-    - Duration: integer number of days
+    - Duration: integer number of days to complete the subtask
     - RiskLevel: integer from 1-5 that correlates with parent task risk level
-    - The Duration MUST be used to calculate the end date in the parent task's TaskName
 **END Tasks**
 
 
@@ -118,7 +120,7 @@ You MUST create EXACTLY 10 main business objectives, each with EXACTLY 3 subtask
 4. Main task IDs MUST be integers 1-10
 5. Risk levels MUST be integers 1-5
 6. Subtask risk levels MUST correlate with parent task risk level according to the specified ranges
-7. The start date plus duration MUST NOT pass the desired deadline for goals, but timelines MUST be realistic
+7. The start date of the first subtask per main task MUST match the overall start date provided
 **END VALIDATION REQUIREMENTS**
 
 CRITICAL: Your response MUST maintain the exact following JSON property names. DO NOT modify, rename, or restructure any properties:
@@ -155,7 +157,7 @@ CRITICAL: Your response MUST maintain the exact following JSON property names. D
             ]
         }
     ]
-}""" % (kpi, industry, current_kpi, desired_kpi, deadline, financial_context, sentiment_context, current_kpi, desired_kpi)
+}""" % (kpi, industry, current_kpi, desired_kpi, deadline, start_date, financial_context, sentiment_context, current_kpi, desired_kpi)
 
     system_prompt = """You are a precise business strategy analyst who MUST create EXACTLY 10 specific business objectives, each with EXACTLY 3 subtasks (total 40 tasks). You excel at:
 1. Drawing meaningful inferences from data instead of stating raw numbers
@@ -164,6 +166,8 @@ CRITICAL: Your response MUST maintain the exact following JSON property names. D
 4. Using proper number formatting (commas for thousands) and currency symbols ($) for monetary values
 5. Creating SMART objectives with specific, measurable, achievable, relevant, and time-bound targets
 6. Assessing implementation risks and their cascading effects on subtasks
+7. Creating timelines to complete main objectives by the desired deadline
+8. Create tasking with realistic multi-month durations if allowed by the deadline
 
 STRICT REQUIREMENTS:
 - Generate EXACTLY 10 main tasks (no more, no less)
