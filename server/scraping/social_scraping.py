@@ -174,6 +174,8 @@ class RedditMultiScraper:
                 print(f"Error searching {subreddit} for {term}: {str(e)}")
                 continue
 
+            time.sleep(1)
+
         # Create DataFrame
         df = pd.DataFrame(structured_data)
 
