@@ -50,18 +50,21 @@ def prompt(inputs):
 
     my_prompt = """
 **Inputs:**
-1. **Startup KPIs:**
+1. ** BEGIN Startup KPIs:**
     - KPI: %s
     - Industry: %s
     - Current KPI performance: %s
     - Desired KPI performance: %s
     - Deadline for improvement: %s
-2. **Industry Financial Context:**
+    ** END Startup KPIs **
+2. ** BEGIN Industry Financial Context:**
     %s
-3. **Sentiment Analysis:**
+   ** END Industry Financial Context **
+3. **BEGIN Sentiment Analysis:**
     %s
+   **END Sentiment Analysis**
 
-**Tasks:**
+**BEGIN Tasks:**
 
 You MUST create EXACTLY 10 main business objectives, each with EXACTLY 3 subtasks (total of 40 tasks). Any response with fewer tasks will be rejected.
 
@@ -104,15 +107,18 @@ You MUST create EXACTLY 10 main business objectives, each with EXACTLY 3 subtask
     - Duration: integer number of days
     - RiskLevel: integer from 1-5 that correlates with parent task risk level
     - The Duration MUST be used to calculate the end date in the parent task's TaskName
+**END Tasks**
 
-VALIDATION REQUIREMENTS:
+
+**BEGIN VALIDATION REQUIREMENTS:**
 1. MUST have EXACTLY 10 main tasks
 2. Each main task MUST have EXACTLY 3 subtasks
 3. Subtask IDs MUST be "A", "B", or "C"
 4. Main task IDs MUST be integers 1-10
 5. Risk levels MUST be integers 1-5
 6. Subtask risk levels MUST correlate with parent task risk level according to the specified ranges
-
+7. The start date plus duration MUST NOT pass the desired deadline for goals, but timelines MUST be realistic
+**END VALIDATION REQUIREMENTS**
 
 CRITICAL: Your response MUST maintain the exact following JSON property names. DO NOT modify, rename, or restructure any properties:
 
