@@ -30,7 +30,7 @@ export default function Index() {
             background: linear-gradient(
               to bottom,
               rgba(0, 0, 0, 0.2) 0%,
-              rgba(0, 0, 0, 1) 20%,
+              rgba(0, 0, 0, 1) 19%,
               rgba(0, 0, 0, 1) 100%
             );
           }

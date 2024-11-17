@@ -77,19 +77,20 @@ You MUST create EXACTLY 10 main business objectives, each with EXACTLY 3 subtask
       1. Draw meaningful inferences from sentiment patterns
       2. Connect industry trends to specific market opportunities
       3. Explain how this objective addresses the market dynamics
+      4. Use varied sentence structures without repetitive patterns
 
 4. For each subtask, provide:
     - TaskID: MUST be one of: "A", "B", or "C"
     - TaskName: A specific action item starting with an action verb
     - StartDate: date in ISO format (YYYY-MM-DD)
     - Duration: integer number of days
-    - The Duration MUST be used to calculate the end date in the parent task's TaskName
 
 VALIDATION REQUIREMENTS:
 1. MUST have EXACTLY 10 main tasks
 2. Each main task MUST have EXACTLY 3 subtasks
 3. Subtask IDs MUST be "A", "B", or "C"
 4. Main task IDs MUST be integers 1-10
+5. First main task MUST NOT reiterate the KPI improvement
 
 CRITICAL: Your response MUST maintain the exact following JSON property names. DO NOT modify, rename, or restructure any properties:
 

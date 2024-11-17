@@ -359,7 +359,7 @@ export default function Main() {
                 <React.Fragment key={index}>
                   <div
                     id={`task-${index + 1}`}
-                    className='ktq4 hover:brightness-150 hover:text-gray-300 transition duration-100'
+                    className='ktq4 hover:shadow-[0_10px_10px_1px_0.3] hover:shadow-pink-600 hover:brightness-150 hover:text-gray-300 transition duration-100'
                   >
                     <h3 className='font-semibold text-lg text-white'>
                       {(index + 1).toString()}. {recommendation.TaskName} by{' '}

@@ -240,10 +240,22 @@ export default function Form({
           <TextInput
             className='dark w-full'
             id='currentstatus'
-            type='text'
+            type='number'
+            step='any'
             value={currentStatus}
             onChange={handleCurrentStatusChange}
             required
+            onKeyDown={(e) => {
+              if (
+                (e.key !== 'Backspace' &&
+                  e.key !== 'Delete' &&
+                  e.key !== 'ArrowLeft' &&
+                  e.key !== 'ArrowRight' &&
+                  !/^[0-9.]$/.test(e.key)) ||
+                (e.key === '.' && currentStatus.includes('.'))
+              )
+                e.preventDefault();
+            }}
             theme={{
               field: {
                 input: {
@@ -267,10 +279,22 @@ export default function Form({
           <TextInput
             className='dark w-full'
             id='targetstatus'
-            type='text'
+            type='number'
+            step='any'
             value={targetStatus}
             onChange={handleTargetStatusChange}
             required
+            onKeyDown={(e) => {
+              if (
+                (e.key !== 'Backspace' &&
+                  e.key !== 'Delete' &&
+                  e.key !== 'ArrowLeft' &&
+                  e.key !== 'ArrowRight' &&
+                  !/^[0-9.]$/.test(e.key)) ||
+                (e.key === '.' && targetStatus.includes('.'))
+              )
+                e.preventDefault();
+            }}
             theme={{
               field: {
                 input: {
@@ -301,19 +325,35 @@ export default function Form({
       </FormGroup>
 
       <div className='lg:ml-[33.33%]'>
-        <button
-          type='submit'
-          disabled={isLoading}
-          className={`inline-flex items-center py-2 rounded-lg font-semibold tracking-tighter text-white ease-in-out transform bg-transparent bg-gradient-to-r from-blue-500 to-blue-800 px-20 text-md md:mt-0 focus:shadow-outline lg:ml-2.5  active:scale-95 focus:scale-100 transition duration-300 ${
-            isLoading
-              ? 'brightness-50'
-              : 'hover:brightness-150 focus:brightness-100'
-          }`}
-        >
-          <div className='flex text-lg'>
-            <span className='justify-center'>Generate G4NTT</span>
-          </div>
-        </button>
+        <div className='flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4'>
+          <button
+            type='submit'
+            disabled={isLoading}
+            className={`inline-flex items-center justify-center py-2 rounded-lg font-semibold tracking-tighter text-white ease-in-out transform bg-transparent bg-gradient-to-r from-blue-600 to-blue-800 px-10 text-md md:mt-0 focus:shadow-outline lg:ml-2.5 active:scale-95 focus:scale-100 transition duration-300 ${
+              isLoading
+                ? 'brightness-50'
+                : 'hover:brightness-150 focus:brightness-100'
+            }`}
+            style={{ width: '100%' }}
+          >
+            <div className='flex justify-center items-center text-lg'>
+              <span>Generate G4NTT</span>
+            </div>
+          </button>
+          <button
+            disabled={isLoading}
+            className={`inline-flex items-center justify-center py-2 rounded-lg font-semibold tracking-tighter text-white ease-in-out transform bg-transparent bg-gradient-to-r from-pink-600 to-purple-700 px-10 text-md md:mt-0 focus:shadow-outline lg:ml-2.5 active:scale-95 focus:scale-100 transition duration-300 ${
+              isLoading
+                ? 'brightness-50'
+                : 'hover:brightness-150 focus:brightness-100'
+            }`}
+            style={{ width: '100%' }}
+          >
+            <div className='flex justify-center items-center text-lg'>
+              <span>Run Risk Analysis</span>
+            </div>
+          </button>
+        </div>
       </div>
     </form>
   );
