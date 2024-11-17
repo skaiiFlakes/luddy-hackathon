@@ -352,7 +352,11 @@ export default function Main() {
       {Array.isArray(response.recommendations) &&
         response.recommendations.length > 0 && (
           <div>
-            <Gantt data={response.recommendations} />
+            <Gantt
+              data={response.recommendations.sort(
+                (a: any, b: any) => a.RiskLevel - b.RiskLevel
+              )}
+            />
             <RecommendationsDisplay
               recommendations={response.recommendations}
             />

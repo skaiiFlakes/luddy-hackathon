@@ -21,23 +21,24 @@ def prompt(inputs):
     deadline = inputs.get('deadline')
     print(kpi, current_kpi, desired_kpi, deadline, industry)
 
-    sentiment_context = ""
-    sentiment_file = open("./preprocessed_files/" + industry.lower() + "_sentiment.txt", "r")
+    sentiment_context = "Unkown"
     try :
-        sentiment_context = sentiment_file.read()
-    finally:
-        sentiment_file.close()
-    if sentiment_context == "":
-        return "Sentiment context not found"
+        if os.path.exists("preprocessed_files/" + industry.lower() + "_sentiment.txt"):
+            sentiment_file = open("preprocessed_files/" + industry.lower() + "_sentiment.txt", "r")
+            sentiment_context = sentiment_file.read()
+            sentiment_file.close()
+    except Exception as e:
+        pass
 
-    financial_context = ""
-    financial_file = open("./preprocessed_files/" + industry + "_financial_analysis.txt", "r")
+    financial_context = "Unkown"
     try:
-        financial_context = financial_file.read()
-    finally:
-        financial_file.close()
-    if financial_context == "":
-        return "Financial context not found"
+        if os.path.exists("preprocessed_files/" + industry.lower().title().replace(' ','_') + "_financial_analysis.txt"):
+            financial_file = open("preprocessed_files/" + industry.lower().title().replace(' ','_') + "_financial_analysis.txt", "r")
+            financial_context = financial_file.read()
+            financial_file.close()
+
+    except Exception as e:
+        pass
 
     # try:
     #     sentiment_context = get_sentiment_context(industry)
