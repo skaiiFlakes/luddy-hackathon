@@ -48,7 +48,7 @@ export default function Header() {
         >
           <div className='md:ml-auto md:mr-auto font-4 pt-1 md:pl-14 pl-1 flex flex-wrap items-center md:text-base text-1xl md:justify-center justify-items-start'>
             <Link
-              href='/features'
+              href='/'
               className='mr-11 pr-2 cursor-pointer text-gray-300 hover:text-white font-semibold tr04'
             >
               Features
@@ -91,7 +91,7 @@ export default function Header() {
                 <div className='rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden'>
                   <div className='relative grid gap-6 bg-black px-2 py-6 sm:gap-8 '>
                     <Link
-                      href='/template-1'
+                      href='/'
                       className='-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04'
                     >
                       <div className='ml-4'>
@@ -104,7 +104,7 @@ export default function Header() {
                       </div>
                     </Link>
                     <Link
-                      href='/template-2'
+                      href='/'
                       className='-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04'
                     >
                       <div className='ml-4'>
@@ -117,7 +117,7 @@ export default function Header() {
                       </div>
                     </Link>
                     <Link
-                      href='/template-3'
+                      href='/'
                       className='-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04'
                     >
                       <div className='ml-4'>
@@ -134,37 +134,38 @@ export default function Header() {
               </div>
             </div>
             <Link
-              href='/pricing'
+              href='/'
               className='mr-12 md:ml-11 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04'
             >
               Pricing
             </Link>
             <Link
-              href='/careers'
+              href='/'
               className='mr-5 cursor-pointer text-gray-300 hover:text-white font-semibold tr04'
             >
               Careers
             </Link>
           </div>
           <Link
-            href='https://twitter.com/'
+            href='https://www.youtube.com/watch?v=m-JbPCPBlaE'
             rel='noopener noreferrer'
             target='_blank'
             className='invisible md:visible'
           >
             <svg
-              // title='Twitter'
-              width='30'
-              height='17'
-              viewBox='0 0 50 40'
               xmlns='http://www.w3.org/2000/svg'
-              fill='none'
+              width='1.43em'
+              height='1em'
+              viewBox='0 0 256 180'
             >
               <path
-                data-v-54e46119=''
-                d='M15.4528 40C34.0158 40 44.1732 24.6063 44.1732 11.2796C44.1732 10.8465 44.1732 10.4134 44.1536 9.98031C46.122 8.56299 47.8347 6.77166 49.1929 4.74409C47.3819 5.55118 45.4331 6.08268 43.3858 6.33858C45.4724 5.09842 47.0669 3.11023 47.8347 0.74803C45.8858 1.90944 43.7204 2.73622 41.4173 3.18898C39.5669 1.22047 36.9488 0 34.0551 0C28.4842 0 23.9567 4.52756 23.9567 10.0984C23.9567 10.8858 24.0551 11.6536 24.2126 12.4016C15.8268 11.9882 8.38582 7.95276 3.40551 1.85039C2.53937 3.34646 2.04724 5.07874 2.04724 6.92913C2.04724 10.4331 3.83859 13.5237 6.53543 15.3347C4.88189 15.2756 3.32677 14.8228 1.9685 14.0748C1.9685 14.1142 1.9685 14.1536 1.9685 14.2126C1.9685 19.0944 5.45276 23.189 10.0591 24.1142C9.2126 24.3504 8.32677 24.4686 7.40158 24.4686C6.75197 24.4686 6.12204 24.4094 5.51181 24.2913C6.79133 28.3071 10.5315 31.2204 14.9409 31.2992C11.4763 34.0158 7.12599 35.6299 2.40158 35.6299C1.59449 35.6299 0.787401 35.5906 0 35.4921C4.44882 38.3268 9.76378 40 15.4528 40Z'
-                fill='white'
-              ></path>
+                fill='#ffffff'
+                d='M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134'
+              />
+              <path
+                fill='currentColor'
+                d='m102.421 128.06l66.328-38.418l-66.328-38.418z'
+              />
             </svg>
           </Link>
           <Link
