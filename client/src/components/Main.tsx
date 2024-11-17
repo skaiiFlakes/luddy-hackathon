@@ -337,7 +337,7 @@ export default function Main() {
         </h2>
       </div>
       <div className='container pt-12 pb-36 max-w-4xl mx-auto justify-center items-center'>
-        <div className='ktq4'>
+        <div className='ktq4 hover:shadow-[0_0_900px_rgba(59,130,246,0.5)] hover:brightness-125 hover:text-gray-300 transition duration-300'>
           <Form
             isLoading={isLoading}
             setError={setError}
@@ -371,7 +371,7 @@ export default function Main() {
         time-bound action items with clear tasks and measurable outcomes.
       </p>
       <div className='pt-12 pb-24 max-w-4xl mx-auto fsac4 md:px-1 px-3'>
-        <div className='ktq4'>
+        <div className='ktq4 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:brightness-110 hover:text-gray-300 transition duration-300'>
           <Target className='w-10 h-10 text-blue-500 text-gradient-to-r from-blue-300 to-blue-800' />
           <h3 className='pt-3 font-semibold text-lg text-white'>
             Smart Goal Setting
@@ -382,7 +382,7 @@ export default function Main() {
             milestones for every stage of your journey.
           </p>
         </div>
-        <div className='ktq4'>
+        <div className='ktq4 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:brightness-125 hover:text-gray-300 transition duration-300'>
           <Clock className='w-10 h-10 text-blue-500 text-gradient-to-r from-blue-300 to-blue-800' />
           <h3 className='pt-3 font-semibold text-lg text-white'>
             Timeline Optimization
@@ -393,7 +393,7 @@ export default function Main() {
             track with automated progress tracking and adjustments.
           </p>
         </div>
-        <div className='ktq4'>
+        <div className='ktq4 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:brightness-125 hover:text-gray-300 transition duration-300'>
           <TrendingUp className='w-10 h-10 text-blue-500 text-gradient-to-r from-blue-300 to-blue-800' />
           <h3 className='pt-3 font-semibold text-lg text-white'>
             Finance-Driven Insights
@@ -404,7 +404,7 @@ export default function Main() {
             contextual recommendations that align with your financial goals.
           </p>
         </div>
-        <div className='ktq4'>
+        <div className='ktq4 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:brightness-125 hover:text-gray-300 transition duration-300'>
           <LineChart className='w-10 h-10 text-blue-500 text-gradient-to-r from-blue-300 to-blue-800' />
           <h3 className='pt-3 font-semibold text-lg text-white'>
             Market Sentiment Analytics

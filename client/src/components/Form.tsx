@@ -164,7 +164,7 @@ export default function Form({
   maxDate.setFullYear(maxDate.getFullYear() + 5);
 
   return (
-    <form onSubmit={handleSubmit} className='space-y-4'>
+    <form onSubmit={handleSubmit} className='space-y-4 '>
       <FormGroup label='Industry'>
         <Select
           className='dark'

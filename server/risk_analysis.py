@@ -18,7 +18,7 @@ def get_kpi_risk_level(kpi_name: str, value: float) -> str:
             "healthy": 100,  # $100
             "type": "lower_better"
         },
-        "ChR": {
+        "CR": {
             "critical": 0.10,  # 10%
             "warning": 0.05,  # 5%
             "healthy": 0.02,  # 2%
@@ -89,30 +89,33 @@ def get_kpi_risk_level(kpi_name: str, value: float) -> str:
     if kpi_name not in kpi_metrics:
         return "Unknown KPI"
 
-    metric = kpi_metrics[kpi_name]
+    try:
+        metric = int(kpi_metrics[kpi_name])
 
-    if metric["type"] == "higher_better":
-        if value <= metric["critical"]:
-            return "Critical"
-        elif value <= metric["warning"]:
-            return "High"
-        elif value <= metric["healthy"]:
-            return "Medium"
-        elif value <= metric["healthy"] * 1.5:
-            return "Low"
-        else:
-            return "Minimal"
-    else:  # lower_better
-        if value >= metric["critical"]:
-            return "Critical"
-        elif value >= metric["warning"]:
-            return "High"
-        elif value >= metric["healthy"]:
-            return "Medium"
-        elif value >= metric["healthy"] * 0.5:
-            return "Low"
-        else:
-            return "Minimal"
+        if metric["type"] == "higher_better":
+            if value <= metric["critical"]:
+                return "Critical"
+            elif value <= metric["warning"]:
+                return "High"
+            elif value <= metric["healthy"]:
+                return "Medium"
+            elif value <= metric["healthy"] * 1.5:
+                return "Low"
+            else:
+                return "Minimal"
+        else:  # lower_better
+            if value >= metric["critical"]:
+                return "Critical"
+            elif value >= metric["warning"]:
+                return "High"
+            elif value >= metric["healthy"]:
+                return "Medium"
+            elif value >= metric["healthy"] * 0.5:
+                return "Low"
+            else:
+                return "Minimal"
+    except ValueError:
+        return "Unknown"
 # use this risk score and previous context, rank the suggestions for the startup
 
 load_dotenv()
@@ -133,7 +136,8 @@ def get_risk_rankings(industry: str="", KPI: str="", value: float=0.0) -> list[l
     Given that my startup is in the %s industry space, and my startup's %s KPI is currently %s risk,
     rank the following suggestions based on risk level of tackling that problem first, from low to high, where 1 is low, and 10 is high:
     %s
-    Output in a list of lists, where the format is [[suggestion, ranking], [suggestion, ranking], ...]
+    Output in a list of lists of rankings and a 1 sentence description of what risks might be involved (if risk > 5) or what market openings and opportunities there are (if risk < 5),
+    Format it this way: [[ranking, description], [ranking, description], ...]
     """ % industry, KPI, risk, suggestions
 
     completion = client.chat.completions.create(
@@ -143,5 +147,5 @@ def get_risk_rankings(industry: str="", KPI: str="", value: float=0.0) -> list[l
     ]
     )
 
-    result = completion.choices[0].message.content
+    result = {"kpi_status": risk, "risk_levels": completion.choices[0].message.content}
     return result

@@ -40,6 +40,14 @@ const riskLabels: Record<RiskSpectrum, string> = {
   5: 'Very High Risk',
 };
 
+const riskGlowColors: Record<RiskSpectrum, string> = {
+  1: 'hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]', // blue glow
+  2: 'hover:shadow-[0_0_30px_rgba(37,99,235,0.3)]', // darker blue glow
+  3: 'hover:shadow-[0_0_30px_rgba(147,51,234,0.3)]', // purple glow
+  4: 'hover:shadow-[0_0_30px_rgba(219,39,119,0.3)]', // pink glow
+  5: 'hover:shadow-[0_0_30px_rgba(239,68,68,0.3)]', // red glow
+};
+
 const RiskDot: React.FC<RiskDotProps> = ({ risklevel }) => {
   return (
     <div className='flex items-center space-x-2'>
@@ -65,7 +73,10 @@ const RecommendationsDisplay: React.FC<RecommendationsDisplayProps> = ({
       {recommendations.map((recommendation, index) => (
         <div key={recommendation.TaskID} className='lg:flex lg:gap-6'>
           <React.Fragment key={index}>
-            <div className='ktq4 hover:brightness-150 hover:text-gray-300 transition duration-100 flex-1'>
+            <div
+              className={`ktq4 hover:brightness-125 hover:text-gray-300 transition-all duration-300 flex-1 rounded-lg p-4 bg-gray-900
+                ${riskGlowColors[recommendation.RiskLevel]}`}
+            >
               <div className='flex items-center space-x-4 mb-2'>
                 <RiskDot risklevel={recommendation.RiskLevel} />
               </div>
@@ -87,7 +98,10 @@ const RecommendationsDisplay: React.FC<RecommendationsDisplayProps> = ({
               {recommendation.subtasks.map((subtask, subindex) => (
                 <div
                   key={subindex}
-                  className=' bg-gray-900 text-gray-500 h-full rounded-lg p-4 hover:brightness-150 hover:text-gray-300 transition duration-100'
+                  className={`bg-gray-900 text-gray-500 h-full rounded-lg p-4 hover:brightness-125 hover:text-gray-300
+                    transition-all duration-300 ${
+                      riskGlowColors[subtask.RiskLevel]
+                    }`}
                 >
                   <div className='flex justify-between items-center w-full h-full'>
                     <span>{subtask.TaskName}</span>
