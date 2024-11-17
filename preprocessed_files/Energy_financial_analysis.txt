@@ -1,0 +1,190 @@
+Analysis for Exxon Mobil Corporation (XOM):
+
+INDUSTRY ANALYSIS AND RECOMMENDATIONS
+===================================
+
+Performance Classification: Stable
+
+Key Metrics Summary:
+------------------
+- Revenue Growth: -16.05%
+- Profit Margin: 9.80%
+- Operating Margin: 13.27%
+- Return on Assets: 7.08%
+- Current Ratio: 1.35
+- Debt to Equity: 15.39
+
+Critical Areas (Based on Feature Importance):
+------------------------------------------
+- Profit Margin: 0.217 importance score
+- Roa: 0.201 importance score
+- Revenue Growth: 0.188 importance score
+- Operating Margin: 0.146 importance score
+- Current Ratio: 0.144 importance score
+- Debt To Equity: 0.104 importance score
+
+Market Position:
+--------------
+Company maintains stable market position with room for optimization.
+
+Industry Context:
+---------------
+Industry averages:
+- Revenue Growth: -12.89%
+- Profit Margin: 15.67%
+Company performance relative to industry benchmarks can inform strategic decisions.
+
+Predicted Performance Class: Stable
+
+Analysis for Chevron Corporation (CVX):
+
+INDUSTRY ANALYSIS AND RECOMMENDATIONS
+===================================
+
+Performance Classification: High-Performing
+
+Key Metrics Summary:
+------------------
+- Revenue Growth: -16.46%
+- Profit Margin: 8.70%
+- Operating Margin: 10.91%
+- Return on Assets: 5.37%
+- Current Ratio: 1.07
+- Debt to Equity: 16.46
+
+Critical Areas (Based on Feature Importance):
+------------------------------------------
+- Profit Margin: 0.217 importance score
+- Roa: 0.201 importance score
+- Revenue Growth: 0.188 importance score
+- Operating Margin: 0.146 importance score
+- Current Ratio: 0.144 importance score
+- Debt To Equity: 0.104 importance score
+
+Market Position:
+--------------
+Company shows strong market positioning with above-average metrics.
+
+Industry Context:
+---------------
+Industry averages:
+- Revenue Growth: -12.89%
+- Profit Margin: 15.67%
+Company performance relative to industry benchmarks can inform strategic decisions.
+
+Predicted Performance Class: High-Performing
+
+Analysis for ConocoPhillips (COP):
+
+INDUSTRY ANALYSIS AND RECOMMENDATIONS
+===================================
+
+Performance Classification: Struggling
+
+Key Metrics Summary:
+------------------
+- Revenue Growth: -28.48%
+- Profit Margin: 17.47%
+- Operating Margin: 24.28%
+- Return on Assets: 10.03%
+- Current Ratio: 1.30
+- Debt to Equity: 36.70
+
+Critical Areas (Based on Feature Importance):
+------------------------------------------
+- Profit Margin: 0.217 importance score
+- Roa: 0.201 importance score
+- Revenue Growth: 0.188 importance score
+- Operating Margin: 0.146 importance score
+- Current Ratio: 0.144 importance score
+- Debt To Equity: 0.104 importance score
+
+Market Position:
+--------------
+Company faces significant challenges requiring immediate attention.
+
+Industry Context:
+---------------
+Industry averages:
+- Revenue Growth: -12.89%
+- Profit Margin: 15.67%
+Company performance relative to industry benchmarks can inform strategic decisions.
+
+Predicted Performance Class: Struggling
+
+Analysis for Schlumberger Limited (SLB):
+
+INDUSTRY ANALYSIS AND RECOMMENDATIONS
+===================================
+
+Performance Classification: Stable
+
+Key Metrics Summary:
+------------------
+- Revenue Growth: 17.96%
+- Profit Margin: 12.44%
+- Operating Margin: 17.96%
+- Return on Assets: 8.11%
+- Current Ratio: 1.48
+- Debt to Equity: 57.14
+
+Critical Areas (Based on Feature Importance):
+------------------------------------------
+- Profit Margin: 0.217 importance score
+- Roa: 0.201 importance score
+- Revenue Growth: 0.188 importance score
+- Operating Margin: 0.146 importance score
+- Current Ratio: 0.144 importance score
+- Debt To Equity: 0.104 importance score
+
+Market Position:
+--------------
+Company maintains stable market position with room for optimization.
+
+Industry Context:
+---------------
+Industry averages:
+- Revenue Growth: -12.89%
+- Profit Margin: 15.67%
+Company performance relative to industry benchmarks can inform strategic decisions.
+
+Predicted Performance Class: Stable
+
+Analysis for EOG Resources, Inc. (EOG):
+
+INDUSTRY ANALYSIS AND RECOMMENDATIONS
+===================================
+
+Performance Classification: Struggling
+
+Key Metrics Summary:
+------------------
+- Revenue Growth: -21.40%
+- Profit Margin: 29.92%
+- Operating Margin: 35.57%
+- Return on Assets: 12.55%
+- Current Ratio: 2.31
+- Debt to Equity: 13.91
+
+Critical Areas (Based on Feature Importance):
+------------------------------------------
+- Profit Margin: 0.217 importance score
+- Roa: 0.201 importance score
+- Revenue Growth: 0.188 importance score
+- Operating Margin: 0.146 importance score
+- Current Ratio: 0.144 importance score
+- Debt To Equity: 0.104 importance score
+
+Market Position:
+--------------
+Company faces significant challenges requiring immediate attention.
+
+Industry Context:
+---------------
+Industry averages:
+- Revenue Growth: -12.89%
+- Profit Margin: 15.67%
+Company performance relative to industry benchmarks can inform strategic decisions.
+
+Predicted Performance Class: Struggling
+

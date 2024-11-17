@@ -1,0 +1,67 @@
+=== Sentiment Context for Healthcare ===
+
+average sentiment: 0.160, Title: I compiled a list of all 190 stocks and funds from the September 2024 Quarterly Thread
+Body: What is the purpose of this list exactly?, Title: I compiled a list of all 190 stocks and funds from the September 2024 Quarterly Thread
+Body: What’s next, you’re going to list out all the letters of the alphabet?
+average sentiment: -0.134, Title: Is healthcare sector doom?
+Body: Yeah, the more than $30 billion dollars the U.S. federal government has spent on covid vaccines, including, crucially, many  millions to develop the vaccines in the first place, which is of course a big risk for drug companies to take up on their own because if it doesn't pan out then they are just out all of those millions they used in development., Title: Is healthcare sector doom?
+Body: The easy covid vaccine money dried up for them and now they are wondering what to do with themselves. There is always a chance that one company will come out with a new product and make money as a result but its hard to know which one to bet on
+=== News Sentiment Analysis Summary ===
+
+Analysis Timestamp: 2024-11-16 18:58:48
+Total Headlines Analyzed: 32
+
+=== Sentiment Distribution ===
+financial_news - NEGATIVE: 6
+financial_news - POSITIVE: 10
+general_news - NEGATIVE: 5
+general_news - POSITIVE: 11
+
+=== Average Sentiment Scores ===
+financial_news: 0.099
+general_news: 0.053
+
+=== Financial News Analysis ===
+
+By Ticker (Average Sentiment):
+T: 0.123
+TMUS: -0.163
+VZ: 0.417
+ticker: -0.294
+
+By Publisher (Average Sentiment):
+Bloomberg: -0.490
+Investor's Business Daily: 0.299
+Motley Fool: 0.420
+StockStory: -0.300
+The Wall Street Journal: -1.209
+Zacks: 0.418
+publisher: -0.294
+
+Most Positive Financial Headline:
+Ticker: T
+Headline: AT&T Surges 33% YTD: Reason to Include T Stock in Your Portfolio?
+Score: 1.000
+
+Most Negative Financial Headline:
+Ticker: T
+Headline: DirecTV Plans to Cancel Dish Deal Unless Debt Swap Resolved
+Score: -1.279
+
+=== General News Analysis ===
+
+By Company (Average Sentiment):
+AT&T Inc.: 0.376
+T-Mobile US, Inc.: -0.046
+Verizon Communications Inc.: -0.102
+company: -0.292
+
+Most Positive General News Headline:
+Company: AT&T Inc.
+Headline: TCL LINKPORT IK511 brings 5G RedCap connectivity to T-Mobile
+Score: 0.789
+
+Most Negative General News Headline:
+Company: T-Mobile US, Inc.
+Headline: US Election 2024 – FBI warning about fake election videos
+Score: -1.210

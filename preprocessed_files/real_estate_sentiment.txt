@@ -1,0 +1,62 @@
+=== Sentiment Context for Real Estate ===
+
+average sentiment: 0.192, Title: Can I Buy An Abandonend House?
+Body: This is not adverse possession., Title: Can I Buy An Abandonend House?
+Body: The government cannot force the sale of the property to you unless there are back property taxes or unresolved code enforcement issues. If those exist, the city/county will foreclosure and sell it, typically at auction. 
+
+Your best bet is to track down the owner and make an offer.
+average sentiment: 0.033, Title: Transferring real estate from holding company to sub
+Body: If you have a single member llc that wholly owns its llc subsidiary - both pass throughs not taxed as S Corps, can you transfer real estate from the holding llc to the subsidiary without causing a taxable event? , None
+=== News Sentiment Analysis Summary ===
+
+Analysis Timestamp: 2024-11-16 19:01:28
+Total Headlines Analyzed: 17
+
+=== Sentiment Distribution ===
+financial_news - NEGATIVE: 1
+financial_news - NEUTRAL: 5
+financial_news - POSITIVE: 5
+general_news - NEGATIVE: 1
+general_news - POSITIVE: 5
+
+=== Average Sentiment Scores ===
+financial_news: 0.069
+general_news: 0.608
+
+=== Financial News Analysis ===
+
+By Ticker (Average Sentiment):
+RDFN: 0.299
+Z: -0.088
+ticker: -0.294
+
+By Publisher (Average Sentiment):
+Business Wire: 0.299
+MT Newswires: -0.023
+publisher: -0.294
+
+Most Positive Financial Headline:
+Ticker: RDFN
+Headline: Existing Home Sales Post Biggest Increase in Nearly Three Years
+Score: 0.300
+
+Most Negative Financial Headline:
+Ticker: ticker
+Headline: title
+Score: -0.294
+
+=== General News Analysis ===
+
+By Company (Average Sentiment):
+Zillow Group, Inc.: 0.788
+company: -0.292
+
+Most Positive General News Headline:
+Company: Zillow Group, Inc.
+Headline: Zillow Group (NASDAQ:ZG) Hits New 1-Year High After Analyst Upgrade
+Score: 1.489
+
+Most Negative General News Headline:
+Company: company
+Headline: headline
+Score: -0.292

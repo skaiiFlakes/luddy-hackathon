@@ -1,0 +1,184 @@
+=== Sentiment Context for Automotive ===
+
+average sentiment: 0.720, Title: Tesla shares jump 6% on profit beat
+Body: * Tesla reported third-quarter earnings on Wednesday that topped analysts’ estimates even as revenue came in just shy of expectations.
+
+Here’s what the company reported compared with what Wall Street was expecting, based on a survey of analysts by LSEG:
+
+* **Earnings per share:** 72 cents vs. 58 cents expected
+* **Revenue:** $25.18 billion vs. $25.37 billion expected
+
+Revenue increased 8% in the quarter from $23.35 billion a year earlier. Net income rose to about $2.17 billion, or 62 cents a share, from $1.85 billion, or 53 cents s share, a year ago.
+
+Tesla’s profit margins were bolstered by $739 million in automotive regulatory credit revenue during the quarter. The company has also been offering an array of discounts and incentives to spur sales.
+
+Automotive revenue increased 2% to $20 billion from $19.63 billion in the same period a year earlier. Energy generation and storage revenue soared 52% to $2.38 billion, while services and other revenue jumped 29% to $2.79 billion.
+
+Operating margin was reported at 10.8% of sales to improve from last quarter's mark of 6.3%, and top last year's mark of 7.6%. Total GAAP gross margin was 19.8% vs. 17.9% a year ago and 18.0% in the prior quarter. Adjusted EBITDA was $4.67 billion vs. $3.76 billion a year ago. For the quarter, the EV juggernaut's adjusted EBITDA margin rose to 18.5% of sales from 16.1% a year ago.
+
+# 
+
+Tesla had already disclosed 462,890 deliveries for Q3. The electric vehicle maker said it produced 469,796 vehicles during the quarter. Tesla noted that 3% of the deliveries were subject to operating lease accounting. For reference, Tesla delivered 443,956 vehicles in Q2 of this year and 435,059 vehicles in Q3 of last year. Tesla's  all-time deliveries record was 484,507 vehicles in Q4 of 2023. Looking ahead, Tesla reiterated that plans for new vehicles, including more affordable models, remain on track for start of production in the first half of 2025.
+
+# More than just EVs
+
+Tesla said energy storage deployments decreased sequentially in Q3 to a record 6.9 GWh, but were up 75% Y/Y. Overall, Tesla said energy services and other businesses are becoming increasingly profitable parts of the company. "As energy storage products continue to ramp, and our vehicle fleet continues to grow, we are expecting continued profit growth from these businesses over time," noted TSLA. The company also said that it deployed and is training ahead of schedule on a 29k H100 cluster at Gigafactory Texas, where it expects to have 50k H100 capacity by the end of October.
+
+# Balance sheet
+
+Tesla ended the quarter with a cash position of $33.6 billion. The sequential increase of $2.9 billion was a result of positive free cash flow of $2.7 billion. Operating cash flow was $6.3 billion during the quarter.
+
+**SUMMARY**
+
+We delivered strong results in Q3 with growth in vehicle deliveries both sequentially and year-on-year, resulting in record third-quarter volumes. We also recognized our second-highest quarter of regulatory credit revenues as other OEMs are still behind on meeting emissions requirements.
+
+Our cost of goods sold (COGS) per vehicle came down to its lowest level ever at \~$35,100. In order to continue accelerating the world’s transition to sustainable energy, we need to make EVs affordable for everyone, including making total cost of ownership per mile competitive with all forms of transportation. Preparations remain underway for our offering of new vehicles – including more affordable models – which we will begin launching in the first half of 2025. At our "We, Robot" event on October 10, we detailed our long-term goal of offering autonomous transport with a cost per mile below rideshare, personal car ownership, and even public transit.
+
+The Energy business achieved another strong quarter with a record gross margin. Additionally, the Megafactory in Lathrop produced 200 Megapacks in a week, and Powerwall deployments reached a record for the second quarter in a row as we continue to ramp Powerwall 3.
+
+Despite sustained macroeconomic headwinds and others pulling back on EV investments, we remain focused on expanding our vehicle and energy product lineup, reducing costs and making critical investments in AI projects and production capacity. We believe these efforts will allow us to capitalize on the ongoing transition in the transportation and energy sectors., None
+average sentiment: 0.708, Title: Why do you guys even bother trading when you can just buy the S&P 500?
+Body: I’m genuinely curious. I’m not trying to dog on any of yall. I’m sure some of you have made a lot of money on individual stocks.
+
+But like… I struggle to understand why you guys even bother. I just don’t see a point in investing in single company stocks.
+
+They’re too volatile, companies change, etc. for instance Cisco used to practically be a monopoly. Now I’m not even sure it’ll reach the ATH from 20 years ago… ever. 
+
+Also all of the time invested. Time is money… you really gotta research a lot before even considering buying stocks. 
+
+So why not just go S&P 500, bonds, 401k, etc. it’s going great for me (130k net worth at 25.) 
+
+Just curious, thanks. , None
+average sentiment: 0.619, Title: Tesla stock has best day in over a decade on Musk's 2025 growth projection
+Body: Musk makes overly optimistic forecasts and unrealistic predictions, the stock rises. Why doesn't every CEO just pull estimates out of their ass and over sell the upside for years ahead?, Title: Tesla stock has best day in over a decade on Musk's 2025 growth projection
+Body: Is musk ever held accountable for blatantly inaccurate projections that are designed to pump the stock? 2025 is going to be even more competitive for them as more competitors release EVs that are more and more compelling.
+average sentiment: 0.496, Title: Tesla and Uber partner to give drivers $2,000 to switch to Tesla
+Body: [https://www.evuniverse.io/p/tesla-and-uber-partner-giving-2000-to-drivers](https://www.evuniverse.io/p/tesla-and-uber-partner-giving-2000-to-drivers)
+
+>Tesla just launched a collaboration with Uber, this time to give eligible Model 3 & Y buyers: $1,000 in Tesla Credits upon taking delivery + $1,000 in cash from Uber after completing 100 trips. The Tesla Credits can be used toward Supercharging, a new Tesla vehicle, service appointments or select Tesla Shop or upgrade purchases. Just for your info, Tesla Tequila is excluded though. The incentive is available after verifying eligibility with Uber through their system, find the button on Tesla’s fresh [tesla.com/uber](http://tesla.com/uber) website.
+
+>The 100 trips need to be completed before February 15, 2025 and the deal is not available for used vehicles. Interestingly the offer is stackable with Tesla Military Purchase Program, but is not stackable with other Tesla promotions, including its Refer and Earn Program., None
+average sentiment: 0.490, Title: Are you convinced Tesla is back to growth?
+Body: There were bets on the stock going either way on earnings, but nobody predicted such a decisive beat on auto gross margins and EPS. For the first time in almost 3 years, the pump is halfway justified by fundamentals. 
+
+Is this trend reversal in Q3 sustainable in the coming quarters? Is the stock going to finally stop yoyoing on non-events and track earnings again?
+
+, None
+average sentiment: 0.428, Title: Is google not a no brainer buy right now?? 
+Body: Google is UP 18.5% over the past year. I would not call that getting “hit pretty hard”. And it’s only 14% down from ATH which it hit just 3 months ago. 
+
+It may very well rally back to ATH and beyond relatively quickly, but nothing is a no-brainer buy. Anything “obvious” is very quickly gobbled up by algos., Title: Is google not a no brainer buy right now?? 
+Body: I bought it, so it’ll go out of business soon
+average sentiment: 0.395, Title: Elon Musk’s Trump bet has paid off so well that Tesla is now worth more than most of the rest of the car industry combined
+Body: Biggest thing: stopping Chinese EVs from entering the market., Title: Elon Musk’s Trump bet has paid off so well that Tesla is now worth more than most of the rest of the car industry combined
+Body: Biggest thing: stopping Chinese EVs from entering the market.
+average sentiment: 0.336, Title: Lithium Americas Corp secures $625m in funding from General Motors, is up 18% in premarket trading
+Body: Been accumulating LAC for a while now, I think it'll be north of $10 a share by 2030., Title: Lithium Americas Corp secures $625m in funding from General Motors, is up 18% in premarket trading
+Body: It was shit luck. I just discovered it, and would probably have bought at $5 if that's what it cost. I like the stock for lots of reasons, primarily because Thacker Pass greatly reduces our dependence on foreign Lithium.
+average sentiment: 0.283, Title: Ford guides to low end of 2024 earnings forecast as it slightly tops Wall Street's Q3 expectations
+Body: Ford Motor guided to the low end of its previously announced 2024 earnings forecast as it slightly topped Wall Street’s third-quarter expectations.
+
+The Detroit automaker said Monday it now expects adjusted earnings before interest and taxes, or EBIT, of about $10 billion. It had previously guided to between $10 billion and $12 billion. It retained its forecast for adjusted free cash flow of between $7.5 billion and $8.5 billion.
+
+Here’s how the company performed in the third quarter, compared with average estimates compiled by LSEG:
+
+Earnings per share: 49 cents adj. vs. 47 cents adj. expected
+
+Automotive revenue: $43.07 billion vs. $41.88 billion expected
+
+The automaker was under pressure after a disappointing second quarter in which unexpected warranty costs caused the company to miss Wall Street’s earnings expectations.
+
+Source: https://www.cnbc.com/2024/10/28/ford-motor-f-earnings-q3-2024.html, Title: Ford guides to low end of 2024 earnings forecast as it slightly tops Wall Street's Q3 expectations
+Body: GM earnings were spectacular. F has its own unique issues.
+average sentiment: 0.271, Title: Tesla hits $1T Market Cap for the first time since 2021
+Body: It can’t keep going up can it? Just sold today and took gains, Title: Tesla hits $1T Market Cap for the first time since 2021
+Body: Trump wins and Trump wants to give Elon a government position. 
+
+That’s why Tesla stock is skyrocketing
+average sentiment: 0.250, Title: $HMC Honda to start Hydrogen Project in Hawaii
+Body: See my [other post](https://old.reddit.com/r/stocks/comments/1gfrh9q/hmc_honda_to_start_hydrogen_project_in_hawaii/lukvwl8/) in this thread about how Hydrogen is made. It makes ZERO sense whatsoever in any world, economically, environmentally, or any other way, to create hydrogen and then burn it for energy., Title: $HMC Honda to start Hydrogen Project in Hawaii
+Body: I'm in on HYSR. The fact that we're trying to switch to EVs, yet companies are having to start up their own nuclear reactors to meet the power demand from AI, tells me there's going to HAVE to be an alternate fuel source. Hydrogen is it. Plus you can fill up your tank in minutes just like ICE vehicles, instead of waiting hours at a charge station.
+average sentiment: 0.222, Title: Musk now says it's 'pointless' to build a $25,000 Tesla for human drivers
+Body: Big, if true., Title: Musk now says it's 'pointless' to build a $25,000 Tesla for human drivers
+Body: If Tesla had any autonomous driving product then maybe this statement would have made sense but they can't even trust "FSD" enough to get level 3 approval while other manufacturers are going ahead.
+average sentiment: 0.197, Title: Alphabet To $7 Trillion By 2025?
+Body: So, the thesis is that waymo will fully capture the entire US ride-sharing market by....next year? And people will give up their cars and use those services as well by.....next year?
+
+Also, waymo has to buy and maintain their own cars, unlike Uber. Therefore, they are likely to have much higher costs than Uber. How fast can waymo even manufacture their vehicles?
+
+No offense, this reads like something ARKK would put out., Title: Alphabet To $7 Trillion By 2025?
+Body: So alphabet more than tripling their market cap within a year? You start smoking early today?
+average sentiment: 0.163, Title: Tesla’s Not a Car Company, Musk’s in the Business of Selling the Future. And 5 Other Things to Know Today.
+Body: I’m in it for the underplayed AI., Title: Tesla’s Not a Car Company, Musk’s in the Business of Selling the Future. And 5 Other Things to Know Today.
+Body: I’m in it for the underplayed AI.
+average sentiment: 0.031, Title: The absolute madness of Tesla
+Body: Tsla doesn't trade on fundamentals but purely on hype as a cult co., Title: The absolute madness of Tesla
+Body: Why would you short or invest in a company which isn’t based on fundamentals?
+
+It’s a meme stock, its stock value is not driven by the same factors as other companies.
+average sentiment: 0.019, Title: What Should I Buy Today When It's Mostly Red?
+Body: I can't believe the guy is so old when he has Mcdonalds for breakfast every day., Title: What Should I Buy Today When It's Mostly Red?
+Body: I buy a cheese burger, if it’s really down day I add bacon
+average sentiment: 0.005, Title: Toyota posts nearly 20% drop in second-quarter operating profit, missing estimates
+Body: They have big issues with the Iforce engine in the Tundra and lx600, 6th gen 4runner is still not delivered and the current Tacoma and 5th gen 4runners are 50k and up. They are too expensive and people are not willing to pay for the hybrid systems., Title: Toyota posts nearly 20% drop in second-quarter operating profit, missing estimates
+Body: 100%.  Im glad to see this.
+average sentiment: -0.693, Title: What are your thoughts on Tesla's upcoming earnings? 
+Body: Some of the news I've seen so far has been negative: the company missing production target, horrors of cybertruck, increasing competition outside states due to cheaper Chinese cars, the recent disappointing cybercab event, and now FSD being investigated for killing pedestrians. The only bullish thing I saw were the increasing sales in China. What are your thoughts for the upcoming earnings and why? , None
+=== News Sentiment Analysis Summary ===
+
+Analysis Timestamp: 2024-11-16 18:52:19
+Total Headlines Analyzed: 32
+
+=== Sentiment Distribution ===
+financial_news - NEGATIVE: 1
+financial_news - NEUTRAL: 2
+financial_news - POSITIVE: 13
+general_news - NEGATIVE: 3
+general_news - POSITIVE: 13
+
+=== Average Sentiment Scores ===
+financial_news: 0.493
+general_news: 0.254
+
+=== Financial News Analysis ===
+
+By Ticker (Average Sentiment):
+AAPL: 0.495
+IBM: 0.592
+MSFT: 0.549
+ticker: -0.294
+
+By Publisher (Average Sentiment):
+Benzinga: 0.299
+Bloomberg: 0.295
+Insider Monkey: 0.342
+Motley Fool: 0.691
+publisher: -0.294
+
+Most Positive Financial Headline:
+Ticker: AAPL
+Headline: Meet the Stock-Split Stock That Soared by 11,210% Over the Past 15 Years. Now, It's Poised to Join Nvidia, Apple, Microsoft, Amazon, Alphabet, Meta, and Tesla in the $1 Trillion Club by 2026
+Score: 0.999
+
+Most Negative Financial Headline:
+Ticker: ticker
+Headline: title
+Score: -0.294
+
+=== General News Analysis ===
+
+By Company (Average Sentiment):
+Apple Inc.: 0.236
+IBM: 0.515
+Microsoft Corporation: 0.121
+company: -0.292
+
+Most Positive General News Headline:
+Company: IBM
+Headline: Stock market today: S&P 500 snaps 3-day losing streak as Tesla surges 22%
+Score: 1.000
+
+Most Negative General News Headline:
+Company: Microsoft Corporation
+Headline: Stock market today: US futures inch up as Treasury yields ease, but weekly losses loom
+Score: -0.580
