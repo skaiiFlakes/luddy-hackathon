@@ -1,4 +1,5 @@
 import json
+from generate_sentiment import get_sentiment_context
 from dotenv import load_dotenv
 import openai
 import os
@@ -18,24 +19,33 @@ def prompt(inputs):
     current_kpi = inputs.get('currentStatus')
     desired_kpi = inputs.get('targetStatus')
     deadline = inputs.get('deadline')
+    print(kpi, current_kpi, desired_kpi, deadline, industry)
 
-    try:
-        with open(f"preprocessed_files/{industry}_sentiment.txt", "r") as f:
-            sentiment_context = f.read()
-    except:
-        sentiment_context = "No sentiment context available for this industry."
+    sentiment_context = ""
+    sentiment_file = open("../preprocessed_files/" + industry.lower() + "_sentiment.txt", "r")
+    try :
+        sentiment_context = sentiment_file.read()
+    finally:
+        sentiment_file.close()
+    if sentiment_context == "":
+        return "Sentiment context not found"
 
+    financial_context = ""
+    financial_file = open("../preprocessed_files/" + industry + "_financial_analysis.txt", "r")
     try:
-        with open(f"preprocessed_files/{industry}_financial_analysis.txt", "r") as f:
-            financial_context = f.read()
-    except:
-        financial_context = "No financial context available for this industry."
+        financial_context = financial_file.read()
+    finally:
+        financial_file.close()
+    if financial_context == "":
+        return "Financial context not found"
 
     # try:
     #     sentiment_context = get_sentiment_context(industry)
     # except Exception as e:
     #     with open("news_sentiment.txt", "r") as f:
             # sentiment_context = f.read()
+
+    # print(sentiment_context)
 
 
     my_prompt = """
@@ -77,20 +87,19 @@ You MUST create EXACTLY 10 main business objectives, each with EXACTLY 3 subtask
       1. Draw meaningful inferences from sentiment patterns
       2. Connect industry trends to specific market opportunities
       3. Explain how this objective addresses the market dynamics
-      4. Use varied sentence structures without repetitive patterns
 
 4. For each subtask, provide:
     - TaskID: MUST be one of: "A", "B", or "C"
     - TaskName: A specific action item starting with an action verb
     - StartDate: date in ISO format (YYYY-MM-DD)
     - Duration: integer number of days
+    - The Duration MUST be used to calculate the end date in the parent task's TaskName
 
 VALIDATION REQUIREMENTS:
 1. MUST have EXACTLY 10 main tasks
 2. Each main task MUST have EXACTLY 3 subtasks
 3. Subtask IDs MUST be "A", "B", or "C"
 4. Main task IDs MUST be integers 1-10
-5. First main task MUST NOT reiterate the KPI improvement
 
 CRITICAL: Your response MUST maintain the exact following JSON property names. DO NOT modify, rename, or restructure any properties:
 
@@ -129,6 +138,7 @@ CRITICAL: Your response MUST maintain the exact following JSON property names. D
 2. Identifying subtle market patterns and their business implications
 3. Writing varied, concise sentences without repetitive patterns
 4. Using proper number formatting (commas for thousands) and currency symbols ($) for monetary values
+5. Creating SMART objectives with specific, measurable, achievable, relevant, and time-bound targets
 
 STRICT REQUIREMENTS:
 - Generate EXACTLY 10 main tasks (no more, no less)
@@ -163,3 +173,13 @@ Your response MUST be a valid JSON object with all property names in double quot
         print(f"JSON Error: {e}")
         print(f"Problematic JSON: {response_text}")
         raise
+
+if __name__ == "__main__":
+    inputs = {
+        "kpi": "Gross Sales",
+        "industry": "Fashion",
+        "currentStatus": 1000,
+        "targetStatus": 100000,
+        "deadline": "2025-11-17T16:12:16+0000"
+    }
+    prompt(inputs)
