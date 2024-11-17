@@ -102,6 +102,7 @@ You MUST create EXACTLY 10 main business objectives, each with EXACTLY 3 subtask
       3. Explain how this objective addresses the market dynamics
       4. Use varied sentence structures without repetitive patterns
     - RiskLevel: integer from 1-5 indicating implementation risk
+    - Main Objectives should be made in sequential order
 
 
 4. For each subtask, provide:
@@ -120,7 +121,8 @@ You MUST create EXACTLY 10 main business objectives, each with EXACTLY 3 subtask
 4. Main task IDs MUST be integers 1-10
 5. Risk levels MUST be integers 1-5
 6. Subtask risk levels MUST correlate with parent task risk level according to the specified ranges
-7. The start date of the first subtask per main task MUST match the overall start date provided
+7. The start date of the FIRST main task MUST be the current date
+8. The end date of the LAST main task MUST NOT exceed the provided deadline
 **END VALIDATION REQUIREMENTS**
 
 CRITICAL: Your response MUST maintain the exact following JSON property names. DO NOT modify, rename, or restructure any properties:
@@ -166,8 +168,8 @@ CRITICAL: Your response MUST maintain the exact following JSON property names. D
 4. Using proper number formatting (commas for thousands) and currency symbols ($) for monetary values
 5. Creating SMART objectives with specific, measurable, achievable, relevant, and time-bound targets
 6. Assessing implementation risks and their cascading effects on subtasks
-7. Creating timelines to complete main objectives by the desired deadline
-8. Create tasking with realistic multi-month durations if allowed by the deadline
+7. Creating timelines to complete all main objectives by the desired deadline
+8. Create tasking with realistic multi-month durations that fill the time from start to the deadline
 
 STRICT REQUIREMENTS:
 - Generate EXACTLY 10 main tasks (no more, no less)
