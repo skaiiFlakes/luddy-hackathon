@@ -1,5 +1,4 @@
 import json
-from generate_sentiment import get_sentiment_context
 from dotenv import load_dotenv
 import openai
 import os

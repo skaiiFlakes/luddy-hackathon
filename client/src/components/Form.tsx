@@ -159,6 +159,10 @@ export default function Form({
     setDeadline(event.target.valueAsDate!);
   };
 
+  const minDate = new Date();
+  const maxDate = new Date();
+  maxDate.setFullYear(maxDate.getFullYear() + 5);
+
   return (
     <form onSubmit={handleSubmit} className='space-y-4'>
       <FormGroup label='Industry'>
@@ -281,6 +285,8 @@ export default function Form({
           type='date'
           onChange={handleDeadlineChange}
           className='dark w-full'
+          min={minDate.toISOString().split('T')[0]}
+          max={maxDate.toISOString().split('T')[0]}
           theme={{
             field: {
               input: {

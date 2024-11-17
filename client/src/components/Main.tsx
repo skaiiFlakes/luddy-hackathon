@@ -349,48 +349,49 @@ export default function Main() {
 
       {isLoading && response.recommendations.length === 0 && <GanttSkeleton />}
 
-      {response.recommendations.length > 0 && (
-        <div>
-          <Gantt data={response.recommendations} />
+      {Array.isArray(response.recommendations) &&
+        response.recommendations.length > 0 && (
+          <div>
+            <Gantt data={response.recommendations} />
 
-          <div className='pt-12 pb-8 px-10 mx-auto fsac4'>
-            {response.recommendations.map((recommendation, index) => (
-              <React.Fragment key={index}>
-                <div
-                  id={`task-${index + 1}`}
-                  className='ktq4 hover:brightness-150 hover:text-gray-300 transition duration-100'
-                >
-                  <h3 className='font-semibold text-lg text-white'>
-                    {(index + 1).toString()}. {recommendation.TaskName} by{' '}
-                    {format(
-                      addBusinessDays(
-                        parseISO(recommendation.subtasks[2].StartDate),
-                        recommendation.subtasks[2].Duration - 1
-                      ),
-                      'MMM d, yyyy'
+            <div className='pt-12 pb-8 px-10 mx-auto fsac4'>
+              {response.recommendations.map((recommendation, index) => (
+                <React.Fragment key={index}>
+                  <div
+                    id={`task-${index + 1}`}
+                    className='ktq4 hover:brightness-150 hover:text-gray-300 transition duration-100'
+                  >
+                    <h3 className='font-semibold text-lg text-white'>
+                      {(index + 1).toString()}. {recommendation.TaskName} by{' '}
+                      {format(
+                        addBusinessDays(
+                          parseISO(recommendation.subtasks[2].StartDate),
+                          recommendation.subtasks[2].Duration - 1
+                        ),
+                        'MMM d, yyyy'
+                      )}
+                    </h3>
+                    <p className='pt-2 value-text text-md text-gray-200 fkrr1'>
+                      {recommendation.Description}
+                    </p>
+                  </div>
+                  <div className='flex flex-col space-y-2'>
+                    {recommendation.subtasks.map(
+                      (subtask: any, subindex: any) => (
+                        <div
+                          key={subindex}
+                          className='bg-gray-900 text-gray-500 rounded-lg p-4 hover:brightness-150 hover:text-gray-300 transition duration-100'
+                        >
+                          {subtask.TaskName}
+                        </div>
+                      )
                     )}
-                  </h3>
-                  <p className='pt-2 value-text text-md text-gray-200 fkrr1'>
-                    {recommendation.Description}
-                  </p>
-                </div>
-                <div className='flex flex-col space-y-2'>
-                  {recommendation.subtasks.map(
-                    (subtask: any, subindex: any) => (
-                      <div
-                        key={subindex}
-                        className='bg-gray-900 text-gray-500 rounded-lg p-4 hover:brightness-150 hover:text-gray-300 transition duration-100'
-                      >
-                        {subtask.TaskName}
-                      </div>
-                    )
-                  )}
-                </div>
-              </React.Fragment>
-            ))}
+                  </div>
+                </React.Fragment>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
+        )}
       <TechStack />
 
       <h2 className='pt-40 mb-1 text-2xl font-semibold tracking-tighter text-center text-gray-200 lg:text-7xl md:text-6xl'>
