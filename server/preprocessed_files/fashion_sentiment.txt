@@ -1,0 +1,83 @@
+=== Sentiment Context for Fashion ===
+
+average sentiment: 0.496, Title: Ralph Lauren dress with tie neck for second day office visit
+Body: You look amazing gal 😀, Title: Ralph Lauren dress with tie neck for second day office visit
+Body: Love this
+average sentiment: 0.258, Title: Native American Jewelry, Polo Ralph Lauren, and the New York Knicks.
+Body:  Thats my triple play, None
+average sentiment: -0.216, Title: Are these kids' Ralph Lauren shirts real or fake?
+Body: Arguing in the comments will result in a ban. One reply stating your response is more than enough. Even if you have the moral high-ground, but you viciously perpetuate the argument, you will be banned. This includes post creator aka OP. The ban may be permenant or temporary depending on the severity.
+
+
+*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/fashion) if you have any questions or concerns.*, Title: Are these kids' Ralph Lauren shirts real or fake?
+Body: if there's a better sub for this point me to it - TIA
+average sentiment: -0.248, Title: Are there any hangers that dont do this damage? 
+Body: The velvet hangers I use drastically minimize this issue. Something like these:
+
+ https://www.amazon.com/Amazon-Basics-Non-Slip-Clothes-Hangers/dp/B00FXNAAW2, Title: Are there any hangers that dont do this damage? 
+Body: folding them as intended is definitely the way to go
+average sentiment: -0.479, Title: I got this Ralph Lauren from a thrift is it fake
+Body: It's a lower-quality/cheaper line., Title: I got this Ralph Lauren from a thrift is it fake
+Body: Then why comment info if you don’t know the answer
+=== News Sentiment Analysis Summary ===
+
+Analysis Timestamp: 2024-11-16 18:57:59
+Total Headlines Analyzed: 30
+
+=== Sentiment Distribution ===
+financial_news - NEGATIVE: 5
+financial_news - POSITIVE: 11
+general_news - NEGATIVE: 6
+general_news - POSITIVE: 8
+
+=== Average Sentiment Scores ===
+financial_news: 0.296
+general_news: 0.043
+
+=== Financial News Analysis ===
+
+By Ticker (Average Sentiment):
+LULU: 0.565
+PVH: 0.064
+RL: 0.376
+ticker: -0.294
+
+By Publisher (Average Sentiment):
+Business Wire: 0.299
+MT Newswires: -0.299
+Motley Fool: -0.790
+Retail Dive: 0.789
+Simply Wall St.: 0.650
+Sourcing Journal: 0.299
+StockStory: 0.755
+WWD: 0.299
+Zacks: 0.414
+publisher: -0.294
+
+Most Positive Financial Headline:
+Ticker: RL
+Headline: SNA Hits 52-Week High: Can Growth Initiatives Further Drive the Stock?
+Score: 1.280
+
+Most Negative Financial Headline:
+Ticker: LULU
+Headline: History Says Palantir Stock Has a 79% Chance of Dropping 25% or More Within a Year
+Score: -0.790
+
+=== General News Analysis ===
+
+By Company (Average Sentiment):
+Lululemon Athletica Inc.: -0.097
+PVH Corp.: 0.058
+Ralph Lauren Corporation: 0.178
+company: -0.292
+
+Most Positive General News Headline:
+Company: Ralph Lauren Corporation
+Headline: Estée Lauder appoints CEO
+Score: 0.298
+
+Most Negative General News Headline:
+Company: Ralph Lauren Corporation
+Headline: Ralph Lauren (NYSE:RL) Downgraded by StockNews.com to “Hold”
+Score: -0.300

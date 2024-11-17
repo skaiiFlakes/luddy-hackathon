@@ -1,0 +1,105 @@
+=== Sentiment Context for Manufacturing ===
+
+average sentiment: 0.665, Title: 'Conclave' stars hope Vatican thriller leaves audiences with questions
+Body: Q: When will children be safe?, None
+average sentiment: 0.628, Title: Arcane Season 2 smashes Netflix charts & becomes most popular show in over 60 countries
+Body: How did everyone enjoy the first 3 episodes so far? For me, I like that they got right into the action scenes early on but overall I feel like the plot is kind of slow right now, and not much is really happening., Title: Arcane Season 2 smashes Netflix charts & becomes most popular show in over 60 countries
+Body: its living up to the hype imo
+average sentiment: 0.566, Title: Olivia Rodrigo on Netflix Concert Film and Voting In Her First Presidential Election: “It Couldn’t Be More Important”
+Body: Haven't heard of this lil concert film, but definitely something to give a gander, Title: Olivia Rodrigo on Netflix Concert Film and Voting In Her First Presidential Election: “It Couldn’t Be More Important”
+Body: I really wish more artists would do this too. Preserves the show forever for all of us.
+average sentiment: 0.462, Title: Daniel Craig calls on Netflix to release 'Knives Out 3' in cinemas
+Body: I’d be happy if they just released them on Blu-ray. I don’t particularly feel the need to subscribe to a service just to watch a particular movie., Title: Daniel Craig calls on Netflix to release 'Knives Out 3' in cinemas
+Body: The second one, like other Netflix movies, plays in a very limited amount of theater(s) solely to qualify for awards. It didn’t release wide like the first one did.
+average sentiment: 0.293, Title: “Hate”: Martha Stewart trashes Netflix’s new “Martha” documentary
+Body: She’s the original haughty, WASP-y, cold, denying, perfectionist Grandma Kween and I love her for it, Title: “Hate”: Martha Stewart trashes Netflix’s new “Martha” documentary
+Body: Part of her appeal is her perfect cooking and homemaking skills and her very messy self while also being kind of a diva. I love it.
+average sentiment: 0.172, Title: Alicia Keys, At Kamala Harris Rally, Says Trump Platform Would Roll Back Women’s Rights: “This Is Not Some Dystopian Netflix Show I’m Talking About”
+Body: >“If you don’t vote for her, or you don’t vote at all, you’re voting for the chaos and the hate,” she told a rally in Montgomery County, PA, where she was appearing with former First Lady Michelle Obama.
+
+
+
+>“You’re voting for a cruel tomorrow for immigrants, people of color, women, girls, our children and our planet,” she said.
+
+
+
+>She added, “It’s crazy because too many people think women can’t lead just because they haven’t seen enough of it. When our kids look around their classrooms at the pictures of presidents on the wall, every single one is a man, one Black guy. No wonder it is hard for many to imagine a female president. They have never seen one, and if they can’t see it, how can they believe it?”
+
+
+
+>Keys noted that women “had reproductive freedom, but not so much now, and that’s why we’re still fighting today. That’s why we can’t get comfortable, because they’re already starting to take those rights away. If it’s been done already with Roe. vs. Wade, what makes us think that there couldn’t be a leader in place for the other side that would say, ‘Forget equal pay. Women don’t need it. Or, ‘We don’t need to educate women anymore. They can just stay at home. They don’t work anyway.'”
+
+
+
+>She added, “This is not some dystopian Netflix show that I am talking about. This is like the platform the other side is running on. They want to turn back the clock.”, Title: Alicia Keys, At Kamala Harris Rally, Says Trump Platform Would Roll Back Women’s Rights: “This Is Not Some Dystopian Netflix Show I’m Talking About”
+Body: Don’t forget gay marriage, interracial marriage, access to contraception
+average sentiment: 0.041, Title: Netflix likely to announce new price increase soon, analysts predict
+Body: Cancel your subscription then. Money is the only language companies understand, Title: Netflix likely to announce new price increase soon, analysts predict
+Body: They should try and put some more decent original content out. The service is getting worse and worse.
+average sentiment: 0.027, Title: ‘Back in Action’ Trailer: Cameron Diaz Ends Her 11-Year Acting Retirement by Teaming Up With Jamie Foxx for Netflix’s Spy Movie
+Body: Ends retirement for…money, Title: ‘Back in Action’ Trailer: Cameron Diaz Ends Her 11-Year Acting Retirement by Teaming Up With Jamie Foxx for Netflix’s Spy Movie
+Body: It’s hard for me to get optimistic when it comes to ‘Netflix spy movie’
+average sentiment: -0.010, Title: Jake Paul, Mike Tyson Fight Viewed by 60 Million Households, Netflix Says peaking at 65 Million concurrent streams. Serrano vs. Taylor 2, “likely be the most watched professional women’s sporting event in US history"
+Body: Actual viewers or those that attempted to view?, Title: Jake Paul, Mike Tyson Fight Viewed by 60 Million Households, Netflix Says peaking at 65 Million concurrent streams. Serrano vs. Taylor 2, “likely be the most watched professional women’s sporting event in US history"
+Body: Deleted Bloomberg because of the paywall. Variety had all the info.
+average sentiment: -0.067, Title: Jamie Foxx Netflix Special About Medical Emergency Sets Release Date
+Body: Did he keep it secret all this time just to be able to make it a juicy tell-all?, Title: Jamie Foxx Netflix Special About Medical Emergency Sets Release Date
+Body: He really had to get paid and have a whole show to let everyone finally know about his health issues ?
+average sentiment: -0.202, Title: Monsters walk among us — and they're watching Netflix at 1.5x speed
+Body: I do this with YouTube and podcasts all the time. Not brave enough to do this with a show with actual production quality though., Title: Monsters walk among us — and they're watching Netflix at 1.5x speed
+Body: I'll never understand this. 
+
+I can only speak for myself--- I struggle to follow media with the 'internet editing' of it all, when people cut out every single pause as they take a breath between words and when they use jump cuts to finish sentences.  Maybe my brain works differently. But no one should be watching movies or tv fast like this. What in the hell?
+=== News Sentiment Analysis Summary ===
+
+Analysis Timestamp: 2024-11-16 18:57:01
+Total Headlines Analyzed: 17
+
+=== Sentiment Distribution ===
+financial_news - NEGATIVE: 1
+financial_news - NEUTRAL: 5
+financial_news - POSITIVE: 5
+general_news - NEGATIVE: 1
+general_news - POSITIVE: 5
+
+=== Average Sentiment Scores ===
+financial_news: 0.069
+general_news: 0.608
+
+=== Financial News Analysis ===
+
+By Ticker (Average Sentiment):
+RDFN: 0.299
+Z: -0.088
+ticker: -0.294
+
+By Publisher (Average Sentiment):
+Business Wire: 0.299
+MT Newswires: -0.023
+publisher: -0.294
+
+Most Positive Financial Headline:
+Ticker: RDFN
+Headline: Existing Home Sales Post Biggest Increase in Nearly Three Years
+Score: 0.300
+
+Most Negative Financial Headline:
+Ticker: ticker
+Headline: title
+Score: -0.294
+
+=== General News Analysis ===
+
+By Company (Average Sentiment):
+Zillow Group, Inc.: 0.788
+company: -0.292
+
+Most Positive General News Headline:
+Company: Zillow Group, Inc.
+Headline: Zillow Group (NASDAQ:ZG) Hits New 1-Year High After Analyst Upgrade
+Score: 1.489
+
+Most Negative General News Headline:
+Company: company
+Headline: headline
+Score: -0.292

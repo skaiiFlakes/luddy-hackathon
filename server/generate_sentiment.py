@@ -55,33 +55,8 @@ def generate_config(subreddits: list[str] = [],
     if time_filter not in valid_time_filters:
         raise ValueError(f"Time filter must be one of {valid_time_filters}")
 
-    # Check if file exists and read existing credentials
-    existing_credentials = {
-        'CLIENT_ID': '',
-        'CLIENT_SECRET': '',
-        'USER_AGENT': 'sentiment/1.0'
-    }
-
-    try:
-        with open(config_file, 'r') as f:
-            lines = f.readlines()
-            for line in lines:
-                if '=' in line:
-                    key, value = line.strip().split('=', 1)
-                    if key in existing_credentials:
-                        existing_credentials[key] = value
-            print(f"Found existing configuration file: {config_file}")
-            if not overwrite:
-                print("Preserving existing API credentials...")
-    except FileNotFoundError:
-        print(f"No existing configuration file found. Creating new file: {config_file}")
-
     # Create configuration content
     config_content = [
-        "# Reddit API Credentials",
-        f"CLIENT_ID={existing_credentials['CLIENT_ID']}",
-        f"CLIENT_SECRET={existing_credentials['CLIENT_SECRET']}",
-        f"USER_AGENT={existing_credentials['USER_AGENT']}\n",
         "# Search Parameters",
         f"search_terms={', '.join(search_terms)}",
         f"subreddits={', '.join(subreddits)}\n",
@@ -105,14 +80,12 @@ def generate_social_sentiment(industry: str = "",
                               ) -> list[str]:
     # Get info from ChatGPT
     # Check if the competitor_info file exists
-    if not os.path.exists('./competitor_info.txt'):
-        print("NOTFOUND")
-        competitor_info = gc(industry)
-        with open('./competitor_info.txt', 'w') as file:
-            file.write(competitor_info)
-    else:
-        with open('./competitor_info.txt', 'r') as file:
-            competitor_info = file.read()
+    print("Getting competitor info...", industry)
+    competitor_info = gc(industry)
+    with open('./competitor_info.txt', 'w') as file:
+        file.write(competitor_info)
+    with open('./competitor_info.txt', 'r') as file:
+        competitor_info = file.read()
 
     # Parse the competitor_info to extract top_companies and subreddits
     competitor_info = ast.literal_eval(competitor_info)
@@ -165,14 +138,8 @@ def read_sentiment_to_string(file_path='news_sentiment.txt') -> str:
 def generate_news_sentiment(industry: str = "") -> str:
     # Get info from ChatGPT
     # Check if the competitor_info file exists
-    if not os.path.exists('./competitor_info.txt'):
-        print("NOTFOUND")
-        competitor_info = gc(industry)
-        with open('./competitor_info.txt', 'w') as file:
-            file.write(competitor_info)
-    else:
-        with open('./competitor_info.txt', 'r') as file:
-            competitor_info = file.read()
+    with open('./competitor_info.txt', 'r') as file:
+        competitor_info = file.read()
 
     # Parse the competitor_info to extract top_companies and subreddits
     competitor_info = ast.literal_eval(competitor_info)
@@ -197,10 +164,69 @@ def get_sentiment_context(industry: str = "") -> str:
     context += generate_news_sentiment(industry=industry)
     return context
 
+
+def process_industry_sentiments(industries: list) -> None:
+    """
+    Iterate over industries, get sentiment context for each, and write to individual files
+
+    Args:
+        industries (list): List of industry names to process
+    """
+    try:
+        # Process each industry
+        for industry in industries:
+            # Clean industry name for filename
+            clean_industry = industry.lower().replace(' ', '_').replace('&', 'and')
+            filename = f"{clean_industry}_sentiment.txt"
+
+            try:
+                # Get sentiment context for the industry
+                sentiment_context = get_sentiment_context(industry)
+
+                # Write to industry-specific file
+                with open(filename, 'w', encoding='utf-8') as f:
+                    f.write(f"=== Sentiment Context for {industry} ===\n\n")
+                    f.write(sentiment_context)
+
+                print(f"Successfully wrote sentiment context for {industry} to {filename}")
+
+            except Exception as e:
+                print(f"Error processing {industry}: {str(e)}")
+                continue
+
+    except Exception as e:
+        print(f"Error in processing industries: {str(e)}")
+        raise
+
+
 if __name__ == "__main__":
     # search_terms = ['beigene', 'tango therapeutics', 'allogene therapeutics']
     # subreddits = ['biotech']
 
     # print(generate_social_sentiment(industry="space"))
     # print(generate_news_sentiment(industry="space"))
-    print(get_sentiment_context("space"))
+    # print(get_sentiment_context("space"))
+
+    industries = [
+        'Automotive',
+        'Banking',
+        'Construction',
+        'Education',
+        'Energy',
+        'Fashion',
+        'Food and Beverage',
+        'Healthcare',
+        'Information Technology',
+        'Manufacturing',
+        'Media and Entertainment',
+        'Real Estate',
+        'Retail',
+        'Telecommunications',
+        'Transportation',
+        'Travel and Tourism',
+        'Utilities',
+        'Wholesale',
+        'Not Specified'
+    ]
+    process_industry_sentiments(industries)
+

@@ -1,0 +1,145 @@
+=== Sentiment Context for Construction ===
+
+average sentiment: 0.717, Title: Unionization 
+Body: Just remember the owner is going to do what benefits him the most. Just keep doing what you’re doing. Generally if you’re good at one company you’ll be just fine at another. In a union you should never be job scared like with a sole company. , None
+average sentiment: 0.709, Title: Need advice on gaining new clients for Safety & Risk SaaS in large construction projects
+Body: Hey everyone! I work for a small safety and risk SaaS company (<20 clients), and we’re looking to expand our client base. We’ve been reaching out to subcontractors and companies involved in large construction projects (>$500M), but we’re not getting much response. I’d appreciate some guidance from anyone with experience in this area on how to get new clients:
+
+1. Who’s generally responsible for making the final decision on using this kind of software—the owner or the general contractor?
+
+2. How do projects typically adopt safety and risk software? Does the owner purchase the software and give access to all the contractors, or does the general contractor handle it, or does each contractor maintain their own software individually?
+
+3. At what stage of a project do the owner/general contractor usually realize they need safety and risk software? Is it closer to construction or do they look for it during the design phase
+
+4. Is there a reliable source to verify the insurance details of a project?
+
+Thanks in advance for any advice or insights! Appreciate your help., None
+average sentiment: 0.638, Title: Comp Package for Sales Reps?
+Body: What’s your commission package?
+
+What does your sales reps commission structure look like?
+
+Can anyone share with me your commission package? I work for a home improvement company selling roofing, windows, doors, decking, siding, etc. We currently have a 10% commission on jobs profiting 45%+. The owner is changing this package, and I believe I’m going to lose roughly 30% of my income overnight. 
+
+Trying to see how other companies compare. Any help or advice would be appreciated.
+
+**Profit Margin**              **Com. Percentage**
+
+45-46%                                2%
+
+46-47%                                3.5%
+
+47-48%                                5%
+
+48-49%                                6.5%
+
+49-50%                                8%
+
+50 Plus%                              10% (Full Commission)
+
+52-55%                                11%
+
+55 Plus%                              12%
+
+
+I could be wrong, but this seems out of character for the market. We’re already the most expensive contractor on the vast majority of jobs we bid unless going against a national company like Renewal By Andersen.
+
+I’ve sold $1,250,000 this year, with a 40% GROSS closing rate. 
+
+From my experience; when a company based commissions off a GP - there’s also a bonus allotted. Between May, June, July, August, & September I’ve averaged $176k/month. 
+
+How does this look to other Reps?, None
+average sentiment: 0.597, Title: Unionization 
+Body: I really just need a grasp on what is bullshit and what he has the power to do. His whole crew is now untrustworthy of him & no longer respect him. When he proposed his offer it seemed great. Then he threw his little fit & it made us all see the unions side far more clearly.
+
+I am located in Ontario Canada for reference, Title: Unionization 
+Body: I love working union, never even thought about going back. Even if compensation was equal, it's a mile ahead. It's like the majors vs minors for the trades around here.
+average sentiment: 0.422, Title: Unionization 
+Body: Ontario unions are strong and That OT won’t last forever, None
+average sentiment: 0.227, Title: Tradie Work Uniforms - help?
+Body: Why would you give them 3 shirts when there is 5 working days in the week., Title: Tradie Work Uniforms - help?
+Body: We give our guys 11 of each pants and shirt and jacket.
+average sentiment: 0.051, Title: Large cutting booth required
+Body: Build a shed on skids. They make pallet jacks to move them., Title: Large cutting booth required
+Body: I should have mentioned, the only area we have to do this cutting is out the front of our warehouse. It is a fairly new and tidy industrial estate so I highly doubt that the real estate would approve of us leaving a container permanently out the front of it. Ideally something portable on wheels that we can roll into our warehouse each day would keep them happy.
+average sentiment: 0.000, Title: OQ  Training That Transfers To ISNET & Veriforce
+Body: Is there a company that trains evaluators that allows you to upload to both?, None
+average sentiment: -0.463, Title: Unionization 
+Body: It's straight intimidation. If you do switch to Union the union won't replace you with different Union guys. They will tell the owner to go fuck themselves. Your joining a brotherhood and sisterhood. If he does shut down the union will get you back to work quickly., None
+average sentiment: -0.623, Title: Unionization 
+Body: Currently working for one of the largest forming outfits in my province and we’ve recently been getting visits from our local union.
+
+There was a vote held via internet today at 2:00 and the results will be figured out sooner or later. The owner of the company works on the same site as us. Prior to the vote, he stopped all union representatives from entering the site. He offered a pension, union rates and quarterly performance reviews to discuss raises among other small things to stop us from unionizing.
+
+He said if we unionize we will be capped at 8 hours, no more overtime & possibly shut down and never return. He said that if the union won’t agree on a rate he’s happy with he will shut us down & hire a new crew. He told the temporary cash workers that they will be fired if we unionize. The owner has invested millions of dollars into this specific crew & just moved us to a new fabrication yard & invested even more there. He claimed that the union would cost the company ~700,000$ a month. 
+
+At 5:00 today shortly after everyone had left, he told our superintendent to tear up all the sheets he printed off regarding his offer and essentially called the entire crew pricks and said “I can’t believe I gave my years to these guys”. Keep in mind a decision hasn’t even been made. Most of us hadn’t even voted at this point.
+
+I’m a 3rd year carpenter apprentice. Most of the guys on site either don’t speak great English or are young & easy to take advantage of. Is anything he’s saying true? Or is this all bullshit to scare us?
+
+**TL;DR**: unionization possible, company owner extremely unhappy & is making empty promises & empty threats, threw a temper tantrum & pretty much lied to everyone’s faces and insulted us. Where does it go from here?, None
+=== News Sentiment Analysis Summary ===
+
+Analysis Timestamp: 2024-11-16 18:53:14
+Total Headlines Analyzed: 31
+
+=== Sentiment Distribution ===
+financial_news - NEGATIVE: 6
+financial_news - NEUTRAL: 1
+financial_news - POSITIVE: 9
+general_news - NEGATIVE: 9
+general_news - NEUTRAL: 1
+general_news - POSITIVE: 5
+
+=== Average Sentiment Scores ===
+financial_news: 0.157
+general_news: -0.095
+
+=== Financial News Analysis ===
+
+By Ticker (Average Sentiment):
+CAT: 0.080
+DE: 0.081
+FLR: 0.401
+ticker: -0.294
+
+By Publisher (Average Sentiment):
+Bloomberg: 0.541
+Business Wire: 0.641
+FX Empire: -0.296
+Insider Monkey: 0.299
+Investing.com: 0.299
+MT Newswires: 0.046
+Simply Wall St.: -0.299
+Yahoo Finance: -0.191
+Yahoo Finance Video: -0.029
+Zacks: 0.439
+publisher: -0.294
+
+Most Positive Financial Headline:
+Ticker: DE
+Headline: Gold Near Seven-Week Low as Dollar Extends Gains After Trump Win
+Score: 0.681
+
+Most Negative Financial Headline:
+Ticker: DE
+Headline: China has been 'boogeyman' under oil's bed for 6 months: Trader
+Score: -0.300
+
+=== General News Analysis ===
+
+By Company (Average Sentiment):
+Caterpillar Inc.: 0.017
+Deere & Company: -0.257
+Fluor Corporation: 0.017
+company: -0.292
+
+Most Positive General News Headline:
+Company: Fluor Corporation
+Headline: US Bancorp DE Raises Stake in Fluor Co. (NYSE:FLR)
+Score: 0.786
+
+Most Negative General News Headline:
+Company: Caterpillar Inc.
+Headline: Caterpillar Misses Estimates on Weakening Construction
+Score: -0.510

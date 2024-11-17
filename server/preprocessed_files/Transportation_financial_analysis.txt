@@ -1,0 +1,190 @@
+Analysis for Union Pacific Corporation (UNP):
+
+INDUSTRY ANALYSIS AND RECOMMENDATIONS
+===================================
+
+Performance Classification: Struggling
+
+Key Metrics Summary:
+------------------
+- Revenue Growth: -3.04%
+- Profit Margin: 27.33%
+- Operating Margin: 39.86%
+- Return on Assets: 8.99%
+- Current Ratio: 0.77
+- Debt to Equity: 197.15
+
+Critical Areas (Based on Feature Importance):
+------------------------------------------
+- Current Ratio: 0.238 importance score
+- Revenue Growth: 0.215 importance score
+- Operating Margin: 0.192 importance score
+- Profit Margin: 0.149 importance score
+- Roa: 0.115 importance score
+- Debt To Equity: 0.092 importance score
+
+Market Position:
+--------------
+Company faces significant challenges requiring immediate attention.
+
+Industry Context:
+---------------
+Industry averages:
+- Revenue Growth: -4.21%
+- Profit Margin: 16.60%
+Company performance relative to industry benchmarks can inform strategic decisions.
+
+Predicted Performance Class: Struggling
+
+Analysis for United Parcel Service, Inc. (UPS):
+
+INDUSTRY ANALYSIS AND RECOMMENDATIONS
+===================================
+
+Performance Classification: High-Performing
+
+Key Metrics Summary:
+------------------
+- Revenue Growth: -9.35%
+- Profit Margin: 6.25%
+- Operating Margin: 9.22%
+- Return on Assets: 7.62%
+- Current Ratio: 1.15
+- Debt to Equity: 155.43
+
+Critical Areas (Based on Feature Importance):
+------------------------------------------
+- Current Ratio: 0.238 importance score
+- Revenue Growth: 0.215 importance score
+- Operating Margin: 0.192 importance score
+- Profit Margin: 0.149 importance score
+- Roa: 0.115 importance score
+- Debt To Equity: 0.092 importance score
+
+Market Position:
+--------------
+Company shows strong market positioning with above-average metrics.
+
+Industry Context:
+---------------
+Industry averages:
+- Revenue Growth: -4.21%
+- Profit Margin: 16.60%
+Company performance relative to industry benchmarks can inform strategic decisions.
+
+Predicted Performance Class: High-Performing
+
+Analysis for CSX Corporation (CSX):
+
+INDUSTRY ANALYSIS AND RECOMMENDATIONS
+===================================
+
+Performance Classification: High-Performing
+
+Key Metrics Summary:
+------------------
+- Revenue Growth: -1.32%
+- Profit Margin: 24.97%
+- Operating Margin: 37.72%
+- Return on Assets: 8.16%
+- Current Ratio: 1.39
+- Debt to Equity: 147.91
+
+Critical Areas (Based on Feature Importance):
+------------------------------------------
+- Current Ratio: 0.238 importance score
+- Revenue Growth: 0.215 importance score
+- Operating Margin: 0.192 importance score
+- Profit Margin: 0.149 importance score
+- Roa: 0.115 importance score
+- Debt To Equity: 0.092 importance score
+
+Market Position:
+--------------
+Company shows strong market positioning with above-average metrics.
+
+Industry Context:
+---------------
+Industry averages:
+- Revenue Growth: -4.21%
+- Profit Margin: 16.60%
+Company performance relative to industry benchmarks can inform strategic decisions.
+
+Predicted Performance Class: High-Performing
+
+Analysis for FedEx Corporation (FDX):
+
+INDUSTRY ANALYSIS AND RECOMMENDATIONS
+===================================
+
+Performance Classification: High-Performing
+
+Key Metrics Summary:
+------------------
+- Revenue Growth: -2.73%
+- Profit Margin: 4.62%
+- Operating Margin: 7.64%
+- Return on Assets: 4.73%
+- Current Ratio: 1.28
+- Debt to Equity: 0.00
+
+Critical Areas (Based on Feature Importance):
+------------------------------------------
+- Current Ratio: 0.238 importance score
+- Revenue Growth: 0.215 importance score
+- Operating Margin: 0.192 importance score
+- Profit Margin: 0.149 importance score
+- Roa: 0.115 importance score
+- Debt To Equity: 0.092 importance score
+
+Market Position:
+--------------
+Company shows strong market positioning with above-average metrics.
+
+Industry Context:
+---------------
+Industry averages:
+- Revenue Growth: -4.21%
+- Profit Margin: 16.60%
+Company performance relative to industry benchmarks can inform strategic decisions.
+
+Predicted Performance Class: High-Performing
+
+Analysis for Norfolk Southern Corporation (NSC):
+
+INDUSTRY ANALYSIS AND RECOMMENDATIONS
+===================================
+
+Performance Classification: Struggling
+
+Key Metrics Summary:
+------------------
+- Revenue Growth: -4.62%
+- Profit Margin: 19.85%
+- Operating Margin: 49.89%
+- Return on Assets: 6.77%
+- Current Ratio: 0.73
+- Debt to Equity: 128.64
+
+Critical Areas (Based on Feature Importance):
+------------------------------------------
+- Current Ratio: 0.238 importance score
+- Revenue Growth: 0.215 importance score
+- Operating Margin: 0.192 importance score
+- Profit Margin: 0.149 importance score
+- Roa: 0.115 importance score
+- Debt To Equity: 0.092 importance score
+
+Market Position:
+--------------
+Company faces significant challenges requiring immediate attention.
+
+Industry Context:
+---------------
+Industry averages:
+- Revenue Growth: -4.21%
+- Profit Margin: 16.60%
+Company performance relative to industry benchmarks can inform strategic decisions.
+
+Predicted Performance Class: Struggling
+

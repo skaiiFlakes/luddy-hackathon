@@ -1,0 +1,241 @@
+=== Sentiment Context for Education ===
+
+average sentiment: 0.772, Title: Top New Positions from Mega Investors in Recent 13F Filings - October
+
+
+Body: Hey r/investing community,
+
+I've been digging through the latest October 13F filings and wanted to share some interesting new positions that mega investors have added to their portfolios. I tried to focus on just the largest funds, and also only new positions which were significant.
+
+*\*Note: Highly anticipated filings like Berkshire Hathaway, Michael Burry's Scion Asset Management, and Ensign Peak Advisors, Inc. (LDS Church fund) have not been posted yet.*
+
+**New Positions Added by Major Investors:**
+
+|**Ticker**|**Company Name**|**Industry**|**Investor**|**Notes**|
+|:-|:-|:-|:-|:-|
+|[**IONQ**](https://finance.yahoo.com/quote/IONQ)|IonQ, Inc.|Technology|Carnegie Investment Counsel|New position|
+|[**LAC**](https://finance.yahoo.com/quote/LAC)|Lithium Americas Corp.|Materials|Renaissance Technologies LLC|New stake|
+|[**TRMD**](https://finance.yahoo.com/quote/TRMD)|TORM plc|Energy/Shipping|HSBC Holdings PLC|Purchased 246,426 shares valued at \~$9.6M|
+|[**GTLB**](https://finance.yahoo.com/quote/GTLB)|GitLab Inc.|Information Technology|Barton Investment Management|New position of 168,358 shares|
+|[**BF.B**](https://finance.yahoo.com/quote/BF.B)|Brown-Forman Corp.|Consumer Staples|Lindsell Train Ltd|New position, 1.53% of portfolio|
+|[**PDYPF**](https://finance.yahoo.com/quote/PDYPF)|Flutter Entertainment|Consumer Discretionary|Marathon Asset Management Ltd|New significant position, 12.48% of portfolio|
+|[**SIRI**](https://finance.yahoo.com/quote/SIRI)|Sirius XM Holdings Inc.|Communications|Citadel Investment Advisory, Inc.|New position of 9,310 shares|
+|[**CRS**](https://finance.yahoo.com/quote/CRS)|Carpenter Technology Corp.|Industrials|Wolf Hill Capital Management|New position|
+|[**POOL**](https://finance.yahoo.com/quote/POOL)|Pool Corp.|Consumer Discretionary|Patrizia|New position of 1,100,398 shares|
+|[**GEV**](https://finance.yahoo.com/quote/GEV)|GE Vernova|Industrials|State Street|New position of 10,316,733 shares|
+|[**SOLV**](https://finance.yahoo.com/quote/SOLV)|Solventum Corp|\[Industry Unknown\]|BlackRock|New position|
+|[**SW**](https://finance.yahoo.com/quote/SW)|Smurfit WestRock plc|Materials/Paper Packaging|Compagnie Lombard Odier Scma|Top holding, $39.6M|
+|[**NVT**](https://finance.yahoo.com/quote/NVT)|nVent Electric plc|Industrials|Swedbank AB|New holding of $110.7M|
+|[**ELF**](https://finance.yahoo.com/quote/ELF)|e.l.f. Beauty Inc.|Consumer Staples|Swedbank AB|New holding of $76.3M|
+|[**CTAS**](https://finance.yahoo.com/quote/CTAS)|Cintas Corp.|Industrials|Riverbridge Partners LLC|New holding of $42.3M (Significant investment)|
+|[**TEL**](https://finance.yahoo.com/quote/TEL)|TE Connectivity Ltd.|Industrials/Technology|Multiple Investors (see notes)|Gaining attention from multiple investors|
+|[**PH**](https://finance.yahoo.com/quote/PH)|Parker-Hannifin Corp.|Industrials|Artemis Investment Management|New holding of $54M|
+|[**FWONA**](https://finance.yahoo.com/quote/FWONA)|Formula One Group|Media/Entertainment|Artemis Investment Management|New holding of $36.5M|
+
+**Most Added Tech Stocks This Quarter Overall:**
+
+|**Stock**|**Holders**|**Total Shares**|**Share Change (Q/Q)**|**Share Change % (Q/Q)**|
+|:-|:-|:-|:-|:-|
+|[**RDDT**](https://finance.yahoo.com/quote/RDDT)|27|7.72M|+7.45M|+2,707.63%|
+|[**IOT**](https://finance.yahoo.com/quote/IOT)|46|2.33M|+805.85K|+52.75%|
+|[**GTLB**](https://finance.yahoo.com/quote/GTLB)|34|1.06M|+556.30K|+110.97%|
+|[**RBRK**](https://finance.yahoo.com/quote/RBRK)|9|476.19K|+386.60K|+431.53%|
+|[**ZS**](https://finance.yahoo.com/quote/ZS)|78|979.14K|+284.75K|+41.01%|
+
+**Top 3 Opportunities of Interest from the Latest 13F Filings:**
+
+1. **TE Connectivity PLC (**[**TEL**](https://finance.yahoo.com/quote/TEL)**)**
+   * **Why It's Interesting:** TE Connectivity has caught the attention of multiple institutional investors this quarter, including Creative Planning, HB Wealth Management, and the Czech National Bank.
+   * **Industry Impact:** As a leader in industrial technology and connectivity solutions, increased institutional investment suggests confidence in the growth of the industrial tech sector.
+   * **Potential Opportunity:** The collective interest from several reputable investors may indicate that TE Connectivity is poised for significant growth, making it a stock worth watching.
+2. **Smurfit WestRock plc (**[**SW**](https://finance.yahoo.com/quote/SW)**)**
+   * **Why It's Interesting:** Compagnie Lombard Odier Scma and other European investors have made significant investments in Smurfit WestRock, making it a top holding.
+   * **Industry Impact:** Operating in the materials and paper packaging industry, the company could benefit from global trends in sustainable packaging and increased e-commerce activity.
+   * **Potential Opportunity:** The substantial European investor interest suggests that Smurfit WestRock may have strong growth prospects, especially in international markets.
+3. **Cintas Corp. (**[**CTAS**](https://finance.yahoo.com/quote/CTAS)**)**
+   * **Why It's Interesting:** Riverbridge Partners LLC made a significant new investment of $42.3 million in Cintas Corp., which is notable for its size.
+   * **Industry Impact:** As a provider of corporate uniforms and facility services, Cintas stands to gain from economic reopening and increased business activities.
+   * **Potential Opportunity:** The large investment indicates strong institutional confidence in the company's future performance, potentially making it an attractive option for investors seeking growth in the industrial sector.
+
+**Additional Considerations:**
+
+* **nVent Electric plc (**[**NVT**](https://finance.yahoo.com/quote/NVT)**)** and **e.l.f. Beauty Inc. (**[**ELF**](https://finance.yahoo.com/quote/ELF)**)**: Significant new holdings by Swedbank AB suggest these companies are also worth monitoring, particularly given the substantial amounts invested ($110.7M in NVT and $76.3M in ELF).
+* **GitLab Inc. (**[**GTLB**](https://finance.yahoo.com/quote/GTLB)**)**: Noted as one of the most added tech stocks this quarter, with Barton Investment Management initiating a new position of 168,358 shares. The tech sector's overall growth could make this a compelling opportunity.
+* **Flutter Entertainment (**[**FLUT**](https://finance.yahoo.com/quote/flut)**)**: (Gaming) Had new and increased investments by Blackstone and Marathon Asset Management. It's also rated a strong buy.
+
+**Disclaimer:** This is not investment advice. Always consult with a financial advisor before making investment decisions.
+
+**Disclosure:** GTLB is my only current holding of these stocks.  Original content posted only here, recovering WSB trying to change my strategy to longer term.
+
+*Happy investing!*, None
+average sentiment: 0.658, Title: Pfizer Investment Analysis: Strong Q3 Performance, Strategic Growth in Oncology and Weight Loss Markets, and High Dividend Appeal for Long-Term Investors
+Body: **Summary**
+
+* **Buy Recommendation**: Pfizer shows strong growth potential and income appeal.
+* **Q3 Performance**: 32% year-over-year growth with expanding non-COVID revenue.
+* **Strategic Focus**: Shifting to oncology and weight loss treatments to drive future growth.
+* **High Dividend Yield**: Attractive for income-focused investors.
+* **Debt Reduction**: Strengthens financial stability and flexibility.
+* **Long-Term Potential**: Diversified pipeline supports growth beyond COVID-related products.
+
+**Introduction & Pfizer’s Q3 Performance**
+
+Pfizer delivered strong third quarter 2024 financial results. According to an article published on Pfizer Investor Insights, “The company reported revenues of $17.7 billion in the third quarter, representing 32% year-over-year growth. Excluding the company’s COVID-19 products, revenues were $13.6 billion, reflecting an operational increase of 14% compared with the prior-year quarter. Third quarter revenue growth was driven primarily by a combination of contributions from Pfizer’s Oncology products, key in-line products, recent commercial launches, as well as heightened demand for its COVID-19 oral treatment. This quarter marks Pfizer’s impressive third consecutive quarter of growth in 2024. Based on the recent quarter performance, the company once again raised its full-year 2024 revenue guidance and adjusted diluted EPS guidance. The company once again increased its full-year 2024 sales projection and modified diluted EPS guidance as a result of the last quarter's success. 
+
+**COVID Franchise & Non-COVID Growth Options**
+
+Pfizer’s current focus on oncology and other rare diseases highlights the transition from its reliance on COVID products. Pfizer must now shift its focus to other areas due to a consistent decline in revenue from its COVID products. According to CNBC, Pfizer’s revenue dropped by 33% in 2023. While people in the market are concerned about Pfizer's post-COVID growth because of the patent expirations and increased competition, Pfizer is addressing these challenges by investing heavily in R&D and strategic acquisitions. Pfizer is also leveraging mRNA technology, proven in its COVID vaccine, for other potential vaccines and genetic treatments to provide further success showing future promise . With a strong balance sheet and a diversified portfolio, Pfizer is focusing to maintain robust growth despite the loss of COVID-related revenue.
+
+**Guidance & Capital Allocation Framework**
+
+Pfizer’s guidance for 2024 project revenues estimates $58.5 and $61.5 billion, reflecting a moderated outlook compared to last year as the demand for COVID-19 products like Paxlovid stabilizes. This outlook shows shifts in COVID-19 product demand, including Paxlovid and Comirnaty, expected to bring in about 8 billion dollars. Despite this, Pfizer’s portfolio is positioned for growth between 8-10% outside COVID-19/pandemic-related products with the recent acquisition of Seagen. Despite decreasing legacy COVID-19 revenues, Pfizer is focused on scaling the oncology, vaccines, and anti-infective products/segments to increase revenue. In cash management, Pfizer is showing a conservative approach, opting not to repurchase shares of 2024 and instead choosing to prioritize their debt reduction with the recent acquisition of Seagen. The company’s $4 billion cost-saving initiative, which is intended to restore operating margins to pre-COVID levels, emphasizes the company’s dedication to increasing profitability even as its expenses rise. This strategy is backed by a very long-standing demand for their products. Which Pfizer expects to leverage for stable revenue growth. Pfizer’s conservative capital allocation strategy shows a balance between reinvesting in growth and maintaining some flexibility to address future operational needs, signaling a focus on performance as the global health markets shift and evolve from a need for COVID-19 products to products focusing on oncology and many other things.
+
+**Pipeline Overview & Oncology Segment**
+
+Pfizer's future expansion is mostly focused upon its late-stage oncology pipeline, especially since buying Seagen in 2023 to expand its targeted cancer therapies and antibody-drug conjugates (ADCs). ADC Sigvotatug vedotin for non-small cell lung cancer, prostate cancer medicines like PACDEV with KEYTRUDA, and breast cancer medications like abemaciclib and PF-07248144 are important assets. Pfizer expects many regulatory submissions, anticipated peak sales of $10 billion from oncology by the late 2020s, and the further expansion of indications for well-known medications like IBRANCE and 56666 TULISA.
+
+**New Markets: Weight Loss Drugs** 
+
+Pfizer has recently entered the weight loss drug market with Danuglipron, an oral glp-1 receptor agonist whose introduction is well timed as there is increasing demand in the market for prescription drugs for weight loss. Promising results have been experienced in the Phase 2 trials of Danuglipron, which also demonstrated a clinically significant placebo-adjusted loss of weight and ease of tolerating the drug. It remains to be seen whether this high rate of discontinuation of the treatment can be explained entirely by the broad range of gastrointestinal effects experienced. Pfizer has now prioritized a once-a-day modified-release version of Danuglipron that they hope to improve further in 2024. This formulation may lead to increased tolerability and improved patient adherence, hence presenting itself into a market characterized by injectables. In comparison to Eli Lilly's oral candidate and Astra's lower-rate offering, Pfizer hopes to launch funnel and Danuglipron in the next few years. Demand for weight loss medications is presently quite high owing to growing understanding of obesity's accompanying health threats as well as better treatment options resulting in considerable growth potential within the market. If approved, Danuglipron could offer a major source of revenue and allow time-poor patients a simpler oral method of taking GLP-1 medications , which represents a new strategy for companies like Novo Nordisk and Eli Lilly, who currently lead in the market. 
+
+**Capital Allocation & Debt Reduction Strategy**
+
+In Pfizer’s strategic shift toward long-term growth, capital allocation and debt reduction have become critical focal points. Following its recent acquisition of Seagen, Pfizer has prioritized lowering its debt, demonstrating a cautious approach to capital management. Rather than share repurchases, Pfizer has opted to channel resources into reducing its debt burden, a move designed to strengthen its balance sheet and enhance financial flexibility. This approach is supported by the company’s $4 billion cost-saving initiative aimed at improving operating margins, which aligns with the goal of achieving greater profitability in a post-COVID revenue landscape. By prioritizing debt reduction, Pfizer not only bolsters investor confidence but also positions itself to reinvest in key growth areas, especially in oncology and other high-potential therapeutic areas.
+
+**Dividend Policy and Shareholder Returns**
+
+In Pfizer’s most recent quarterly report, they expressed their goal of bolstering the shareholder value as much as possible. They prioritize increasing the number of share buybacks, reducing the company’s debt, and improving the value of their dividends. Dividend yield is calculated by dividing the annual dividends per share by the price of the shares. This metric communicates what percentage of the share price the dividend is. A higher dividend yield indicates that the company's dividends are worth the share's price. Pfizer’s current dividend yield is 6.00%, which is higher than average. As of the YTD, the annual dividend is $4.96, and the dividend of the recent quarter is $0.42. In the past two quarters, Pfizer has spent $273.04 on share buybacks. These share buybacks increase the value of a Pfizer share which benefits current investors. Based on recent company goals, the amount of shares repurchased by the company will increase. Investors can maximize their profit by investing as soon as possible, as Pfizer’s dividend policy benefits income investors due to the dividends the company distributes each quarter. When compared to peer companies like Johnson and Johnson, Novo Nordisk, and AbbVie Inc, Pfizer has the highest dividend yield and payout ratio, making it the optimal company to invest in.
+
+**Research and Development Focus in Oncology**
+
+Pfizer’s oncology efforts are led by innovative treatments such as Elranatamab, known as Elrexfio. Approved last year, Elrexifo targets patients that suffer from a rare and incurable blood cancer that affects myeloma cells. This disease currently impacts around 160,000 people worldwide and accumulates around 34,000 new diagnoses annually in the U.S. alone. Elrexifo aims to extend the amount of time patients have before their condition worsens. According to The Independent, the treatment was recently endorsed by the National Institute for Health and Care Excellence (NICE) in the UK. It is estimated by NICE themselves that about 700 people will benefit from this recommendation. It will only help a handful of patients because of the restrictions that reduce accessibility, however, efforts are underway to broaden its reach. Globally, Elrexifo is a key contributor of Pfizer’s projected oncology sales, which totaled over $12 billion in 2023. So far, their oncology revenue, combined with that of non-COVID products, has totaled over $13.6 billion in Q3 2024. These products are seeing a growth rate of 14% compared to last year. Aside from Elrexifo, Pfizer also intends to boost its oncology sector by investing in next-gen cancer therapies like immuno-oncology, further researching potential cancer treatments, and striking partnerships with biotech firms. These factors suggest a promising future for Pfizer’s role in oncology, making the company a compelling investment opportunity going forward, even with COVID out of the picture.
+
+**Competitive Landscape in Weight Loss Market**
+
+Pfizer’s entry into the weight loss drug market with Danuglipron provides it with a foothold against key competitors like Eli Lilly. Danuglipron’s oral formulation offers a unique advantage in a field dominated by injectables, potentially boosting patient adherence. While competitors like Eli Lilly and Novo Nordisk hold substantial market shares, Pfizer's innovation in GLP-1 delivery could capture significant demand, especially if its modified-release formulation proves successful.
+
+**Profitability Metrics & Investor Appeal**
+
+Pfizer’s profitability metrics reveal a mixed picture for long-term investors. While its gross profit and operating income are substantial, translating into a gross profit of $42.68 billion this year with a $4.2 billion net income, profitability ratios such as ROE (declining at 28%) and ROIC (14%) signal potential weaknesses in value generation for shareholders. Additionally, Pfizer’s profitability score is a modest 58/100, trailing behind competitors like Johnson & Johnson, Roche, and Eli Lilly, which have higher scores and better net income margins despite lower gross profits. Pfizer’s EBITDA margins reflect solid cash-generating ability, but declining profitability metrics suggest a need to boost efficiency or reduce costs to enhance returns. Pfizer’s forward dividend yield, which appeals to income-focused investors, remains a strong draw, yet the declining ROE and ROIC may lessen its attractiveness as a sustainable long-term investment compared to its more efficient peers.
+
+**Valuation Analysis**
+
+Two factors that can be used to conduct an in-depth analysis for the valuation of Pfizer are forward EBITDA and PEG ratios. These can be used to compare Pfizer to industry standards. Currently, their EBITDA margin benchmark against competitors is 30.7%. Pfizer is relatively higher compared to industry standards, emphasizing strong profitability. Additionally, Pfizer’s PEG ratio is 1.47. Compared to industry standards, Pfizer is well exceeding in this category reflecting how it could be potentially overvalued. Therefore, their current valuation reflects strong growth potential according to EBITDA but questionable growth potential according to PEG ratios. In addition, Pfizer’s stance in the healthcare industry allows them to dominate but also provides risks as their COVID-19- revenue is slowly declining. Ultimately, Pfizer's strong EBITDA margin and dominant industry position make it a unique portfolio addition, as it offers stability and growth potential despite concerns over COVID-19 revenue decline and a high PEG ratio.
+
+**Conclusion: Investment Thesis/ TLDR**
+
+Buy: Pfizer’s strong Q3 growth, high dividend, and strategic focus on cancer and weight loss treatments make it a stable, income-friendly investment with solid long-term potential.
+
+, Title: Pfizer Investment Analysis: Strong Q3 Performance, Strategic Growth in Oncology and Weight Loss Markets, and High Dividend Appeal for Long-Term Investors
+Body: Just keep holding and collect juicy dividend. If it falls below $25, add more
+It’s all about the flow of money and the flow right now is going into anything AI.
+Be the contrarian on this name.
+average sentiment: 0.499, Title: Strategic Investment in Metals: An Opportunity with the New Presidency (?)
+Body: I'm pretty sure I've seen an article about how everyone should buy metals every single day for the last 5 years at least. With lithium in particular, you're buying in the middle of hype that started a long time ago. There's no way to know if you're too late for that train or not., Title: Strategic Investment in Metals: An Opportunity with the New Presidency (?)
+Body: Dear Investors,
+
+With the inauguration of the new presidency, the global markets are gearing up for significant economic changes. A recent article by Lee Ying Shan for *Futures & Commodities* highlights a potentially lucrative investment opportunity in the metals market.
+
+According to Russell Hardy, CEO of Vitol, global petroleum demand is expected to peak within the next decade, paving the way for substantial growth in the metals sector. Vitol, the world's largest independent energy trader, is now focusing on the markets for copper, aluminum, steel, and iron ore.
+
+As the oil sector anticipates a decline, the metals industry is poised for significant expansion driven by increased electrification and green technologies. Critical minerals like copper, nickel, cobalt, and lithium are essential for manufacturing electric vehicle batteries, EVs, power grids, and solar panels. Copper demand, in particular, is expected to grow exponentially, with a potential shortage by 2030, according to the International Energy Agency.
+
+Given the current high levels of stock market prices and valuations of listed companies, diversifying investments into metals could prove to be a smart strategy. The energy transition and the rise of green technologies offer opportunities for significant long-term returns.
+
+It is time to consider metals as a crucial component of your investment portfolio (?)
+
+[Vitol eyeing metals market as oil demand to peak in 10 years, CEO signals](https://www.cnbc.com/2024/11/08/vitol-eyes-metals-market-as-oil-demand-to-peak-in-10-years-ceo-signals-.html) 
+
+DBB, DBC, DBA, LIT, URA REMX ?
+
+PICK ?
+
+VALE BHP RIO ?
+average sentiment: 0.488, Title: $285k to invest, new to this! 
+Body: Assuming this is invested in a taxable brokerage account (eg not an IRA or 401k), you will be taxed on the gains. Do you know how much the gains are and the fraction which are short / long term?
+
+I get the desire for simplicity but I would not spend a ton of money to achieve that. It’s not that bad of a scenario if you basically maintain these assets. You can use your future investments to have your portfolio with these mirror the VTI/VXUS portfolio you want. It requires a bit of spreadsheeting but it shouldn’t be complicated.
+
+QQQ and to a lesser extent SPY have high expense ratios though. They’re more intended for providing liquidity for trading and for the options chains rather than as a long term investment. There is math to be done to figure out if you should sell them for cheaper ETFs. We can help you figure that out!
+
+Going forward with future investments the questions you should ask are what is the expense ratio and am I creating the distributions of investments that I want to., Title: $285k to invest, new to this! 
+Body: 1) Yes, you can buy VTI and VXUS at Vanguard
+ 
+2) You can sell but will be taxed for any gains in a non-tax advantaged account.  If this is in a 401k or Roth IRA there is no tax implications from selling as long as the money stays in the account.
+ 
+3) Just lump sum invest, it generally beats trying to dollar cost average.  You can’t time the market.
+ 
+4) Select your holding and click the sell button :)
+ 
+5) You mentioned being about 15 years from retirement, I’d recommend mixing in some bonds as well.  You can mirror a target date fund composition.
+ 
+6) Keep 3 - 6 months of expenses in a HYSA or MMKT.  That total will be different for everyone.
+average sentiment: 0.359, Title: Hydrogen will boom again.  Look at the Texas Hydrogen Alliance 
+Body: Think it has to do with safety, expense and of course the car industry pushing back. 
+
+But, like with everything.... some things are impossible, until they are not., Title: Hydrogen will boom again.  Look at the Texas Hydrogen Alliance 
+Body: I used to work in the technology startup world.  I was a huge believer in Hydrogen and never quite sure why it didn't catch on even at the commercial trucking level.  I still think there's potential there.
+average sentiment: 0.213, Title: 41- plan to retire at 56- portfolio review
+Body: Small cap is like 5-10% of the market and you have 12% of your brokerage and 17% of your IRA in a single small cap fund., Title: 41- plan to retire at 56- portfolio review
+Body: You need 1 Bitcoin at least.
+=== News Sentiment Analysis Summary ===
+
+Analysis Timestamp: 2024-11-16 18:53:43
+Total Headlines Analyzed: 17
+
+=== Sentiment Distribution ===
+financial_news - NEGATIVE: 2
+financial_news - NEUTRAL: 1
+financial_news - POSITIVE: 8
+general_news - NEGATIVE: 1
+general_news - POSITIVE: 5
+
+=== Average Sentiment Scores ===
+financial_news: 0.236
+general_news: 0.364
+
+=== Financial News Analysis ===
+
+By Ticker (Average Sentiment):
+CHGG: 0.233
+EDU: 0.346
+ticker: -0.294
+
+By Publisher (Average Sentiment):
+GuruFocus.com: 0.543
+Insider Monkey: 0.509
+MT Newswires: 0.296
+Motley Fool: 0.506
+Reuters: 0.297
+Simply Wall St.: 0.104
+StockStory: -0.299
+Thomson Reuters StreetEvents: 0.291
+publisher: -0.294
+
+Most Positive Financial Headline:
+Ticker: CHGG
+Headline: Chegg Inc (CHGG) Q3 2024 Earnings Call Highlights: Navigating AI Challenges and Strategic ...
+Score: 0.579
+
+Most Negative Financial Headline:
+Ticker: CHGG
+Headline: Why Chegg (CHGG) Shares Are Trading Lower Today
+Score: -0.299
+
+=== General News Analysis ===
+
+By Company (Average Sentiment):
+2U Inc.: 0.299
+Chegg Inc.: 0.299
+New Oriental Education & Technology Group Inc.: 0.789
+company: -0.292
+
+Most Positive General News Headline:
+Company: New Oriental Education & Technology Group Inc.
+Headline: Share Market Highlights October 23, 2024: Sensex, Nifty end in red; Bajaj Finance gains nearly 5%
+Score: 1.280
+
+Most Negative General News Headline:
+Company: company
+Headline: headline
+Score: -0.292
