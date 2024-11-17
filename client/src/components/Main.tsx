@@ -5,21 +5,324 @@ import Gantt from './Gantt';
 import GanttSkeleton from './GanttSkeleton';
 import { Target, Clock, TrendingUp, LineChart } from 'lucide-react';
 import TechStack from './TechStack';
+import { format, addDays, parseISO, addBusinessDays } from 'date-fns';
 
 // import { sampleGanttData } from '../sampleGanttData';
 
 export default function Main() {
   interface ResponseData {
-    outputs: {
-      recommendations: any[];
-    };
+    recommendations: any[];
   }
 
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [response, setResponse] = useState<ResponseData>({
-    outputs: { recommendations: [] },
+    recommendations: [],
   });
+  // const [response, setResponse] = useState<ResponseData>({
+  //   recommendations: [
+  //     {
+  //       TaskID: 1,
+  //       TaskName:
+  //         'Implement AI-driven marketing strategies to optimize Gross Sales from 5,000,000 to 5,000,000',
+  //       Description:
+  //         'The positive sentiment in financial news, especially from companies like Insider Monkey and Motley Fool, indicates market receptivity to advanced technologies. Leveraging AI for marketing can improve customer targeting and increase sales. This objective aligns with the dynamic trends in the Information Technology industry towards innovative solutions.',
+  //       subtasks: [
+  //         {
+  //           TaskID: 'A',
+  //           TaskName:
+  //             'Conduct a market analysis to identify AI implementation opportunities',
+  //           StartDate: '2024-11-18',
+  //           Duration: 15,
+  //         },
+  //         {
+  //           TaskID: 'B',
+  //           TaskName:
+  //             'Collaborate with AI experts to develop personalized marketing algorithms',
+  //           StartDate: '2024-12-03',
+  //           Duration: 30,
+  //         },
+  //         {
+  //           TaskID: 'C',
+  //           TaskName:
+  //             'Launch AI-powered marketing campaigns targeting high-potential customer segments',
+  //           StartDate: '2025-01-02',
+  //           Duration: 45,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       TaskID: 2,
+  //       TaskName:
+  //         'Enhance customer engagement strategies to maintain Gross Sales at 5,000,000',
+  //       Description:
+  //         'The negative sentiment in general news indicates a potential risk of customer disengagement. Developing proactive engagement strategies can retain existing customers and drive repeat sales. This objective leverages the industry financial context to ensure sustained performance in the Information Technology sector.',
+  //       subtasks: [
+  //         {
+  //           TaskID: 'A',
+  //           TaskName:
+  //             'Implement a customer feedback system to gather insights for engagement improvements',
+  //           StartDate: '2024-11-18',
+  //           Duration: 20,
+  //         },
+  //         {
+  //           TaskID: 'B',
+  //           TaskName:
+  //             'Train customer service teams on personalized engagement tactics',
+  //           StartDate: '2024-12-08',
+  //           Duration: 30,
+  //         },
+  //         {
+  //           TaskID: 'C',
+  //           TaskName:
+  //             'Launch a loyalty program to incentivize repeat purchases',
+  //           StartDate: '2025-01-07',
+  //           Duration: 45,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       TaskID: 3,
+  //       TaskName:
+  //         'Expand market reach to increase Gross Sales from 5,000,000 to 5,000,000',
+  //       Description:
+  //         'The positive sentiment in financial news presents an opportunity to capitalize on market optimism. Expanding market reach can tap into new customer segments and drive additional sales. This objective aligns with the growth potential highlighted in the industry financial context for Information Technology.',
+  //       subtasks: [
+  //         {
+  //           TaskID: 'A',
+  //           TaskName:
+  //             'Conduct a market segmentation analysis to identify untapped markets',
+  //           StartDate: '2024-11-20',
+  //           Duration: 25,
+  //         },
+  //         {
+  //           TaskID: 'B',
+  //           TaskName:
+  //             'Develop partnerships with complementary businesses to access new customer pools',
+  //           StartDate: '2024-12-15',
+  //           Duration: 40,
+  //         },
+  //         {
+  //           TaskID: 'C',
+  //           TaskName:
+  //             'Launch targeted marketing campaigns in newly identified market segments',
+  //           StartDate: '2025-01-24',
+  //           Duration: 35,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       TaskID: 4,
+  //       TaskName:
+  //         'Optimize pricing strategies to improve Gross Sales from 5,000,000 to 5,000,000',
+  //       Description:
+  //         'The negative sentiment in general news may indicate price sensitivity among potential customers. Optimizing pricing strategies can attract cost-conscious buyers and drive sales volume. This objective leverages the financial news sentiment to adapt pricing in the competitive landscape of the Information Technology industry.',
+  //       subtasks: [
+  //         {
+  //           TaskID: 'A',
+  //           TaskName:
+  //             'Conduct a pricing analysis to assess competitive pricing structures',
+  //           StartDate: '2024-11-22',
+  //           Duration: 20,
+  //         },
+  //         {
+  //           TaskID: 'B',
+  //           TaskName:
+  //             'Implement dynamic pricing models to adjust prices based on market demand',
+  //           StartDate: '2024-12-12',
+  //           Duration: 35,
+  //         },
+  //         {
+  //           TaskID: 'C',
+  //           TaskName:
+  //             'Monitor competitor pricing strategies and adapt pricing accordingly',
+  //           StartDate: '2025-01-16',
+  //           Duration: 30,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       TaskID: 5,
+  //       TaskName:
+  //         'Strengthen distribution channels to sustain Gross Sales at 5,000,000',
+  //       Description:
+  //         'The positive sentiment in financial news towards specific tickers and publishers suggests receptiveness to technology-related products. Strengthening distribution channels can ensure product availability to meet market demand. This objective capitalizes on industry trends in the Information Technology sector to enhance product accessibility.',
+  //       subtasks: [
+  //         {
+  //           TaskID: 'A',
+  //           TaskName:
+  //             'Evaluate current distribution network performance and identify bottlenecks',
+  //           StartDate: '2024-11-25',
+  //           Duration: 15,
+  //         },
+  //         {
+  //           TaskID: 'B',
+  //           TaskName:
+  //             'Diversify distribution channels to reach a broader customer base',
+  //           StartDate: '2024-12-10',
+  //           Duration: 25,
+  //         },
+  //         {
+  //           TaskID: 'C',
+  //           TaskName:
+  //             'Implement a logistics tracking system to improve delivery efficiency',
+  //           StartDate: '2025-01-04',
+  //           Duration: 35,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       TaskID: 6,
+  //       TaskName:
+  //         'Enhance product personalization to drive Gross Sales from 5,000,000 to 5,000,000',
+  //       Description:
+  //         "The positive sentiment in financial news towards personalized services emphasizes the importance of tailored customer experiences. Enhancing product personalization can boost customer loyalty and drive repeat purchases. This objective aligns with the industry's move towards customized solutions in the Information Technology sector.",
+  //       subtasks: [
+  //         {
+  //           TaskID: 'A',
+  //           TaskName:
+  //             'Conduct a customer segmentation analysis to identify personalized product opportunities',
+  //           StartDate: '2024-11-28',
+  //           Duration: 20,
+  //         },
+  //         {
+  //           TaskID: 'B',
+  //           TaskName:
+  //             'Implement AI algorithms for product recommendations based on customer preferences',
+  //           StartDate: '2024-12-18',
+  //           Duration: 30,
+  //         },
+  //         {
+  //           TaskID: 'C',
+  //           TaskName:
+  //             'Launch personalized marketing campaigns highlighting customized product offerings',
+  //           StartDate: '2025-01-17',
+  //           Duration: 40,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       TaskID: 7,
+  //       TaskName:
+  //         'Improve customer service processes to ensure Gross Sales at 5,000,000',
+  //       Description:
+  //         'The negative sentiment in general news highlights the importance of quality customer service. Improving customer service processes can enhance customer satisfaction and drive positive word-of-mouth referrals. This objective leverages the financial news sentiment to address customer experience in the competitive Information Technology industry.',
+  //       subtasks: [
+  //         {
+  //           TaskID: 'A',
+  //           TaskName:
+  //             'Conduct a customer service audit to identify pain points and areas for improvement',
+  //           StartDate: '2024-12-02',
+  //           Duration: 25,
+  //         },
+  //         {
+  //           TaskID: 'B',
+  //           TaskName:
+  //             'Implement a training program for customer service representatives on effective communication skills',
+  //           StartDate: '2024-12-27',
+  //           Duration: 30,
+  //         },
+  //         {
+  //           TaskID: 'C',
+  //           TaskName:
+  //             'Integrate AI chatbots to streamline customer query resolution processes',
+  //           StartDate: '2025-01-26',
+  //           Duration: 35,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       TaskID: 8,
+  //       TaskName:
+  //         'Utilize social media channels to increase brand visibility and drive Gross Sales from 5,000,000 to 5,000,000',
+  //       Description:
+  //         "The positive sentiment in financial news towards specific publishers like Insider Monkey and Motley Fool presents an opportunity for brand exposure. Leveraging social media channels can boost brand visibility and attract new customers. This objective aligns with the industry's social media engagement trends in the Information Technology sector.",
+  //       subtasks: [
+  //         {
+  //           TaskID: 'A',
+  //           TaskName:
+  //             'Audit current social media presence and identify areas for enhancement',
+  //           StartDate: '2024-12-05',
+  //           Duration: 20,
+  //         },
+  //         {
+  //           TaskID: 'B',
+  //           TaskName:
+  //             'Develop a social media content calendar with engaging posts and promotions',
+  //           StartDate: '2024-12-25',
+  //           Duration: 30,
+  //         },
+  //         {
+  //           TaskID: 'C',
+  //           TaskName:
+  //             'Collaborate with social media influencers to reach a wider audience',
+  //           StartDate: '2025-01-24',
+  //           Duration: 35,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       TaskID: 9,
+  //       TaskName:
+  //         'Implement customer feedback analysis tools to enhance product offerings and maintain Gross Sales at 5,000,000',
+  //       Description:
+  //         "The positive sentiment in financial news towards personalized products underscores the value of customer feedback. Implementing feedback analysis tools can provide actionable insights for product improvements and innovation. This objective aligns with the industry's focus on customer-centric solutions in the Information Technology sector.",
+  //       subtasks: [
+  //         {
+  //           TaskID: 'A',
+  //           TaskName:
+  //             'Select and onboard a customer feedback analysis platform',
+  //           StartDate: '2024-12-09',
+  //           Duration: 25,
+  //         },
+  //         {
+  //           TaskID: 'B',
+  //           TaskName:
+  //             'Analyze customer feedback data to identify key improvement areas',
+  //           StartDate: '2025-01-03',
+  //           Duration: 30,
+  //         },
+  //         {
+  //           TaskID: 'C',
+  //           TaskName:
+  //             'Implement product updates based on customer feedback insights',
+  //           StartDate: '2025-02-02',
+  //           Duration: 35,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       TaskID: 10,
+  //       TaskName:
+  //         'Optimize website user experience to drive online sales and achieve Gross Sales of 5,000,000',
+  //       Description:
+  //         'The positive sentiment in financial news towards innovative solutions indicates the importance of a seamless online experience. Optimizing website user experience can attract and retain online customers, driving incremental sales. This objective leverages the industry trend of digital transformation in the Information Technology sector.',
+  //       subtasks: [
+  //         {
+  //           TaskID: 'A',
+  //           TaskName:
+  //             'Conduct a website UX audit to identify usability gaps and bottlenecks',
+  //           StartDate: '2024-12-12',
+  //           Duration: 20,
+  //         },
+  //         {
+  //           TaskID: 'B',
+  //           TaskName:
+  //             'Implement UX improvements based on audit findings to enhance site navigation',
+  //           StartDate: '2025-01-01',
+  //           Duration: 30,
+  //         },
+  //         {
+  //           TaskID: 'C',
+  //           TaskName:
+  //             'Perform A/B testing for new UX features to optimize conversion rates',
+  //           StartDate: '2025-01-31',
+  //           Duration: 35,
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // });
 
   return (
     <section className='text-gray-600 body-font'>
@@ -36,6 +339,7 @@ export default function Main() {
       <div className='container pt-12 pb-36 max-w-4xl mx-auto justify-center items-center'>
         <div className='ktq4'>
           <Form
+            isLoading={isLoading}
             setError={setError}
             setIsLoading={setIsLoading}
             setResponse={setResponse}
@@ -43,23 +347,28 @@ export default function Main() {
         </div>
       </div>
 
-      {Object.keys(response).length !== 0 &&
-        response.outputs.recommendations.length > 0 && (
-          <Gantt data={response.outputs.recommendations} />
-        )}
-      {isLoading && Object.keys(response).length !== 0 && <GanttSkeleton />}
+      {isLoading && response.recommendations.length === 0 && <GanttSkeleton />}
 
-      {Object.keys(response).length !== 0 &&
-        response.outputs.recommendations.length > 0 && (
+      {response.recommendations.length > 0 && (
+        <div>
+          <Gantt data={response.recommendations} />
+
           <div className='pt-12 pb-8 px-10 mx-auto fsac4'>
-            {response.outputs.recommendations.map((recommendation, index) => (
+            {response.recommendations.map((recommendation, index) => (
               <React.Fragment key={index}>
                 <div
-                  id={`task-${index * 4 + 1}`}
+                  id={`task-${index + 1}`}
                   className='ktq4 hover:brightness-150 hover:text-gray-300 transition duration-100'
                 >
                   <h3 className='font-semibold text-lg text-white'>
-                    {(index + 1).toString()}. {recommendation.TaskName}
+                    {(index + 1).toString()}. {recommendation.TaskName} by{' '}
+                    {format(
+                      addBusinessDays(
+                        parseISO(recommendation.subtasks[2].StartDate),
+                        recommendation.subtasks[2].Duration - 1
+                      ),
+                      'MMM d, yyyy'
+                    )}
                   </h3>
                   <p className='pt-2 value-text text-md text-gray-200 fkrr1'>
                     {recommendation.Description}
@@ -80,7 +389,8 @@ export default function Main() {
               </React.Fragment>
             ))}
           </div>
-        )}
+        </div>
+      )}
       <TechStack />
 
       <h2 className='pt-40 mb-1 text-2xl font-semibold tracking-tighter text-center text-gray-200 lg:text-7xl md:text-6xl'>
@@ -139,36 +449,7 @@ export default function Main() {
           </p>
         </div>
       </div>
-      {/*
-      <div className='pt-32 pb-32 max-w-6xl mx-auto fsac4 md:px-1 px-3'>
-        <div className='ktq4'>
-          <img src='/api/placeholder/400/300' alt='Sales KPI Template'></img>
-          <h3 className='pt-3 font-semibold text-lg text-white'>
-            Sales Performance KPI Template
-          </h3>
-          <p className='pt-2 value-text text-md text-gray-200 fkrr1'>
-            Accelerate your sales team's performance with our comprehensive KPI
-            template. Includes proven strategies for pipeline management,
-            conversion rate optimization, and revenue growth. Perfect for B2B
-            and B2C sales teams looking to exceed their targets.
-          </p>
-        </div>
-        <div className='ktq4'>
-          <img
-            src='/api/placeholder/400/300'
-            alt='Customer Success Template'
-          ></img>
-          <h3 className='pt-3 font-semibold text-lg text-white'>
-            Customer Success Metrics Template
-          </h3>
-          <p className='pt-2 value-text text-md text-gray-200 fkrr1'>
-            Drive customer satisfaction and retention with our customer success
-            KPI template. Features detailed action plans for improving NPS,
-            reducing churn, and increasing customer lifetime value. Built on
-            best practices from leading SaaS companies.
-          </p>
-        </div>
-      </div> */}
+
       <section className='relative pb-24'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 text-center'>
           <div className='py-24 md:py-36'>

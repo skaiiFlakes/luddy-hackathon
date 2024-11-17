@@ -21,10 +21,12 @@ const FormGroup = ({
 );
 
 export default function Form({
+  isLoading,
   setIsLoading,
   setError,
   setResponse,
 }: {
+  isLoading: boolean;
   setIsLoading: (isLoading: boolean) => void;
   setError: (error: string | null) => void;
   setResponse: (response: any) => void;
@@ -35,10 +37,46 @@ export default function Form({
   const [targetStatus, setTargetStatus] = useState('');
   const [deadline, setDeadline] = useState(new Date());
 
+  const waitForElement = (
+    selector: string,
+    timeout = 5000
+  ): Promise<HTMLElement | null> => {
+    const startTime = Date.now();
+    return new Promise((resolve) => {
+      const checkElement = () => {
+        const element = document.querySelector(selector);
+        if (element) {
+          resolve(element as HTMLElement);
+          return;
+        }
+        if (Date.now() - startTime > timeout) {
+          resolve(null);
+          return;
+        }
+        setTimeout(checkElement, 100);
+      };
+      checkElement();
+    });
+  };
+
+  const scrollToGantt = async () => {
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    const element = await waitForElement('#gantt-skeleton');
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }
+  };
+
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    setResponse({ recommendations: [] });
     setIsLoading(true);
     setError(null);
+
+    await scrollToGantt();
 
     const formData = {
       industry,
@@ -66,6 +104,7 @@ export default function Form({
 
       const data = await response.json();
       setResponse(data);
+      setIsLoading(false);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
@@ -256,7 +295,12 @@ export default function Form({
       <div className='lg:ml-[33.33%]'>
         <button
           type='submit'
-          className='inline-flex items-center py-2 rounded-lg font-semibold tracking-tighter text-white ease-in-out transform bg-transparent bg-gradient-to-r from-blue-500 to-blue-800 px-20 text-md md:mt-0 focus:shadow-outline lg:ml-2.5  active:scale-95 focus:scale-100 hover:brightness-150 focus:brightness-100 transition duration-300'
+          disabled={isLoading}
+          className={`inline-flex items-center py-2 rounded-lg font-semibold tracking-tighter text-white ease-in-out transform bg-transparent bg-gradient-to-r from-blue-500 to-blue-800 px-20 text-md md:mt-0 focus:shadow-outline lg:ml-2.5  active:scale-95 focus:scale-100 transition duration-300 ${
+            isLoading
+              ? 'brightness-50'
+              : 'hover:brightness-150 focus:brightness-100'
+          }`}
         >
           <div className='flex text-lg'>
             <span className='justify-center'>Generate G4NTT</span>

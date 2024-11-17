@@ -3,7 +3,8 @@ from flask_cors import CORS
 from prompt import prompt
 
 app = Flask(__name__)
-CORS(app, origins=['http://localhost:3000', 'https://g4ntt.vercel.app/'])
+CORS(app, origins='*') # LOCAL DEVELOPMENT ONLY
+# CORS(app, origins=['http://localhost:3000', 'https://g4ntt.vercel.app/'])
 
 @app.route('/api/home', methods=['GET'])
 def return_home():

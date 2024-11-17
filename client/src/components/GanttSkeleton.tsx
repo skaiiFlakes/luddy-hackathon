@@ -25,7 +25,10 @@ function GanttSkeleton() {
   }, []);
 
   return (
-    <div className='w-full h-[500px] ktq4 rounded-lg p-8 mt-5'>
+    <div
+      id='gantt-skeleton'
+      className='w-full h-[500px] ktq4 rounded-lg p-8 mt-5'
+    >
       <div className='h-full flex flex-col items-center justify-center gap-4'>
         <Spinner
           aria-label='Loading spinner'
