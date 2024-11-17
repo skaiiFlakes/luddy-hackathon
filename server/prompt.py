@@ -70,11 +70,17 @@ You MUST create EXACTLY 10 main business objectives, each with EXACTLY 3 subtask
     - Have a clear metric that can be measured
     - Be directly related to improving the main KPI
     - Reference the provided industry context or sentiment analysis
+    - Include a risk assessment value from 1-5 (1 being lowest risk, 5 being highest risk)
 
 2. For each main objective, provide EXACTLY 3 practical implementation subtasks that:
     - Are concrete actions that team members can take
     - Don't require numerical targets
     - Describe specific steps to achieve the parent objective
+    - Include a risk assessment value from 1-5 that correlates with the parent task's risk level
+      (If parent task risk is 1-2, subtask risks should be 1-3)
+      (If parent task risk is 3, subtask risks should be 2-4)
+      (If parent task risk is 4-5, subtask risks should be 3-5)
+
 
 3. For each main objective, provide:
     - TaskID: integers 1-10
@@ -87,12 +93,16 @@ You MUST create EXACTLY 10 main business objectives, each with EXACTLY 3 subtask
       1. Draw meaningful inferences from sentiment patterns
       2. Connect industry trends to specific market opportunities
       3. Explain how this objective addresses the market dynamics
+      4. Use varied sentence structures without repetitive patterns
+    - RiskLevel: integer from 1-5 indicating implementation risk
+
 
 4. For each subtask, provide:
     - TaskID: MUST be one of: "A", "B", or "C"
     - TaskName: A specific action item starting with an action verb
     - StartDate: date in ISO format (YYYY-MM-DD)
     - Duration: integer number of days
+    - RiskLevel: integer from 1-5 that correlates with parent task risk level
     - The Duration MUST be used to calculate the end date in the parent task's TaskName
 
 VALIDATION REQUIREMENTS:
@@ -100,6 +110,9 @@ VALIDATION REQUIREMENTS:
 2. Each main task MUST have EXACTLY 3 subtasks
 3. Subtask IDs MUST be "A", "B", or "C"
 4. Main task IDs MUST be integers 1-10
+5. Risk levels MUST be integers 1-5
+6. Subtask risk levels MUST correlate with parent task risk level according to the specified ranges
+
 
 CRITICAL: Your response MUST maintain the exact following JSON property names. DO NOT modify, rename, or restructure any properties:
 
@@ -109,24 +122,28 @@ CRITICAL: Your response MUST maintain the exact following JSON property names. D
             "TaskID": 1,
             "TaskName": "Example task name",
             "Description": "Example description",
+            "RiskLevel": int,
             "subtasks": [
                 {
                     "TaskID": "A",
                     "TaskName": "Example subtask",
-                    "StartDate": "2024-01-01",
-                    "Duration": 30
+                    "StartDate": "YYYY-MM-DD",
+                    "Duration": int,
+                    "RiskLevel": int
                 },
                 {
                     "TaskID": "B",
                     "TaskName": "Example subtask",
-                    "StartDate": "2024-02-01",
-                    "Duration": 30
+                    "StartDate": "YYYY-MM-DD",
+                    "Duration": int,
+                    "RiskLevel": int
                 },
                 {
                     "TaskID": "C",
                     "TaskName": "Example subtask",
-                    "StartDate": "2024-03-01",
-                    "Duration": 30
+                    "StartDate": "YYYY-MM-DD",
+                    "Duration": int,
+                    "RiskLevel": int
                 }
             ]
         }
@@ -139,6 +156,7 @@ CRITICAL: Your response MUST maintain the exact following JSON property names. D
 3. Writing varied, concise sentences without repetitive patterns
 4. Using proper number formatting (commas for thousands) and currency symbols ($) for monetary values
 5. Creating SMART objectives with specific, measurable, achievable, relevant, and time-bound targets
+6. Assessing implementation risks and their cascading effects on subtasks
 
 STRICT REQUIREMENTS:
 - Generate EXACTLY 10 main tasks (no more, no less)
